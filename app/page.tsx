@@ -1,7 +1,7 @@
 export default function PortfolioWebsite() {
   const featuredWork = [
     {
-      title: "TEST HERO UPDATE",
+      title: "BBC World Service Investigations",
       category: "Investigative Journalism",
       description:
         "Long-form reporting focused on uncovering complex global stories with clarity, rigour, and human depth.",
@@ -31,7 +31,7 @@ export default function PortfolioWebsite() {
 
   return (
     <div className="min-h-screen bg-stone-950 text-stone-100">
-      <section className="relative overflow-hidden border-b border-white/10">
+     <section className="relative overflow-hidden border-b border-white/10">
   <div className="absolute inset-0">
     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-35" />
     <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/85 to-stone-950/40" />
@@ -44,7 +44,7 @@ export default function PortfolioWebsite() {
         BBC Producer • Investigations • Documentary Storytelling
       </p>
       <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl lg:text-8xl">
-        Issa Kheirallah
+        TEST HERO UPDATE
       </h1>
       <p className="mt-6 max-w-3xl text-xl leading-8 text-stone-200 md:text-2xl md:leading-10">
         Stories about power, conflict, and the people living behind the headlines.
@@ -102,65 +102,6 @@ export default function PortfolioWebsite() {
     </div>
   </div>
 </section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.14),transparent_28%),radial-gradient(circle_at_left,rgba(255,255,255,0.06),transparent_30%)]" />
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:py-28">
-          <div>
-            <p className="mb-4 text-sm uppercase tracking-[0.35em] text-stone-400">
-              Producer • Journalist • Storyteller
-            </p>
-            <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
-              Building stories that cut through noise and stay with people.
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300 md:text-xl">
-              I am a BBC producer working across investigations, documentaries,
-              and factual storytelling. My work brings together editorial
-              judgement, narrative craft, and a presenter’s instinct for human,
-              memorable storytelling.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#work"
-                className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950 shadow-lg transition hover:-translate-y-0.5"
-              >
-                View work
-              </a>
-              <a
-                href="#contact"
-                className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5"
-              >
-                Get in touch
-              </a>
-            </div>
-          </div>
-
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur">
-            <div className="rounded-[1.5rem] border border-white/10 bg-stone-900/90 p-6">
-              <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
-                Focus
-              </p>
-              <div className="mt-5 space-y-5">
-                <div>
-                  <p className="text-sm text-stone-400">Current direction</p>
-                  <p className="mt-1 text-xl font-medium text-white">
-                    Investigations, documentaries, and presenter-led factual work
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm text-stone-400">Approach</p>
-                  <p className="mt-1 text-base leading-7 text-stone-300">
-                    Careful reporting, strong structure, and visually led stories
-                    shaped for television, digital, and social audiences.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm text-stone-400">Based in</p>
-                  <p className="mt-1 text-base text-stone-200">United Kingdom</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10" id="about">
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
