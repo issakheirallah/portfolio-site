@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function PortfolioWebsite() {
   const featuredWork = [
     {
@@ -29,79 +31,104 @@ export default function PortfolioWebsite() {
     "Editorial leadership",
   ];
 
+  const videos = [
+    {
+      title: "Africa Eye – Sing, Freetown",
+      url: "https://www.youtube.com/embed/ZFO_vnkpLBA",
+    },
+    {
+      title: "Cape Flats Documentary",
+      url: "https://www.youtube.com/embed/2eOiy7dC3nE",
+    },
+    {
+      title: "BBC Investigation",
+      url: "https://www.youtube.com/embed/OcGbQclUDQw",
+    },
+  ];
+
+  const [currentVideo, setCurrentVideo] = useState(0);
+
+  const nextVideo = () => {
+    setCurrentVideo((prev) => (prev + 1) % videos.length);
+  };
+
+  const prevVideo = () => {
+    setCurrentVideo((prev) => (prev - 1 + videos.length) % videos.length);
+  };
+
   return (
     <div className="min-h-screen bg-stone-950 text-stone-100">
-     <section className="relative overflow-hidden border-b border-white/10">
-  <div className="absolute inset-0">
-    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-35" />
-    <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/85 to-stone-950/40" />
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_22%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent_28%)]" />
-  </div>
+      <section className="relative overflow-hidden border-b border-white/10">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-35" />
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/85 to-stone-950/40" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_22%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.06),transparent_28%)]" />
+        </div>
 
-  <div className="relative mx-auto grid min-h-[88vh] max-w-7xl gap-12 px-6 py-16 md:px-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:py-24">
-    <div className="max-w-4xl self-center">
-      <p className="mb-5 text-sm uppercase tracking-[0.38em] text-stone-300">
-        BBC Producer • Investigations • Documentary Storytelling
-      </p>
-      <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl lg:text-8xl">
-        TEST HERO UPDATE
-      </h1>
-      <p className="mt-6 max-w-3xl text-xl leading-8 text-stone-200 md:text-2xl md:leading-10">
-        Stories about power, conflict, and the people living behind the headlines.
-      </p>
-      <p className="mt-6 max-w-2xl text-base leading-8 text-stone-300 md:text-lg">
-        Producer and journalist working across investigations, documentaries, and
-        factual storytelling for global audiences.
-      </p>
+        <div className="relative mx-auto grid min-h-[88vh] max-w-7xl gap-12 px-6 py-16 md:px-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:py-24">
+          <div className="max-w-4xl self-center">
+            <p className="mb-5 text-sm uppercase tracking-[0.38em] text-stone-300">
+              BBC Producer • Investigations • Documentary Storytelling
+            </p>
+            <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl lg:text-8xl">
+              Issa Kheirallah
+            </h1>
+            <p className="mt-6 max-w-3xl text-xl leading-8 text-stone-200 md:text-2xl md:leading-10">
+              Stories about power, conflict, and the people living behind the headlines.
+            </p>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-stone-300 md:text-lg">
+              Producer and journalist working across investigations, documentaries, and
+              factual storytelling for global audiences.
+            </p>
 
-      <div className="mt-10 flex flex-wrap gap-4">
-        <a
-          href="#work"
-          className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950 shadow-lg transition hover:-translate-y-0.5"
-        >
-          View selected work
-        </a>
-        <a
-          href="#contact"
-          className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:bg-white/10"
-        >
-          Get in touch
-        </a>
-      </div>
-    </div>
-
-    <div className="self-end lg:justify-self-end">
-      <div className="max-w-md rounded-[2rem] border border-white/10 bg-black/30 p-3 shadow-2xl backdrop-blur-md">
-        <div className="rounded-[1.6rem] border border-white/10 bg-white/5 p-6">
-          <p className="text-xs uppercase tracking-[0.32em] text-stone-400">
-            Current focus
-          </p>
-          <div className="mt-6 space-y-6">
-            <div>
-              <p className="text-sm text-stone-400">Role</p>
-              <p className="mt-1 text-xl font-medium text-white">
-                Producer / Journalist
-              </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#work"
+                className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950 shadow-lg transition hover:-translate-y-0.5"
+              >
+                View selected work
+              </a>
+              <a
+                href="#contact"
+                className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:bg-white/10"
+              >
+                Get in touch
+              </a>
             </div>
-            <div>
-              <p className="text-sm text-stone-400">Specialisms</p>
-              <p className="mt-1 text-base leading-7 text-stone-200">
-                Investigations, documentary development, technology storytelling,
-                and presenter-led factual work.
-              </p>
-            </div>
-            <div>
-              <p className="text-sm text-stone-400">Available for</p>
-              <p className="mt-1 text-base leading-7 text-stone-200">
-                Commissions, collaborations, and on-screen storytelling opportunities.
-              </p>
+          </div>
+
+          <div className="self-end lg:justify-self-end">
+            <div className="max-w-md rounded-[2rem] border border-white/10 bg-black/30 p-3 shadow-2xl backdrop-blur-md">
+              <div className="rounded-[1.6rem] border border-white/10 bg-white/5 p-6">
+                <p className="text-xs uppercase tracking-[0.32em] text-stone-400">
+                  Current focus
+                </p>
+                <div className="mt-6 space-y-6">
+                  <div>
+                    <p className="text-sm text-stone-400">Role</p>
+                    <p className="mt-1 text-xl font-medium text-white">
+                      Producer / Journalist
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-stone-400">Specialisms</p>
+                    <p className="mt-1 text-base leading-7 text-stone-200">
+                      Investigations, documentary development, technology storytelling,
+                      and presenter-led factual work.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-stone-400">Available for</p>
+                    <p className="mt-1 text-base leading-7 text-stone-200">
+                      Commissions, collaborations, and on-screen storytelling opportunities.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10" id="about">
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
@@ -124,6 +151,82 @@ export default function PortfolioWebsite() {
               editorial strengths, and create a clear platform for future
               presenting opportunities, commissions, and collaborations.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="showreel" className="border-y border-white/10 bg-white/[0.03]">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+                Showreel
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+                Selected documentaries and investigations
+              </h2>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
+                A curated carousel of work across investigations, documentaries,
+                and factual storytelling.
+              </p>
+            </div>
+            <div className="text-sm text-stone-400">
+              {currentVideo + 1} / {videos.length}
+            </div>
+          </div>
+
+          <div className="mt-12 overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/80 shadow-2xl">
+            <div className="aspect-video w-full">
+              <iframe
+                className="h-full w-full"
+                src={videos[currentVideo].url}
+                title={videos[currentVideo].title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
+          <div className="mt-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <p className="text-lg font-medium text-white">
+              {videos[currentVideo].title}
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={prevVideo}
+                className="rounded-2xl border border-white/20 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/5"
+              >
+                ← Previous
+              </button>
+              <button
+                onClick={nextVideo}
+                className="rounded-2xl border border-white/20 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/5"
+              >
+                Next →
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {videos.map((video, index) => (
+              <button
+                key={video.title}
+                onClick={() => setCurrentVideo(index)}
+                className={`rounded-[1.5rem] border px-5 py-4 text-left transition ${
+                  currentVideo === index
+                    ? "border-white/30 bg-white/10"
+                    : "border-white/10 bg-white/5 hover:bg-white/[0.08]"
+                }`}
+              >
+                <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                  Video {index + 1}
+                </p>
+                <p className="mt-2 text-base font-medium text-white">
+                  {video.title}
+                </p>
+              </button>
+            ))}
           </div>
         </div>
       </section>
