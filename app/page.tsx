@@ -1,0 +1,216 @@
+export default function PortfolioWebsite() {
+  const featuredWork = [
+    {
+      title: "BBC World Service Investigations",
+      category: "Investigative Journalism",
+      description:
+        "Long-form reporting focused on uncovering complex global stories with clarity, rigour, and human depth.",
+    },
+    {
+      title: "4Tech",
+      category: "Technology Storytelling",
+      description:
+        "Broadcast storytelling at the intersection of innovation, culture, and public understanding.",
+    },
+    {
+      title: "Documentary Development",
+      category: "Producer / Presenter",
+      description:
+        "Development of compelling factual narratives built around access, character, and strong editorial framing.",
+    },
+  ];
+
+  const strengths = [
+    "Investigative storytelling",
+    "Broadcast producing",
+    "On-screen presentation",
+    "Script development",
+    "Documentary research",
+    "Editorial leadership",
+  ];
+
+  return (
+    <div className="min-h-screen bg-stone-950 text-stone-100">
+      <section className="relative overflow-hidden border-b border-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.14),transparent_28%),radial-gradient(circle_at_left,rgba(255,255,255,0.06),transparent_30%)]" />
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:py-28">
+          <div>
+            <p className="mb-4 text-sm uppercase tracking-[0.35em] text-stone-400">
+              Producer • Journalist • Storyteller
+            </p>
+            <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white md:text-7xl">
+              Building stories that cut through noise and stay with people.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300 md:text-xl">
+              I am a BBC producer working across investigations, documentaries,
+              and factual storytelling. My work brings together editorial
+              judgement, narrative craft, and a presenter’s instinct for human,
+              memorable storytelling.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#work"
+                className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950 shadow-lg transition hover:-translate-y-0.5"
+              >
+                View work
+              </a>
+              <a
+                href="#contact"
+                className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5"
+              >
+                Get in touch
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur">
+            <div className="rounded-[1.5rem] border border-white/10 bg-stone-900/90 p-6">
+              <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+                Focus
+              </p>
+              <div className="mt-5 space-y-5">
+                <div>
+                  <p className="text-sm text-stone-400">Current direction</p>
+                  <p className="mt-1 text-xl font-medium text-white">
+                    Investigations, documentaries, and presenter-led factual work
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm text-stone-400">Approach</p>
+                  <p className="mt-1 text-base leading-7 text-stone-300">
+                    Careful reporting, strong structure, and visually led stories
+                    shaped for television, digital, and social audiences.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm text-stone-400">Based in</p>
+                  <p className="mt-1 text-base text-stone-200">United Kingdom</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10" id="about">
+        <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+              About
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+              A portfolio built around journalism, depth, and presence.
+            </h2>
+          </div>
+          <div className="space-y-6 text-lg leading-8 text-stone-300">
+            <p>
+              My background spans technology coverage, investigative production,
+              and documentary development. I am especially interested in stories
+              where reporting, character, and editorial ambition meet.
+            </p>
+            <p>
+              This site is designed to present selected work, highlight my
+              editorial strengths, and create a clear platform for future
+              presenting opportunities, commissions, and collaborations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-white/[0.03]" id="work">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+                Selected work
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+                Featured projects and editorial experience
+              </h2>
+            </div>
+            <p className="max-w-xl text-base leading-7 text-stone-400">
+              Replace these placeholders with project pages, embedded clips,
+              documentary summaries, awards, or case studies.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {featuredWork.map((item) => (
+              <article
+                key={item.title}
+                className="group rounded-[2rem] border border-white/10 bg-stone-900/70 p-7 transition hover:-translate-y-1 hover:border-white/20"
+              >
+                <p className="text-sm uppercase tracking-[0.25em] text-stone-500">
+                  {item.category}
+                </p>
+                <h3 className="mt-4 text-2xl font-medium text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-4 leading-7 text-stone-300">
+                  {item.description}
+                </p>
+                <div className="mt-8 text-sm font-medium text-stone-200">
+                  Case study coming soon →
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10" id="expertise">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+              Expertise
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+              What I bring to a story
+            </h2>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {strengths.map((strength) => (
+              <div
+                key={strength}
+                className="rounded-[1.5rem] border border-white/10 bg-white/5 px-5 py-5 text-base text-stone-200 shadow-lg"
+              >
+                {strength}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/10" id="contact">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:px-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+              Contact
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+              Open to documentaries, presenting opportunities, and collaborations.
+            </h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
+              Add your preferred contact details, social links, showreel, and
+              professional biography here.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="mailto:yourname@example.com"
+              className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950"
+            >
+              Email me
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
