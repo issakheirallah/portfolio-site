@@ -1,7 +1,7 @@
 export default function PortfolioWebsite() {
   const featuredWork = [
     {
-      title: "BBC World Service Investigations",
+      title: "TEST HERO UPDATE",
       category: "Investigative Journalism",
       description:
         "Long-form reporting focused on uncovering complex global stories with clarity, rigour, and human depth.",
