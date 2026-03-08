@@ -359,9 +359,15 @@ export default function PortfolioWebsite() {
               Producer • Video Journalist • On-screen Reporter
             </p>
 
-            <h1 className="text-5xl font-semibold tracking-tight text-white md:text-7xl">
-              Issa Kheirallah
-            </h1>
+            <div className="relative inline-block">
+              <div className="absolute inset-0 -z-10 flex items-center justify-center">
+                <div className="h-24 w-72 rounded-full bg-white/20 blur-3xl animate-[pulseGlow_6s_ease-in-out_infinite]" />
+              </div>
+
+              <h1 className="text-5xl font-semibold tracking-tight text-white md:text-7xl">
+                Issa Kheirallah
+              </h1>
+            </div>
 
             <p className="mt-6 max-w-3xl text-xl leading-9 text-stone-200">
               Producer specialising in video journalism, digital storytelling,
