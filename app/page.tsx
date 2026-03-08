@@ -20,35 +20,26 @@ export default function PortfolioWebsite() {
 
   const featuredWork = [
     {
-      title: "Eye Investigations",
+      title: "BBC Eye Investigations",
       category: "Investigations",
       description:
         "Producing and localising flagship BBC investigations for international audiences, managing editorial workflows, translation, dubbing and delivery across multiple markets.",
       image: "/images/projects/bbc-eye-investigations.jpg",
     },
     {
-      title: "4Tech",
-      category: "Technology",
+      title: "BBC Arabic – 4Tech",
+      category: "Presenter-led reporting",
       description:
-        "Producer and presenter of 280+ episodes covering global technology, innovation and digital culture across broadcast and social platforms.",
+        "Part of the production of 280+ episodes covering global technology, innovation and digital culture across broadcast and social platforms.",
       image: "/images/projects/bbc-arabic-4tech.jpg",
     },
     {
       title: "Art for Life",
-      category: "Arts & Culture",
+      category: "Documentary & Culture",
       description:
-        "Produced and directed reports across Europe covering digital art, NFTs and cultural events, leading teams from development through final edit.",
+        "Produced and directed reports across Europe covering digital art, NFTs and cultural events, helping teams from development through final edit.",
       image: "/images/projects/art-for-life.jpg",
     },
-  ];
-
-  const impactStats = [
-    { label: "Years in production", value: "9+" },
-    { label: "4Tech episodes produced", value: "280+" },
-    { label: "Weekly Africa Eye reach", value: "6M+ viewers" },
-    { label: "Documentaries localised yearly", value: "20+" },
-    { label: "Freelancers & vendors managed", value: "10+" },
-    { label: "Cost reduction in localisation", value: "50%" },
   ];
 
   const documentaries = [
@@ -124,18 +115,9 @@ export default function PortfolioWebsite() {
     },
   ];
 
-  const localisationHighlights = [
-    "End-to-end reversioning strategy for BBC Eye Investigations films",
-    "Editorial adaptation of investigative documentaries for new audiences",
-    "Management of translation, dubbing and compliance workflows",
-    "Budget planning and vendor coordination across multiple countries",
-    "Streamlined localisation pipelines reducing delivery time from 4 to 3 weeks",
-    "Scaling Africa Eye reach to millions of viewers across Africa",
-  ];
-
   const expertise = [
     "Investigations and editorial decision-making",
-    "Producer-presenter storytelling",
+    "Producer-led storytelling",
     "International documentary localisation",
     "Scriptwriting and story development",
     "Editorial leadership and team management",
@@ -143,26 +125,45 @@ export default function PortfolioWebsite() {
   ];
 
   const [currentVideo, setCurrentVideo] = useState(0);
-  const [selectedDocumentary, setSelectedDocumentary] = useState(documentaries[0]);
+  const [selectedDocumentary, setSelectedDocumentary] = useState(
+    documentaries[0]
+  );
 
-  const nextVideo = () => setCurrentVideo((prev) => (prev + 1) % videos.length);
-  const prevVideo = () =>
+  const nextVideo = () => {
+    setCurrentVideo((prev) => (prev + 1) % videos.length);
+  };
+
+  const prevVideo = () => {
     setCurrentVideo((prev) => (prev - 1 + videos.length) % videos.length);
+  };
 
   return (
     <div className="min-h-screen bg-stone-950 text-stone-100">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-stone-950/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-          <a href="#top" className="text-sm font-semibold uppercase tracking-[0.3em] text-white">
+          <a
+            href="#top"
+            className="text-sm font-semibold uppercase tracking-[0.3em] text-white"
+          >
             Issa Kheirallah
           </a>
 
           <nav className="hidden gap-6 text-sm text-stone-300 md:flex">
-            <a href="#showreel" className="transition hover:text-white">Showreel</a>
-            <a href="#work" className="transition hover:text-white">Work</a>
-            <a href="#documentaries" className="transition hover:text-white">Documentaries</a>
-            <a href="#about" className="transition hover:text-white">About</a>
-            <a href="#contact" className="transition hover:text-white">Contact</a>
+            <a href="#showreel" className="transition hover:text-white">
+              Showreel
+            </a>
+            <a href="#work" className="transition hover:text-white">
+              Work
+            </a>
+            <a href="#documentaries" className="transition hover:text-white">
+              Documentaries
+            </a>
+            <a href="#about" className="transition hover:text-white">
+              About
+            </a>
+            <a href="#contact" className="transition hover:text-white">
+              Contact
+            </a>
           </nav>
         </div>
       </header>
@@ -176,16 +177,17 @@ export default function PortfolioWebsite() {
         <div className="relative mx-auto grid min-h-[85vh] max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div className="max-w-4xl">
             <p className="mb-5 text-sm uppercase tracking-[0.38em] text-stone-300">
-              BBC Producer • Journalist • Presenter
+              Producer • Video Journalist • On-screen Reporter
             </p>
 
             <h1 className="text-5xl font-semibold tracking-tight text-white md:text-7xl">
               Issa Kheirallah
             </h1>
 
-            <p className="mt-6 max-w-2xl text-xl leading-9 text-stone-200">
-              Producer specialising in investigations, documentary localisation,
-              and presenter-led reporting for global audiences.
+            <p className="mt-6 max-w-3xl text-xl leading-9 text-stone-200">
+              Producer specialising in video journalism, digital storytelling,
+              investigations, documentary localisation, and presenter-led
+              reporting for global audiences.
             </p>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
@@ -239,16 +241,18 @@ export default function PortfolioWebsite() {
           <div className="mt-6 flex items-center justify-between gap-4">
             <button
               onClick={prevVideo}
-              className="rounded-xl border border-white/20 px-4 py-2"
+              className="rounded-xl border border-white/20 px-4 py-2 transition hover:bg-white/5"
             >
               Previous
             </button>
 
-            <p className="text-center text-stone-400">{videos[currentVideo].title}</p>
+            <p className="text-center text-stone-400">
+              {videos[currentVideo].title}
+            </p>
 
             <button
               onClick={nextVideo}
-              className="rounded-xl border border-white/20 px-4 py-2"
+              className="rounded-xl border border-white/20 px-4 py-2 transition hover:bg-white/5"
             >
               Next
             </button>
@@ -272,49 +276,23 @@ export default function PortfolioWebsite() {
             <p>
               I am a BBC producer and journalist with more than nine years of
               experience delivering broadcast, digital and on-location
-              productions. My work spans investigative journalism, documentary
-              storytelling and presenter-led reporting.
+              productions. My work spans digital storytelling, documentary
+              localisation, and presenter-led reporting.
             </p>
 
             <p>
-              I currently lead localisation and reversioning operations for BBC
-              Eye Investigations, adapting flagship documentaries for new
-              international audiences while managing editorial workflows,
-              translation, dubbing and production delivery.
+              I currently lead localisation and reversioning operations for Eye
+              Investigation&apos;s Africa Eye, adapting flagship documentaries
+              for new international audiences while managing editorial
+              workflows, translation, dubbing and production delivery.
             </p>
 
             <p>
-              Alongside investigations, I have produced and presented hundreds
-              of episodes of BBC Arabic's technology programme 4Tech and worked
-              across newsroom journalism, digital investigations and cultural
-              documentary production.
+              Alongside investigations, I have been involved in the production
+              of hundreds of episodes of BBC Arabic&apos;s technology programme,
+              4Tech and worked across newsroom journalism, digital video
+              production and culture show production.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-white/10 bg-white/[0.03]">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-          <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
-            Impact
-          </p>
-
-          <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
-            Production and editorial impact
-          </h2>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {impactStats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-8"
-              >
-                <p className="text-4xl font-semibold text-white">
-                  {stat.value}
-                </p>
-                <p className="mt-2 text-stone-400">{stat.label}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -325,7 +303,7 @@ export default function PortfolioWebsite() {
         </p>
 
         <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
-          Investigations 
+          Investigations, reporting and factual production
         </h2>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-3">
@@ -334,35 +312,27 @@ export default function PortfolioWebsite() {
               key={item.title}
               className="group overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-white/20"
             >
-     <div className="relative h-72 overflow-hidden bg-stone-950">
-  <img
-    src={item.image}
-    alt={item.title}
-    className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
-  />
-</div>
+              <div className="relative h-80 overflow-hidden bg-stone-950">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                />
+              </div>
 
-<div className="p-6">
-  <p className="text-xs uppercase tracking-[0.28em] text-stone-400">
-    {item.category}
-  </p>
-
-  <h3 className="mt-3 text-2xl font-medium text-white">
-    {item.title}
-  </h3>
-
-  <p className="mt-4 leading-7 text-stone-300">
-    {item.description}
-  </p>
-
-  <div className="mt-6 text-sm font-medium text-stone-200">
-    Featured work
-  </div>
-</div>
               <div className="p-6">
-                <p className="leading-7 text-stone-300">
+                <p className="text-xs uppercase tracking-[0.28em] text-stone-400">
+                  {item.category}
+                </p>
+
+                <h3 className="mt-3 text-2xl font-medium text-white">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-stone-300">
                   {item.description}
                 </p>
+
                 <div className="mt-6 text-sm font-medium text-stone-200">
                   Featured work
                 </div>
@@ -372,9 +342,12 @@ export default function PortfolioWebsite() {
         </div>
       </section>
 
-      <section id="documentaries" className="mx-auto max-w-7xl px-6 py-24 md:px-10">
+      <section
+        id="documentaries"
+        className="mx-auto max-w-7xl px-6 py-24 md:px-10"
+      >
         <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
-          Documentary work
+          Localisation work
         </p>
 
         <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
@@ -382,8 +355,8 @@ export default function PortfolioWebsite() {
         </h2>
 
         <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-300">
-          A curated selection of BBC Africa Eye investigations I worked on through
-          reversioning, localisation and international delivery.
+          A curated selection of BBC Africa Eye investigations I worked on
+          through localisation and international delivery.
         </p>
 
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -393,29 +366,32 @@ export default function PortfolioWebsite() {
               onClick={() => setSelectedDocumentary(doc)}
               className="group block overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 text-left shadow-xl transition duration-300 hover:-translate-y-1 hover:border-white/20"
             >
-     <div className="relative h-80 overflow-hidden bg-stone-950">
-  <img
-    src={doc.image}
-    alt={doc.title}
-    className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
-  />
-</div>
+              <div className="relative h-80 overflow-hidden bg-stone-950">
+                <img
+                  src={doc.image}
+                  alt={doc.title}
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                />
+              </div>
 
-<div className="p-6">
-  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-    BBC Africa Eye
-  </p>
+              <div className="p-6">
+                <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                  BBC Africa Eye
+                </p>
 
-  <h3 className="mt-2 text-xl font-medium leading-snug text-white">
-    {doc.title}
-  </h3>
-</div>
+                <h3 className="mt-2 text-xl font-medium leading-snug text-white">
+                  {doc.title}
+                </h3>
+              </div>
             </button>
           ))}
         </div>
       </section>
 
-      <section id="documentary-detail" className="border-y border-white/10 bg-white/[0.03]">
+      <section
+        id="documentary-detail"
+        className="border-y border-white/10 bg-white/[0.03]"
+      >
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
             <div>
@@ -431,11 +407,17 @@ export default function PortfolioWebsite() {
 
               <div className="mt-10 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">Role</p>
-                  <p className="mt-2 text-base text-white">Reversioning / Localisation Producer</p>
+                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    Role
+                  </p>
+                  <p className="mt-2 text-base text-white">
+                    Localisation Producer
+                  </p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">Strand</p>
+                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    Strand
+                  </p>
                   <p className="mt-2 text-base text-white">BBC Africa Eye</p>
                 </div>
               </div>
@@ -462,32 +444,9 @@ export default function PortfolioWebsite() {
               <img
                 src={selectedDocumentary.image}
                 alt={selectedDocumentary.title}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain bg-stone-950"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-white/10 bg-white/[0.03]">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-          <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
-            Documentary localisation
-          </p>
-
-          <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
-            International reversioning and documentary adaptation
-          </h2>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {localisationHighlights.map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6"
-              >
-                {item}
-              </div>
-            ))}
           </div>
         </div>
       </section>
