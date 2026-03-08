@@ -274,6 +274,7 @@ export default function PortfolioWebsite() {
   const [selectedDocumentary, setSelectedDocumentary] = useState(
     documentaries[0]
   );
+  const [spotlightVisible, setSpotlightVisible] = useState(true);
 
   const nextVideo = () => {
     setCurrentVideo((prev) => (prev + 1) % videos.length);
@@ -288,14 +289,22 @@ export default function PortfolioWebsite() {
     [documentaries, selectedDocumentary.slug]
   );
 
+  const changeDocumentary = (doc: (typeof documentaries)[number]) => {
+    setSpotlightVisible(false);
+    window.setTimeout(() => {
+      setSelectedDocumentary(doc);
+      setSpotlightVisible(true);
+    }, 150);
+  };
+
   const nextDocumentary = () => {
     const nextIndex = (selectedIndex + 1) % documentaries.length;
-    setSelectedDocumentary(documentaries[nextIndex]);
+    changeDocumentary(documentaries[nextIndex]);
   };
 
   const prevDocumentary = () => {
     const prevIndex = (selectedIndex - 1 + documentaries.length) % documentaries.length;
-    setSelectedDocumentary(documentaries[prevIndex]);
+    changeDocumentary(documentaries[prevIndex]);
   };
 
   return (
@@ -375,14 +384,14 @@ export default function PortfolioWebsite() {
             <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="#showreel"
-                className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950"
+                className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 Watch showreel
               </a>
 
               <a
                 href="#work"
-                className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white"
+                className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/5 hover:shadow-2xl"
               >
                 View work
               </a>
@@ -420,18 +429,18 @@ export default function PortfolioWebsite() {
           <div className="mt-6 flex items-center justify-between gap-4">
             <button
               onClick={prevVideo}
-              className="rounded-xl border border-white/20 px-4 py-2 transition hover:bg-white/5"
+              className="rounded-xl border border-white/20 px-4 py-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white/5 hover:shadow-xl"
             >
               Previous
             </button>
 
-            <p className="text-center text-stone-400">
+            <p className="text-center text-stone-400 transition-opacity duration-300">
               {videos[currentVideo].title}
             </p>
 
             <button
               onClick={nextVideo}
-              className="rounded-xl border border-white/20 px-4 py-2 transition hover:bg-white/5"
+              className="rounded-xl border border-white/20 px-4 py-2 transition-all duration-300 hover:-translate-y-1 hover:bg-white/5 hover:shadow-xl"
             >
               Next
             </button>
@@ -489,7 +498,7 @@ export default function PortfolioWebsite() {
           {featuredWork.map((item) => (
             <article
               key={item.title}
-              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-white/20"
+              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/20 hover:shadow-2xl"
             >
               <div className="relative h-80 overflow-hidden bg-stone-950">
                 <img
@@ -504,7 +513,7 @@ export default function PortfolioWebsite() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="relative z-10 h-full w-full object-contain p-3 transition duration-500 group-hover:scale-[1.02]"
+                  className="relative z-10 h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
@@ -557,11 +566,11 @@ export default function PortfolioWebsite() {
                   return (
                     <button
                       key={doc.title}
-                      onClick={() => setSelectedDocumentary(doc)}
-                      className={`group block overflow-hidden rounded-[2rem] border text-left shadow-xl transition duration-300 hover:-translate-y-1 ${
+                      onClick={() => changeDocumentary(doc)}
+                      className={`group block overflow-hidden rounded-[2rem] border text-left shadow-xl transition-all duration-300 hover:-translate-y-2 ${
                         isActive
-                          ? "border-white/30 bg-stone-900"
-                          : "border-white/10 bg-stone-900/70 hover:border-white/20"
+                          ? "border-white/30 bg-stone-900 shadow-2xl"
+                          : "border-white/10 bg-stone-900/70 hover:border-white/20 hover:shadow-2xl"
                       }`}
                     >
                       <div className="relative h-80 overflow-hidden bg-stone-950">
@@ -577,7 +586,7 @@ export default function PortfolioWebsite() {
                         <img
                           src={doc.image}
                           alt={doc.title}
-                          className="relative z-10 h-full w-full object-contain p-3 transition duration-500 group-hover:scale-[1.02]"
+                          className="relative z-10 h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
 
@@ -598,127 +607,134 @@ export default function PortfolioWebsite() {
 
             <aside className="lg:sticky lg:top-24">
               <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl">
-                <div className="relative h-[28rem] overflow-hidden bg-stone-950">
-                  <img
-                    src={selectedDocumentary.image}
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 h-full w-full scale-110 object-cover blur-3xl opacity-30"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/10 to-stone-950/30" />
-                  <div className="absolute inset-0 ring-1 ring-white/10" />
-
-                  {selectedDocumentary.preview ? (
-                    <video
-                      key={selectedDocumentary.preview}
-                      src={selectedDocumentary.preview}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="relative z-10 h-full w-full object-contain p-4"
-                    />
-                  ) : (
+                <div
+                  key={selectedDocumentary.slug}
+                  className={`transition-opacity duration-300 ${
+                    spotlightVisible ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <div className="relative h-[28rem] overflow-hidden bg-stone-950">
                     <img
                       src={selectedDocumentary.image}
-                      alt={selectedDocumentary.title}
-                      className="relative z-10 h-full w-full object-contain p-4"
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 h-full w-full scale-110 object-cover blur-3xl opacity-30"
                     />
-                  )}
-                </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/10 to-stone-950/30" />
+                    <div className="absolute inset-0 ring-1 ring-white/10" />
 
-                <div className="p-8">
-                  <div className="flex items-center justify-between gap-4">
-                    <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
-                      Documentary spotlight
-                    </p>
-
-                    <div className="flex gap-2">
-                      <button
-                        onClick={prevDocumentary}
-                        className="rounded-full border border-white/15 px-3 py-2 text-sm text-white transition hover:bg-white/5"
-                        aria-label="Previous documentary"
-                      >
-                        ←
-                      </button>
-                      <button
-                        onClick={nextDocumentary}
-                        className="rounded-full border border-white/15 px-3 py-2 text-sm text-white transition hover:bg-white/5"
-                        aria-label="Next documentary"
-                      >
-                        →
-                      </button>
-                    </div>
+                    {selectedDocumentary.preview ? (
+                      <video
+                        key={selectedDocumentary.preview}
+                        src={selectedDocumentary.preview}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="relative z-10 h-full w-full object-contain p-4 transition-opacity duration-300"
+                      />
+                    ) : (
+                      <img
+                        src={selectedDocumentary.image}
+                        alt={selectedDocumentary.title}
+                        className="relative z-10 h-full w-full object-contain p-4 transition-opacity duration-300"
+                      />
+                    )}
                   </div>
 
-                  <h3 className="mt-4 text-3xl font-semibold text-white">
-                    {selectedDocumentary.title}
-                  </h3>
-
-                  <p className="mt-6 text-lg leading-8 text-stone-300">
-                    {selectedDocumentary.summary}
-                  </p>
-
-                  <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                      <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-                        Role
+                  <div className="p-8 transition-opacity duration-300">
+                    <div className="flex items-center justify-between gap-4">
+                      <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+                        Documentary spotlight
                       </p>
-                      <p className="mt-2 text-base text-white">
-                        {selectedDocumentary.role}
-                      </p>
-                    </div>
 
-                    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                      <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-                        Strand
-                      </p>
-                      <p className="mt-2 text-base text-white">
-                        {selectedDocumentary.strand}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                    <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-                      My contribution
-                    </p>
-                    <p className="mt-3 leading-7 text-stone-300">
-                      {selectedDocumentary.contribution}
-                    </p>
-                  </div>
-
-                  <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                    <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-                      Process
-                    </p>
-                    <div className="mt-4 space-y-3">
-                      {selectedDocumentary.process.map((step) => (
-                        <div
-                          key={step}
-                          className="rounded-xl border border-white/10 bg-stone-950/40 px-4 py-3 text-sm leading-6 text-stone-300"
+                      <div className="flex gap-2">
+                        <button
+                          onClick={prevDocumentary}
+                          className="rounded-full border border-white/15 px-3 py-2 text-sm text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/5"
+                          aria-label="Previous documentary"
                         >
-                          {step}
-                        </div>
-                      ))}
+                          ←
+                        </button>
+                        <button
+                          onClick={nextDocumentary}
+                          className="rounded-full border border-white/15 px-3 py-2 text-sm text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/5"
+                          aria-label="Next documentary"
+                        >
+                          →
+                        </button>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mt-8 flex flex-wrap gap-4">
-                    <a
-                      href={selectedDocumentary.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950"
-                    >
-                      Watch documentary
-                    </a>
-                    <a
-                      href={`/documentaries/${selectedDocumentary.slug}`}
-                      className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5"
-                    >
-                      View project page
-                    </a>
+                    <h3 className="mt-4 text-3xl font-semibold text-white">
+                      {selectedDocumentary.title}
+                    </h3>
+
+                    <p className="mt-6 text-lg leading-8 text-stone-300">
+                      {selectedDocumentary.summary}
+                    </p>
+
+                    <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                      <div className="rounded-2xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] hover:shadow-xl">
+                        <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                          Role
+                        </p>
+                        <p className="mt-2 text-base text-white">
+                          {selectedDocumentary.role}
+                        </p>
+                      </div>
+
+                      <div className="rounded-2xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] hover:shadow-xl">
+                        <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                          Strand
+                        </p>
+                        <p className="mt-2 text-base text-white">
+                          {selectedDocumentary.strand}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:bg-white/[0.08] hover:shadow-xl">
+                      <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                        My contribution
+                      </p>
+                      <p className="mt-3 leading-7 text-stone-300">
+                        {selectedDocumentary.contribution}
+                      </p>
+                    </div>
+
+                    <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:bg-white/[0.08] hover:shadow-xl">
+                      <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                        Process
+                      </p>
+                      <div className="mt-4 space-y-3">
+                        {selectedDocumentary.process.map((step) => (
+                          <div
+                            key={step}
+                            className="rounded-xl border border-white/10 bg-stone-950/40 px-4 py-3 text-sm leading-6 text-stone-300 transition-all duration-300 hover:bg-stone-950/70"
+                          >
+                            {step}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mt-8 flex flex-wrap gap-4">
+                      <a
+                        href={selectedDocumentary.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                      >
+                        Watch documentary
+                      </a>
+                      <a
+                        href={`/documentaries/${selectedDocumentary.slug}`}
+                        className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/5 hover:shadow-2xl"
+                      >
+                        View project page
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -773,7 +789,7 @@ export default function PortfolioWebsite() {
                 {storyLocations.map((location) => (
                   <div
                     key={location.name}
-                    className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4"
+                    className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] hover:shadow-xl"
                   >
                     <p className="text-sm uppercase tracking-[0.22em] text-stone-400">
                       {location.name}
@@ -784,7 +800,7 @@ export default function PortfolioWebsite() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-4 shadow-2xl">
+            <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-4 shadow-2xl transition-all duration-300 hover:shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.08),transparent_20%),radial-gradient(circle_at_70%_35%,rgba(255,255,255,0.05),transparent_18%),radial-gradient(circle_at_55%_70%,rgba(255,255,255,0.06),transparent_22%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
                 <div className="absolute inset-0 opacity-40">
                   <svg
@@ -820,10 +836,10 @@ export default function PortfolioWebsite() {
                     style={{ top: location.top, left: location.left }}
                   >
                     <div className="relative flex flex-col items-center">
-                      <span className="mb-2 rounded-full border border-white/10 bg-stone-950/90 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-stone-200 shadow-lg">
+                      <span className="mb-2 rounded-full border border-white/10 bg-stone-950/90 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-stone-200 shadow-lg transition-all duration-300 hover:-translate-y-1">
                         {location.city}
                       </span>
-                      <span className="h-3 w-3 rounded-full bg-white shadow-[0_0_0_6px_rgba(255,255,255,0.12)]" />
+                      <span className="h-3 w-3 rounded-full bg-white shadow-[0_0_0_6px_rgba(255,255,255,0.12)] transition-transform duration-300 hover:scale-125" />
                     </div>
                   </div>
                 ))}
@@ -849,7 +865,7 @@ export default function PortfolioWebsite() {
           {expertise.map((item) => (
             <div
               key={item}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="rounded-2xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] hover:shadow-xl"
             >
               {item}
             </div>
@@ -875,14 +891,14 @@ export default function PortfolioWebsite() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="mailto:issakheirallah@gmail.com"
-              className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950"
+              className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
             >
               Email
             </a>
 
             <a
               href="https://www.linkedin.com"
-              className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white"
+              className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/5 hover:shadow-2xl"
             >
               LinkedIn
             </a>
