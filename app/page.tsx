@@ -274,9 +274,6 @@ export default function PortfolioWebsite() {
   const [selectedDocumentary, setSelectedDocumentary] = useState(
     documentaries[0]
   );
-  const [hoveredDocumentary, setHoveredDocumentary] = useState<string | null>(
-    null
-  );
 
   const nextVideo = () => {
     setCurrentVideo((prev) => (prev + 1) % videos.length);
@@ -556,14 +553,11 @@ export default function PortfolioWebsite() {
               <div className="mt-14 grid gap-8 sm:grid-cols-2">
                 {documentaries.map((doc) => {
                   const isActive = selectedDocumentary.title === doc.title;
-                  const isHovered = hoveredDocumentary === doc.slug;
 
                   return (
                     <button
                       key={doc.title}
                       onClick={() => setSelectedDocumentary(doc)}
-                      onMouseEnter={() => setHoveredDocumentary(doc.slug)}
-                      onMouseLeave={() => setHoveredDocumentary(null)}
                       className={`group block overflow-hidden rounded-[2rem] border text-left shadow-xl transition duration-300 hover:-translate-y-1 ${
                         isActive
                           ? "border-white/30 bg-stone-900"
@@ -583,24 +577,8 @@ export default function PortfolioWebsite() {
                         <img
                           src={doc.image}
                           alt={doc.title}
-                          className={`relative z-10 h-full w-full object-contain p-3 transition duration-500 ${
-                            isHovered ? "opacity-0" : "opacity-100"
-                          }`}
+                          className="relative z-10 h-full w-full object-contain p-3 transition duration-500 group-hover:scale-[1.02]"
                         />
-
-                        {doc.preview ? (
-                          <video
-                            key={doc.preview}
-                            src={doc.preview}
-                            muted
-                            loop
-                            playsInline
-                            autoPlay={isHovered}
-                            className={`absolute inset-0 z-20 h-full w-full object-cover transition duration-500 ${
-                              isHovered ? "opacity-100" : "opacity-0"
-                            }`}
-                          />
-                        ) : null}
                       </div>
 
                       <div className="p-6">
@@ -630,11 +608,23 @@ export default function PortfolioWebsite() {
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/10 to-stone-950/30" />
                   <div className="absolute inset-0 ring-1 ring-white/10" />
 
-                  <img
-                    src={selectedDocumentary.image}
-                    alt={selectedDocumentary.title}
-                    className="relative z-10 h-full w-full object-contain p-4"
-                  />
+                  {selectedDocumentary.preview ? (
+                    <video
+                      key={selectedDocumentary.preview}
+                      src={selectedDocumentary.preview}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="relative z-10 h-full w-full object-contain p-4"
+                    />
+                  ) : (
+                    <img
+                      src={selectedDocumentary.image}
+                      alt={selectedDocumentary.title}
+                      className="relative z-10 h-full w-full object-contain p-4"
+                    />
+                  )}
                 </div>
 
                 <div className="p-8">
@@ -775,7 +765,8 @@ export default function PortfolioWebsite() {
                 Stories reported across multiple countries and regions
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
-                My work spans investigations, documentary localisation and factual storytelling across Africa, Europe, the Gulf and South Asia.
+                My work spans investigations, documentary localisation and factual
+                storytelling across Africa, Europe, the Gulf and South Asia.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -796,11 +787,29 @@ export default function PortfolioWebsite() {
             <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-4 shadow-2xl">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.08),transparent_20%),radial-gradient(circle_at_70%_35%,rgba(255,255,255,0.05),transparent_18%),radial-gradient(circle_at_55%_70%,rgba(255,255,255,0.06),transparent_22%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
                 <div className="absolute inset-0 opacity-40">
-                  <svg viewBox="0 0 1000 600" className="h-full w-full" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M138 204L164 170L221 158L278 172L320 167L351 188L400 186L419 215L403 242L366 249L355 276L384 314L377 347L333 353L302 336L273 352L250 329L202 327L176 295L164 261L138 204Z" fill="rgba(255,255,255,0.08)" />
-                    <path d="M455 177L493 160L562 159L598 180L633 180L676 204L693 232L678 261L639 275L620 307L593 313L574 298L553 310L520 291L512 261L483 248L455 177Z" fill="rgba(255,255,255,0.08)" />
-                    <path d="M689 229L725 209L781 213L822 236L855 272L851 307L815 324L797 360L752 366L720 341L695 342L679 316L648 288L659 254L689 229Z" fill="rgba(255,255,255,0.08)" />
-                    <path d="M797 390L824 381L860 392L876 419L860 451L826 463L792 446L786 416L797 390Z" fill="rgba(255,255,255,0.08)" />
+                  <svg
+                    viewBox="0 0 1000 600"
+                    className="h-full w-full"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M138 204L164 170L221 158L278 172L320 167L351 188L400 186L419 215L403 242L366 249L355 276L384 314L377 347L333 353L302 336L273 352L250 329L202 327L176 295L164 261L138 204Z"
+                      fill="rgba(255,255,255,0.08)"
+                    />
+                    <path
+                      d="M455 177L493 160L562 159L598 180L633 180L676 204L693 232L678 261L639 275L620 307L593 313L574 298L553 310L520 291L512 261L483 248L455 177Z"
+                      fill="rgba(255,255,255,0.08)"
+                    />
+                    <path
+                      d="M689 229L725 209L781 213L822 236L855 272L851 307L815 324L797 360L752 366L720 341L695 342L679 316L648 288L659 254L689 229Z"
+                      fill="rgba(255,255,255,0.08)"
+                    />
+                    <path
+                      d="M797 390L824 381L860 392L876 419L860 451L826 463L792 446L786 416L797 390Z"
+                      fill="rgba(255,255,255,0.08)"
+                    />
                   </svg>
                 </div>
 
