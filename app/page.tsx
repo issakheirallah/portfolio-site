@@ -24,6 +24,15 @@ export default function PortfolioWebsite() {
     },
   ];
 
+  const documentaries = [
+    "Investigative documentaries localised for international audiences",
+    "Long-form current affairs features reversioned for regional broadcast",
+    "Character-led factual films adapted for new markets",
+    "Global affairs documentaries tailored for local context",
+    "Social issue documentaries reworked for audience-specific transmission",
+    "Award-calibre factual programming prepared for multilingual or regional output",
+  ];
+
   const strengths = [
     "Investigative storytelling",
     "Broadcast producing",
@@ -269,6 +278,32 @@ export default function PortfolioWebsite() {
                   Case study coming soon →
                 </div>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10" id="documentaries">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+              Documentary localisation
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+              30+ documentaries reversioned and localised for broadcast
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-stone-300">
+              Alongside original reporting and production, I have worked extensively on reversioning and localising documentary content for different audiences, markets, and editorial contexts.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {documentaries.map((item) => (
+              <div
+                key={item}
+                className="rounded-[1.5rem] border border-white/10 bg-white/5 px-5 py-5 text-base leading-7 text-stone-200 shadow-lg"
+              >
+                {item}
+              </div>
             ))}
           </div>
         </div>
