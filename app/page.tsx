@@ -315,8 +315,17 @@ export default function PortfolioWebsite() {
               <div className="relative h-80 overflow-hidden bg-stone-950">
                 <img
                   src={item.image}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl opacity-35"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/20 to-stone-950/40" />
+                <div className="absolute inset-0 ring-1 ring-white/10" />
+
+                <img
+                  src={item.image}
                   alt={item.title}
-                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                  className="relative z-10 h-full w-full object-contain p-3 transition duration-500 group-hover:scale-[1.02]"
                 />
               </div>
 
@@ -379,8 +388,17 @@ export default function PortfolioWebsite() {
                       <div className="relative h-80 overflow-hidden bg-stone-950">
                         <img
                           src={doc.image}
+                          alt=""
+                          aria-hidden="true"
+                          className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl opacity-35"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/20 to-stone-950/40" />
+                        <div className="absolute inset-0 ring-1 ring-white/10" />
+
+                        <img
+                          src={doc.image}
                           alt={doc.title}
-                          className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                          className="relative z-10 h-full w-full object-contain p-3 transition duration-500 group-hover:scale-[1.02]"
                         />
                       </div>
 
@@ -404,8 +422,17 @@ export default function PortfolioWebsite() {
                 <div className="relative h-[28rem] overflow-hidden bg-stone-950">
                   <img
                     src={selectedDocumentary.image}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 h-full w-full scale-110 object-cover blur-3xl opacity-30"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/10 to-stone-950/30" />
+                  <div className="absolute inset-0 ring-1 ring-white/10" />
+
+                  <img
+                    src={selectedDocumentary.image}
                     alt={selectedDocumentary.title}
-                    className="h-full w-full object-contain"
+                    className="relative z-10 h-full w-full object-contain p-4"
                   />
                 </div>
 
