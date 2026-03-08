@@ -83,6 +83,7 @@ export default function PortfolioWebsite() {
       slug: "opioid-kings",
       title: "India's Opioid Kings",
       image: "/images/documentaries/03-afeye-india-opioids.jpg",
+      preview: "/videos/documentaries/opioid-kings-preview.mp4",
       url: "https://youtu.be/ji6tjiRjbok",
       summary:
         "For more than a decade, West Africa has been in the grip of an opioid crisis. BBC Eye tracks the supply chain back to the makers of the illegal, dangerous pills.",
@@ -154,6 +155,7 @@ export default function PortfolioWebsite() {
       slug: "death-in-dubai",
       title: "Death In Dubai",
       image: "/images/documentaries/07-afeye-death-in-dubai.jpg",
+      preview: "/videos/documentaries/death-in-dubai-preview.mp4",
       url: "https://youtu.be/OboT09uRw6M",
       summary:
         "When the mysterious death of a 23-year-old Ugandan in Dubai goes viral, she becomes the face of the disturbing Dubai Porta Potty scandal.",
@@ -248,6 +250,15 @@ export default function PortfolioWebsite() {
       description:
         "Worked across digital video, newsroom journalism and factual production, building a cross-platform editorial foundation.",
     },
+  ];
+
+  const storyLocations = [
+    { name: "Kenya", city: "Nairobi", top: "46%", left: "55%" },
+    { name: "Sierra Leone", city: "Freetown", top: "49%", left: "43%" },
+    { name: "India", city: "Delhi", top: "40%", left: "67%" },
+    { name: "UAE", city: "Dubai", top: "43%", left: "60%" },
+    { name: "UK", city: "London", top: "32%", left: "47%" },
+    { name: "West Africa", city: "Regional reporting", top: "46%", left: "41%" },
   ];
 
   const expertise = [
@@ -735,6 +746,66 @@ export default function PortfolioWebsite() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-white/[0.03]">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+          <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+                Global reporting footprint
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
+                Stories reported across multiple countries and regions
+              </h2>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
+                My work spans investigations, documentary localisation and factual storytelling across Africa, Europe, the Gulf and South Asia.
+              </p>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {storyLocations.map((location) => (
+                  <div
+                    key={location.name}
+                    className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4"
+                  >
+                    <p className="text-sm uppercase tracking-[0.22em] text-stone-400">
+                      {location.name}
+                    </p>
+                    <p className="mt-2 text-base text-white">{location.city}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-4 shadow-2xl">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.08),transparent_20%),radial-gradient(circle_at_70%_35%,rgba(255,255,255,0.05),transparent_18%),radial-gradient(circle_at_55%_70%,rgba(255,255,255,0.06),transparent_22%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
+                <div className="absolute inset-0 opacity-40">
+                  <svg viewBox="0 0 1000 600" className="h-full w-full" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M138 204L164 170L221 158L278 172L320 167L351 188L400 186L419 215L403 242L366 249L355 276L384 314L377 347L333 353L302 336L273 352L250 329L202 327L176 295L164 261L138 204Z" fill="rgba(255,255,255,0.08)" />
+                    <path d="M455 177L493 160L562 159L598 180L633 180L676 204L693 232L678 261L639 275L620 307L593 313L574 298L553 310L520 291L512 261L483 248L455 177Z" fill="rgba(255,255,255,0.08)" />
+                    <path d="M689 229L725 209L781 213L822 236L855 272L851 307L815 324L797 360L752 366L720 341L695 342L679 316L648 288L659 254L689 229Z" fill="rgba(255,255,255,0.08)" />
+                    <path d="M797 390L824 381L860 392L876 419L860 451L826 463L792 446L786 416L797 390Z" fill="rgba(255,255,255,0.08)" />
+                  </svg>
+                </div>
+
+                {storyLocations.map((location) => (
+                  <div
+                    key={location.name}
+                    className="absolute -translate-x-1/2 -translate-y-1/2"
+                    style={{ top: location.top, left: location.left }}
+                  >
+                    <div className="relative flex flex-col items-center">
+                      <span className="mb-2 rounded-full border border-white/10 bg-stone-950/90 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-stone-200 shadow-lg">
+                        {location.city}
+                      </span>
+                      <span className="h-3 w-3 rounded-full bg-white shadow-[0_0_0_6px_rgba(255,255,255,0.12)]" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
