@@ -579,21 +579,30 @@ const routePairs: Array<[[number, number], [number, number]]> = [
               reporting for global audiences.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#showreel"
-                className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              >
-                Watch showreel
-              </a>
+     <div className="mt-10 flex flex-wrap gap-4">
+  <a
+    href="#showreel"
+    className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950 transition hover:-translate-y-1 hover:shadow-xl"
+  >
+    Watch showreel
+  </a>
 
-              <a
-                href="#work"
-                className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/5 hover:shadow-2xl"
-              >
-                View work
-              </a>
-            </div>
+  <a
+    href="#work"
+    className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-1 hover:bg-white/5"
+  >
+    View work
+  </a>
+
+  <a
+    href="/Issa-Kheirallah-CV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-2xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:-translate-y-1 hover:bg-white/10"
+  >
+    Download CV
+  </a>
+</div>
           </div>
 
           <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
