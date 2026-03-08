@@ -339,8 +339,17 @@ export default function PortfolioWebsite() {
         id="top"
         className="relative overflow-hidden border-b border-white/10"
       >
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-35" />
+        <div className="absolute inset-0 overflow-hidden">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover scale-105 animate-[heroZoom_18s_ease-in-out_infinite_alternate] opacity-40"
+          >
+            <source src="/videos/hero/hero-background.mp4" type="video/mp4" />
+          </video>
+
           <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/85 to-stone-950/40" />
         </div>
 
