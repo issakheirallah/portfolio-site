@@ -11,6 +11,13 @@ import {
 } from "d3-geo";
 import { feature, mesh } from "topojson-client";
 
+type StoryLocation = {
+  name: string;
+  city: string;
+  region: string;
+  coordinates: [number, number]; // [longitude, latitude]
+};
+
 export default function PortfolioWebsite() {
   const profileImage = "/images/profile/issa-kheirallah.jpg";
 
@@ -891,13 +898,6 @@ export default function PortfolioWebsite() {
           </div>
         </div>
       </section>
-
-type StoryLocation = {
-  name: string;
-  city: string;
-  region: string;
-  coordinates: [number, number]; // [longitude, latitude]
-};
 
 type WorldAtlasTopology = {
   type: "Topology";
