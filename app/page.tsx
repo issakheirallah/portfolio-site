@@ -18,6 +18,59 @@ export default function PortfolioWebsite() {
     },
   ];
 
+const documentaries = [
+  {
+    title: "Dark Waters: Africa's Deadliest Migration Route",
+    image: "/images/documentaries/01-afeye-dark-waters.jpg",
+    url: "https://youtu.be/ajX6NaVks3w"
+  },
+  {
+    title: "Nigeria's Miracle Baby Scammers",
+    image: "/images/documentaries/02-afeye-nigeria-babies.jpg",
+    url: "https://youtu.be/r62xSGw3kcI"
+  },
+  {
+    title: "India's Opioid Kings",
+    image: "/images/documentaries/03-afeye-india-opioids.jpg",
+    url: "https://youtu.be/ji6tjiRjbok"
+  },
+  {
+    title: "Stranded: Exposing The UK's Immigration Scammers",
+    image: "/images/documentaries/04-afeye-stranded.jpg",
+    url: "https://youtu.be/191CuNRGoos"
+  },
+  {
+    title: "Blood Parliament",
+    image: "/images/documentaries/05-afeye-blood-parliament.jpg",
+    url: "https://youtu.be/qz0f1yyf_eA"
+  },
+  {
+    title: "Madams: Exposing Kenya's Child Sex Trade",
+    image: "/images/documentaries/06-afeye-madams.jpg",
+    url: "https://youtu.be/JHINoFq8GvE"
+  },
+  {
+    title: "Death In Dubai",
+    image: "/images/documentaries/07-afeye-death-in-dubai.jpg",
+    url: "https://youtu.be/OboT09uRw6M"
+  },
+  {
+    title: "Money Rituals: Africa's Deadliest Taboo",
+    image: "/images/documentaries/08-afeye-money-rituals.jpg",
+    url: "https://youtu.be/EjDe1D8NlOY"
+  },
+  {
+    title: "Hunting The Traffickers",
+    image: "/images/documentaries/09-afeye-traffickers.jpg",
+    url: "https://youtu.be/_a4G2SZPvBQ"
+  },
+  {
+    title: "State of Fear",
+    image: "/images/documentaries/10-afeye-state-of-fear.jpg",
+    url: "https://youtu.be/9WkYK-SjJtE"
+  }
+];
+
   const featuredWork = [
     {
       title: "BBC Eye Investigations",
@@ -283,6 +336,64 @@ export default function PortfolioWebsite() {
           </div>
         </div>
       </section>
+
+<section id="documentaries" className="mx-auto max-w-7xl px-6 py-24 md:px-10">
+
+  <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+    Documentary work
+  </p>
+
+  <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
+    Selected Africa Eye investigations
+  </h2>
+
+  <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-300">
+    A curated selection of BBC Africa Eye investigations I worked on through
+    reversioning, localisation and international delivery.
+  </p>
+
+  <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+    {documentaries.map((doc) => (
+
+      <a
+        key={doc.title}
+        href={doc.url}
+        target="_blank"
+        className="group block overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-white/20"
+      >
+
+        <div className="relative h-80 overflow-hidden">
+
+          <img
+            src={doc.image}
+            alt={doc.title}
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/30 to-transparent" />
+
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+
+            <p className="text-xs uppercase tracking-[0.25em] text-stone-300">
+              BBC Africa Eye
+            </p>
+
+            <h3 className="mt-2 text-xl font-medium text-white leading-snug">
+              {doc.title}
+            </h3>
+
+          </div>
+
+        </div>
+
+      </a>
+
+    ))}
+
+  </div>
+
+</section>
 
       {/* EXPERTISE */}
       <section id="expertise" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
