@@ -24,18 +24,21 @@ export default function PortfolioWebsite() {
       category: "Investigations",
       description:
         "Producing and localising flagship BBC investigations for international audiences, managing editorial workflows, translation, dubbing and delivery across multiple markets.",
+      image: "/images/projects/bbc-eye-investigations.jpg",
     },
     {
       title: "BBC Arabic – 4Tech",
       category: "Presenter-led reporting",
       description:
         "Producer and presenter of 280+ episodes covering global technology, innovation and digital culture across broadcast and social platforms.",
+      image: "/images/projects/bbc-arabic-4tech.jpg",
     },
     {
       title: "Art for Life",
       category: "Documentary & Culture",
       description:
         "Produced and directed reports across Europe covering digital art, NFTs and cultural events, leading teams from development through final edit.",
+      image: "/images/projects/art-for-life.jpg",
     },
   ];
 
@@ -53,51 +56,71 @@ export default function PortfolioWebsite() {
       title: "Dark Waters: Africa's Deadliest Migration Route",
       image: "/images/documentaries/01-afeye-dark-waters.jpg",
       url: "https://youtu.be/ajX6NaVks3w",
+      summary:
+        "BBC Africa Eye investigates what is fast becoming the world's deadliest migration route: the perilous Atlantic crossing from West Africa to Spain's Canary Islands.",
     },
     {
       title: "Nigeria's Miracle Baby Scammers",
       image: "/images/documentaries/02-afeye-nigeria-babies.jpg",
       url: "https://youtu.be/r62xSGw3kcI",
+      summary:
+        "Africa Eye goes undercover to expose fertility scammers targeting Nigerian women and fuelling an underground trade in black market babies.",
     },
     {
       title: "India's Opioid Kings",
       image: "/images/documentaries/03-afeye-india-opioids.jpg",
       url: "https://youtu.be/ji6tjiRjbok",
+      summary:
+        "For more than a decade, West Africa has been in the grip of an opioid crisis. BBC Eye tracks the supply chain back to the makers of the illegal, dangerous pills.",
     },
     {
       title: "Stranded: Exposing The UK's Immigration Scammers",
       image: "/images/documentaries/04-afeye-stranded.jpg",
       url: "https://youtu.be/191CuNRGoos",
+      summary:
+        "BBC Africa Eye goes undercover to track down rogue relocation agents who squeeze thousands of pounds from aspiring migrants with the false promise of a job in the UK.",
     },
     {
       title: "Blood Parliament",
       image: "/images/documentaries/05-afeye-blood-parliament.jpg",
       url: "https://youtu.be/qz0f1yyf_eA",
+      summary:
+        "Africa Eye investigates the shootings at Kenya's June 25th finance bill protest.",
     },
     {
       title: "Madams: Exposing Kenya's Child Sex Trade",
       image: "/images/documentaries/06-afeye-madams.jpg",
       url: "https://youtu.be/JHINoFq8GvE",
+      summary:
+        "Africa Eye uncovers child sex trafficking in Kenya's transit town, Mai Mahiu, and follows one woman, Baby Girl, who rescues girls from abuse and exploitation.",
     },
     {
       title: "Death In Dubai",
       image: "/images/documentaries/07-afeye-death-in-dubai.jpg",
       url: "https://youtu.be/OboT09uRw6M",
+      summary:
+        "When the mysterious death of a 23-year-old Ugandan in Dubai goes viral, she becomes the face of the disturbing Dubai Porta Potty scandal.",
     },
     {
       title: "Money Rituals: Africa's Deadliest Taboo",
       image: "/images/documentaries/08-afeye-money-rituals.jpg",
       url: "https://youtu.be/EjDe1D8NlOY",
+      summary:
+        "Africa Eye investigates Sierra Leone's hidden ritual market, where criminals posing as healers claim they can supply human body parts, while traditional healers and police deny the trade exists.",
     },
     {
       title: "Hunting The Traffickers",
       image: "/images/documentaries/09-afeye-traffickers.jpg",
       url: "https://youtu.be/_a4G2SZPvBQ",
+      summary:
+        "Africa Eye is given exclusive access to the Sierra Leone Police as they target criminal gangs trafficking vulnerable people across West Africa and help one father try to find his missing daughter.",
     },
     {
       title: "State of Fear",
       image: "/images/documentaries/10-afeye-state-of-fear.jpg",
       url: "https://youtu.be/9WkYK-SjJtE",
+      summary:
+        "A wave of enforced disappearances of government critics is spreading fear across Tanzania. Africa Eye investigates the abductions through powerful testimonies from survivors of torture and families of the disappeared.",
     },
   ];
 
@@ -153,7 +176,7 @@ export default function PortfolioWebsite() {
         <div className="relative mx-auto grid min-h-[85vh] max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div className="max-w-4xl">
             <p className="mb-5 text-sm uppercase tracking-[0.38em] text-stone-300">
-              Producer • Journalist • Video Editor • On-screen presenting
+              BBC Producer • Journalist • Presenter
             </p>
 
             <h1 className="text-5xl font-semibold tracking-tight text-white md:text-7xl">
@@ -176,7 +199,7 @@ export default function PortfolioWebsite() {
                 href="#showreel"
                 className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950"
               >
-                Presenting
+                Watch showreel
               </a>
 
               <a
@@ -197,7 +220,7 @@ export default function PortfolioWebsite() {
           </p>
 
           <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
-            Presenting with 4Tech
+            Investigations, reporting and documentaries
           </h2>
 
           <div className="mt-12 overflow-hidden rounded-2xl border border-white/10">
@@ -305,24 +328,38 @@ export default function PortfolioWebsite() {
           Investigations, reporting and factual production
         </h2>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-8 lg:grid-cols-3">
           {featuredWork.map((item) => (
-            <div
+            <article
               key={item.title}
-              className="rounded-2xl border border-white/10 bg-stone-900/70 p-8"
+              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-white/20"
             >
-              <p className="text-sm uppercase tracking-[0.25em] text-stone-500">
-                {item.category}
-              </p>
+              <div className="relative h-72 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-xs uppercase tracking-[0.28em] text-stone-300">
+                    {item.category}
+                  </p>
+                  <h3 className="mt-3 text-2xl font-medium text-white">
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
 
-              <h3 className="mt-4 text-2xl font-medium text-white">
-                {item.title}
-              </h3>
-
-              <p className="mt-4 leading-7 text-stone-300">
-                {item.description}
-              </p>
-            </div>
+              <div className="p-6">
+                <p className="leading-7 text-stone-300">
+                  {item.description}
+                </p>
+                <div className="mt-6 text-sm font-medium text-stone-200">
+                  Featured work
+                </div>
+              </div>
+            </article>
           ))}
         </div>
       </section>
@@ -383,8 +420,7 @@ export default function PortfolioWebsite() {
                 {selectedDocumentary.title}
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
-                Selected Africa Eye investigation featured as part of my work in
-                reversioning, localisation and international documentary delivery.
+                {selectedDocumentary.summary}
               </p>
 
               <div className="mt-10 grid gap-4 sm:grid-cols-2">
