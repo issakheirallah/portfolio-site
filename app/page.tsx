@@ -5,15 +5,15 @@ import { useState } from "react";
 export default function PortfolioWebsite() {
   const videos = [
     {
-      title: "Africa Eye – Sing, Freetown",
+      title: "Technologies at the 2024 Paris Olympics",
       url: "https://www.youtube.com/embed/ZFO_vnkpLBA",
     },
     {
-      title: "Investigative Feature",
+      title: "Implantable device to help with regulating diabetes",
       url: "https://www.youtube.com/embed/2eOiy7dC3nE",
     },
     {
-      title: "BBC Reporting Segment",
+      title: "Spinal cord rehabilitation device",
       url: "https://www.youtube.com/embed/OcGbQclUDQw",
     },
   ];
@@ -153,7 +153,7 @@ export default function PortfolioWebsite() {
         <div className="relative mx-auto grid min-h-[85vh] max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div className="max-w-4xl">
             <p className="mb-5 text-sm uppercase tracking-[0.38em] text-stone-300">
-              BBC Producer • Journalist • Presenter
+              Producer • Journalist • Video Editor • On-screen presenting
             </p>
 
             <h1 className="text-5xl font-semibold tracking-tight text-white md:text-7xl">
@@ -176,7 +176,7 @@ export default function PortfolioWebsite() {
                 href="#showreel"
                 className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950"
               >
-                Watch showreel
+                Presenting
               </a>
 
               <a
@@ -197,7 +197,7 @@ export default function PortfolioWebsite() {
           </p>
 
           <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
-            Investigations, reporting and documentaries
+            Presenting with 4Tech
           </h2>
 
           <div className="mt-12 overflow-hidden rounded-2xl border border-white/10">
