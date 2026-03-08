@@ -83,7 +83,6 @@ export default function PortfolioWebsite() {
       slug: "opioid-kings",
       title: "India's Opioid Kings",
       image: "/images/documentaries/03-afeye-india-opioids.jpg",
-      preview: "/videos/documentaries/opioid-kings-preview.mp4",
       url: "https://youtu.be/ji6tjiRjbok",
       summary:
         "For more than a decade, West Africa has been in the grip of an opioid crisis. BBC Eye tracks the supply chain back to the makers of the illegal, dangerous pills.",
@@ -155,7 +154,6 @@ export default function PortfolioWebsite() {
       slug: "death-in-dubai",
       title: "Death In Dubai",
       image: "/images/documentaries/07-afeye-death-in-dubai.jpg",
-      preview: "/videos/documentaries/death-in-dubai-preview.mp4",
       url: "https://youtu.be/OboT09uRw6M",
       summary:
         "When the mysterious death of a 23-year-old Ugandan in Dubai goes viral, she becomes the face of the disturbing Dubai Porta Potty scandal.",
