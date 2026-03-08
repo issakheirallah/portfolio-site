@@ -2,6 +2,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import {
+  geoGraticule10,
+  geoNaturalEarth1,
+  geoPath,
+  type GeoProjection,
+} from "d3-geo";
+import { feature, mesh } from "topojson-client";
 
 export default function PortfolioWebsite() {
   const profileImage = "/images/profile/issa-kheirallah.jpg";
@@ -883,14 +891,6 @@ export default function PortfolioWebsite() {
           </div>
         </div>
       </section>
-import React, { useEffect, useMemo, useState } from "react";
-import {
-  geoGraticule10,
-  geoNaturalEarth1,
-  geoPath,
-  type GeoProjection,
-} from "d3-geo";
-import { feature, mesh } from "topojson-client";
 
 type StoryLocation = {
   name: string;
