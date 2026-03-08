@@ -20,22 +20,22 @@ export default function PortfolioWebsite() {
 
   const featuredWork = [
     {
-      title: "BBC Eye Investigations",
+      title: "Eye Investigations",
       category: "Investigations",
       description:
         "Producing and localising flagship BBC investigations for international audiences, managing editorial workflows, translation, dubbing and delivery across multiple markets.",
       image: "/images/projects/bbc-eye-investigations.jpg",
     },
     {
-      title: "BBC Arabic – 4Tech",
-      category: "Presenter-led reporting",
+      title: "4Tech",
+      category: "Technology",
       description:
         "Producer and presenter of 280+ episodes covering global technology, innovation and digital culture across broadcast and social platforms.",
       image: "/images/projects/bbc-arabic-4tech.jpg",
     },
     {
       title: "Art for Life",
-      category: "Documentary & Culture",
+      category: "Arts & Culture",
       description:
         "Produced and directed reports across Europe covering digital art, NFTs and cultural events, leading teams from development through final edit.",
       image: "/images/projects/art-for-life.jpg",
@@ -321,11 +321,11 @@ export default function PortfolioWebsite() {
 
       <section id="work" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
-          Selected work
+          Topics covered
         </p>
 
         <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
-          Investigations, reporting and factual production
+          Investigations 
         </h2>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-3">
