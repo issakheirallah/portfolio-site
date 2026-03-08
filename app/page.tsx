@@ -3,6 +3,8 @@
 import { useMemo, useState } from "react";
 
 export default function PortfolioWebsite() {
+  const profileImage = "/images/profile/issa-kheirallah.jpg";
+
   const videos = [
     {
       title: "Technologies at the 2024 Paris Olympics",
@@ -356,10 +358,10 @@ export default function PortfolioWebsite() {
             <source src="/videos/hero/hero-background.mp4" type="video/mp4" />
           </video>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/85 to-stone-950/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/85 to-stone-950/50" />
         </div>
 
-        <div className="relative mx-auto grid min-h-[85vh] max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+        <div className="relative mx-auto grid min-h-[85vh] max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="max-w-4xl">
             <p className="mb-5 text-sm uppercase tracking-[0.38em] text-stone-300">
               Producer • Video Journalist • On-screen Reporter
@@ -395,6 +397,38 @@ export default function PortfolioWebsite() {
               >
                 View work
               </a>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
+            <div className="absolute -inset-6 rounded-[2.5rem] bg-white/10 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl">
+              <div className="relative aspect-[4/5] overflow-hidden bg-stone-950">
+                <img
+                  src={profileImage}
+                  alt="Issa Kheirallah"
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent" />
+              </div>
+
+              <div className="grid gap-4 border-t border-white/10 bg-stone-900/80 p-6 sm:grid-cols-2">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    Based in
+                  </p>
+                  <p className="mt-2 text-white">London</p>
+                </div>
+
+                <div>
+                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    Focus
+                  </p>
+                  <p className="mt-2 text-white">
+                    Investigations & factual storytelling
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
