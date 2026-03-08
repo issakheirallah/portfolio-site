@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 export default function PortfolioWebsite() {
   const videos = [
@@ -44,74 +44,211 @@ export default function PortfolioWebsite() {
 
   const documentaries = [
     {
+      slug: "dark-waters",
       title: "Dark Waters: Africa's Deadliest Migration Route",
       image: "/images/documentaries/01-afeye-dark-waters.jpg",
+      preview: "/videos/documentaries/dark-waters-preview.mp4",
       url: "https://youtu.be/ajX6NaVks3w",
       summary:
         "BBC Africa Eye investigates what is fast becoming the world's deadliest migration route: the perilous Atlantic crossing from West Africa to Spain's Canary Islands.",
+      role: "Localisation Producer",
+      strand: "BBC Africa Eye",
+      contribution:
+        "Led localisation delivery, coordinating editorial adaptation, dubbing and multilingual production workflows for international audiences.",
+      process: [
+        "Managed editorial localisation workflow from source delivery to final versioning",
+        "Oversaw translation, dubbing and partner coordination",
+        "Prepared the film for international audience adaptation and delivery",
+      ],
     },
     {
+      slug: "miracle-baby-scammers",
       title: "Nigeria's Miracle Baby Scammers",
       image: "/images/documentaries/02-afeye-nigeria-babies.jpg",
+      preview: "/videos/documentaries/nigeria-babies-preview.mp4",
       url: "https://youtu.be/r62xSGw3kcI",
       summary:
         "Africa Eye goes undercover to expose fertility scammers targeting Nigerian women and fuelling an underground trade in black market babies.",
+      role: "Localisation Producer",
+      strand: "BBC Africa Eye",
+      contribution:
+        "Managed localisation and editorial adaptation for international audiences, ensuring the investigation travelled clearly across markets.",
+      process: [
+        "Supported multilingual editorial versioning",
+        "Coordinated translation and dubbing delivery",
+        "Maintained editorial clarity across localised outputs",
+      ],
     },
     {
+      slug: "opioid-kings",
       title: "India's Opioid Kings",
       image: "/images/documentaries/03-afeye-india-opioids.jpg",
+      preview: "/videos/documentaries/opioid-kings-preview.mp4",
       url: "https://youtu.be/ji6tjiRjbok",
       summary:
         "For more than a decade, West Africa has been in the grip of an opioid crisis. BBC Eye tracks the supply chain back to the makers of the illegal, dangerous pills.",
+      role: "Localisation Producer",
+      strand: "BBC Africa Eye",
+      contribution:
+        "Adapted the film for wider international distribution through structured localisation and editorial delivery management.",
+      process: [
+        "Oversaw localisation timeline and delivery",
+        "Managed vendor workflows across translation and dubbing",
+        "Prepared final versions for platform distribution",
+      ],
     },
     {
+      slug: "stranded",
       title: "Stranded: Exposing The UK's Immigration Scammers",
       image: "/images/documentaries/04-afeye-stranded.jpg",
+      preview: "/videos/documentaries/stranded-preview.mp4",
       url: "https://youtu.be/191CuNRGoos",
       summary:
         "BBC Africa Eye goes undercover to track down rogue relocation agents who squeeze thousands of pounds from aspiring migrants with the false promise of a job in the UK.",
+      role: "Localisation Producer",
+      strand: "BBC Africa Eye",
+      contribution:
+        "Handled localisation planning and final adaptation workflows to support wider audience reach.",
+      process: [
+        "Planned versioning across international outputs",
+        "Managed multilingual adaptation",
+        "Supported final editorial delivery",
+      ],
     },
     {
+      slug: "blood-parliament",
       title: "Blood Parliament",
       image: "/images/documentaries/05-afeye-blood-parliament.jpg",
+      preview: "/videos/documentaries/blood-parliament-preview.mp4",
       url: "https://youtu.be/qz0f1yyf_eA",
       summary:
         "Africa Eye investigates the shootings at Kenya's June 25th finance bill protest.",
+      role: "Localisation Producer",
+      strand: "BBC Africa Eye",
+      contribution:
+        "Delivered localisation support for a fast-moving, high-impact investigation requiring precise editorial adaptation.",
+      process: [
+        "Supported rapid localisation turnaround",
+        "Coordinated language and versioning workflows",
+        "Maintained consistency across adapted outputs",
+      ],
     },
     {
+      slug: "madams",
       title: "Madams: Exposing Kenya's Child Sex Trade",
       image: "/images/documentaries/06-afeye-madams.jpg",
+      preview: "/videos/documentaries/madams-preview.mp4",
       url: "https://youtu.be/JHINoFq8GvE",
       summary:
         "Africa Eye uncovers child sex trafficking in Kenya's transit town, Mai Mahiu, and follows one woman, Baby Girl, who rescues girls from abuse and exploitation.",
+      role: "Localisation Producer",
+      strand: "BBC Africa Eye",
+      contribution:
+        "Managed adaptation and multilingual delivery to preserve tone, clarity and emotional impact for new audiences.",
+      process: [
+        "Coordinated multilingual delivery pipeline",
+        "Oversaw dubbing and final quality control",
+        "Supported editorial adaptation for wider accessibility",
+      ],
     },
     {
+      slug: "death-in-dubai",
       title: "Death In Dubai",
       image: "/images/documentaries/07-afeye-death-in-dubai.jpg",
+      preview: "/videos/documentaries/death-in-dubai-preview.mp4",
       url: "https://youtu.be/OboT09uRw6M",
       summary:
         "When the mysterious death of a 23-year-old Ugandan in Dubai goes viral, she becomes the face of the disturbing Dubai Porta Potty scandal.",
+      role: "Localisation Producer",
+      strand: "BBC Africa Eye",
+      contribution:
+        "Helped localise and deliver a sensitive, high-interest investigation for audiences across multiple markets.",
+      process: [
+        "Managed localisation workflow end to end",
+        "Coordinated language adaptation and dubbing",
+        "Prepared final materials for distribution",
+      ],
     },
     {
+      slug: "money-rituals",
       title: "Money Rituals: Africa's Deadliest Taboo",
       image: "/images/documentaries/08-afeye-money-rituals.jpg",
+      preview: "/videos/documentaries/money-rituals-preview.mp4",
       url: "https://youtu.be/EjDe1D8NlOY",
       summary:
         "Africa Eye investigates Sierra Leone's hidden ritual market, where criminals posing as healers claim they can supply human body parts, while traditional healers and police deny the trade exists.",
+      role: "Localisation Producer",
+      strand: "BBC Africa Eye",
+      contribution:
+        "Oversaw the documentary's localisation and delivery, ensuring editorial integrity across adapted versions.",
+      process: [
+        "Guided translation and dubbing workflows",
+        "Ensured cultural and editorial clarity in adapted versions",
+        "Managed delivery across international outputs",
+      ],
     },
     {
+      slug: "hunting-the-traffickers",
       title: "Hunting The Traffickers",
       image: "/images/documentaries/09-afeye-traffickers.jpg",
+      preview: "/videos/documentaries/traffickers-preview.mp4",
       url: "https://youtu.be/_a4G2SZPvBQ",
       summary:
         "Africa Eye is given exclusive access to the Sierra Leone Police as they target criminal gangs trafficking vulnerable people across West Africa and help one father try to find his missing daughter.",
+      role: "Localisation Producer",
+      strand: "BBC Africa Eye",
+      contribution:
+        "Managed localisation and editorial adaptation for a complex cross-border investigation.",
+      process: [
+        "Coordinated external localisation partners",
+        "Oversaw editorial adaptation and version control",
+        "Delivered final adapted outputs for wider distribution",
+      ],
     },
     {
+      slug: "state-of-fear",
       title: "State of Fear",
       image: "/images/documentaries/10-afeye-state-of-fear.jpg",
+      preview: "/videos/documentaries/state-of-fear-preview.mp4",
       url: "https://youtu.be/9WkYK-SjJtE",
       summary:
         "A wave of enforced disappearances of government critics is spreading fear across Tanzania. Africa Eye investigates the abductions through powerful testimonies from survivors of torture and families of the disappeared.",
+      role: "Localisation Producer",
+      strand: "BBC Africa Eye",
+      contribution:
+        "Supported international adaptation and delivery for an investigation centred on testimony, risk and accountability.",
+      process: [
+        "Managed adaptation across target outputs",
+        "Handled dubbing and versioning workflows",
+        "Maintained editorial consistency through final delivery",
+      ],
+    },
+  ];
+
+  const timeline = [
+    {
+      year: "2024–Present",
+      title: "Eye Investigations / Africa Eye",
+      description:
+        "Leading localisation operations for flagship BBC investigations, adapting documentaries for international audiences.",
+    },
+    {
+      year: "2018–2024",
+      title: "BBC Arabic – 4Tech",
+      description:
+        "Part of the production of hundreds of episodes covering technology, innovation and digital culture across broadcast and social platforms.",
+    },
+    {
+      year: "2021–2022",
+      title: "Art for Life",
+      description:
+        "Produced and directed arts and culture reports across the UK and Europe, from development through final edit.",
+    },
+    {
+      year: "2015–2024",
+      title: "BBC News Arabic & Newsroom Roles",
+      description:
+        "Worked across digital video, newsroom journalism and factual production, building a cross-platform editorial foundation.",
     },
   ];
 
@@ -128,6 +265,9 @@ export default function PortfolioWebsite() {
   const [selectedDocumentary, setSelectedDocumentary] = useState(
     documentaries[0]
   );
+  const [hoveredDocumentary, setHoveredDocumentary] = useState<string | null>(
+    null
+  );
 
   const nextVideo = () => {
     setCurrentVideo((prev) => (prev + 1) % videos.length);
@@ -135,6 +275,21 @@ export default function PortfolioWebsite() {
 
   const prevVideo = () => {
     setCurrentVideo((prev) => (prev - 1 + videos.length) % videos.length);
+  };
+
+  const selectedIndex = useMemo(
+    () => documentaries.findIndex((doc) => doc.slug === selectedDocumentary.slug),
+    [documentaries, selectedDocumentary.slug]
+  );
+
+  const nextDocumentary = () => {
+    const nextIndex = (selectedIndex + 1) % documentaries.length;
+    setSelectedDocumentary(documentaries[nextIndex]);
+  };
+
+  const prevDocumentary = () => {
+    const prevIndex = (selectedIndex - 1 + documentaries.length) % documentaries.length;
+    setSelectedDocumentary(documentaries[prevIndex]);
   };
 
   return (
@@ -157,6 +312,9 @@ export default function PortfolioWebsite() {
             </a>
             <a href="#documentaries" className="transition hover:text-white">
               Documentaries
+            </a>
+            <a href="#timeline" className="transition hover:text-white">
+              Timeline
             </a>
             <a href="#about" className="transition hover:text-white">
               About
@@ -374,11 +532,14 @@ export default function PortfolioWebsite() {
               <div className="mt-14 grid gap-8 sm:grid-cols-2">
                 {documentaries.map((doc) => {
                   const isActive = selectedDocumentary.title === doc.title;
+                  const isHovered = hoveredDocumentary === doc.slug;
 
                   return (
                     <button
                       key={doc.title}
                       onClick={() => setSelectedDocumentary(doc)}
+                      onMouseEnter={() => setHoveredDocumentary(doc.slug)}
+                      onMouseLeave={() => setHoveredDocumentary(null)}
                       className={`group block overflow-hidden rounded-[2rem] border text-left shadow-xl transition duration-300 hover:-translate-y-1 ${
                         isActive
                           ? "border-white/30 bg-stone-900"
@@ -398,8 +559,24 @@ export default function PortfolioWebsite() {
                         <img
                           src={doc.image}
                           alt={doc.title}
-                          className="relative z-10 h-full w-full object-contain p-3 transition duration-500 group-hover:scale-[1.02]"
+                          className={`relative z-10 h-full w-full object-contain p-3 transition duration-500 ${
+                            isHovered ? "opacity-0" : "opacity-100"
+                          }`}
                         />
+
+                        {doc.preview ? (
+                          <video
+                            key={doc.preview}
+                            src={doc.preview}
+                            muted
+                            loop
+                            playsInline
+                            autoPlay={isHovered}
+                            className={`absolute inset-0 z-20 h-full w-full object-cover transition duration-500 ${
+                              isHovered ? "opacity-100" : "opacity-0"
+                            }`}
+                          />
+                        ) : null}
                       </div>
 
                       <div className="p-6">
@@ -437,9 +614,28 @@ export default function PortfolioWebsite() {
                 </div>
 
                 <div className="p-8">
-                  <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
-                    Documentary spotlight
-                  </p>
+                  <div className="flex items-center justify-between gap-4">
+                    <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+                      Documentary spotlight
+                    </p>
+
+                    <div className="flex gap-2">
+                      <button
+                        onClick={prevDocumentary}
+                        className="rounded-full border border-white/15 px-3 py-2 text-sm text-white transition hover:bg-white/5"
+                        aria-label="Previous documentary"
+                      >
+                        ←
+                      </button>
+                      <button
+                        onClick={nextDocumentary}
+                        className="rounded-full border border-white/15 px-3 py-2 text-sm text-white transition hover:bg-white/5"
+                        aria-label="Next documentary"
+                      >
+                        →
+                      </button>
+                    </div>
+                  </div>
 
                   <h3 className="mt-4 text-3xl font-semibold text-white">
                     {selectedDocumentary.title}
@@ -455,7 +651,7 @@ export default function PortfolioWebsite() {
                         Role
                       </p>
                       <p className="mt-2 text-base text-white">
-                        Localisation Producer
+                        {selectedDocumentary.role}
                       </p>
                     </div>
 
@@ -464,8 +660,33 @@ export default function PortfolioWebsite() {
                         Strand
                       </p>
                       <p className="mt-2 text-base text-white">
-                        BBC Africa Eye
+                        {selectedDocumentary.strand}
                       </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+                    <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                      My contribution
+                    </p>
+                    <p className="mt-3 leading-7 text-stone-300">
+                      {selectedDocumentary.contribution}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+                    <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                      Process
+                    </p>
+                    <div className="mt-4 space-y-3">
+                      {selectedDocumentary.process.map((step) => (
+                        <div
+                          key={step}
+                          className="rounded-xl border border-white/10 bg-stone-950/40 px-4 py-3 text-sm leading-6 text-stone-300"
+                        >
+                          {step}
+                        </div>
+                      ))}
                     </div>
                   </div>
 
@@ -478,11 +699,44 @@ export default function PortfolioWebsite() {
                     >
                       Watch documentary
                     </a>
+                    <a
+                      href={`/documentaries/${selectedDocumentary.slug}`}
+                      className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5"
+                    >
+                      View project page
+                    </a>
                   </div>
                 </div>
               </div>
             </aside>
           </div>
+        </div>
+      </section>
+
+      <section id="timeline" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+        <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+          Timeline
+        </p>
+
+        <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
+          Career timeline
+        </h2>
+
+        <div className="mt-12 space-y-6 border-l border-white/10 pl-6 md:pl-10">
+          {timeline.map((item) => (
+            <div key={item.title} className="relative">
+              <div className="absolute -left-[2.05rem] top-2 h-3 w-3 rounded-full bg-white md:-left-[2.6rem]" />
+              <p className="text-sm uppercase tracking-[0.25em] text-stone-400">
+                {item.year}
+              </p>
+              <h3 className="mt-2 text-2xl font-medium text-white">
+                {item.title}
+              </h3>
+              <p className="mt-3 max-w-3xl leading-7 text-stone-300">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
