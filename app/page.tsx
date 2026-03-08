@@ -27,7 +27,7 @@ export default function PortfolioWebsite() {
     },
     {
       title: "BBC Arabic – 4Tech",
-      category: "Presenter‑led reporting",
+      category: "Presenter-led reporting",
       description:
         "Producer and presenter of 280+ episodes covering global technology, innovation and digital culture across broadcast and social platforms.",
     },
@@ -111,8 +111,8 @@ export default function PortfolioWebsite() {
   ];
 
   const expertise = [
-    "Investigations and editorial decision‑making",
-    "Producer‑presenter storytelling",
+    "Investigations and editorial decision-making",
+    "Producer-presenter storytelling",
     "International documentary localisation",
     "Scriptwriting and story development",
     "Editorial leadership and team management",
@@ -120,6 +120,7 @@ export default function PortfolioWebsite() {
   ];
 
   const [currentVideo, setCurrentVideo] = useState(0);
+  const [selectedDocumentary, setSelectedDocumentary] = useState(documentaries[0]);
 
   const nextVideo = () => setCurrentVideo((prev) => (prev + 1) % videos.length);
   const prevVideo = () =>
@@ -127,8 +128,23 @@ export default function PortfolioWebsite() {
 
   return (
     <div className="min-h-screen bg-stone-950 text-stone-100">
-      {/* HERO */}
-      <section className="relative overflow-hidden border-b border-white/10">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-stone-950/80 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
+          <a href="#top" className="text-sm font-semibold uppercase tracking-[0.3em] text-white">
+            Issa Kheirallah
+          </a>
+
+          <nav className="hidden gap-6 text-sm text-stone-300 md:flex">
+            <a href="#showreel" className="transition hover:text-white">Showreel</a>
+            <a href="#work" className="transition hover:text-white">Work</a>
+            <a href="#documentaries" className="transition hover:text-white">Documentaries</a>
+            <a href="#about" className="transition hover:text-white">About</a>
+            <a href="#contact" className="transition hover:text-white">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <section id="top" className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-35" />
           <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/85 to-stone-950/40" />
@@ -146,7 +162,7 @@ export default function PortfolioWebsite() {
 
             <p className="mt-6 max-w-2xl text-xl leading-9 text-stone-200">
               Producer specialising in investigations, documentary localisation,
-              and presenter‑led reporting for global audiences.
+              and presenter-led reporting for global audiences.
             </p>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
@@ -155,7 +171,7 @@ export default function PortfolioWebsite() {
               and digital platforms.
             </p>
 
-            <div className="mt-10 flex gap-4">
+            <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href="#showreel"
                 className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950"
@@ -174,7 +190,6 @@ export default function PortfolioWebsite() {
         </div>
       </section>
 
-      {/* SHOWREEL */}
       <section id="showreel" className="border-y border-white/10 bg-white/[0.03]">
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
           <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
@@ -191,12 +206,14 @@ export default function PortfolioWebsite() {
                 className="h-full w-full"
                 src={videos[currentVideo].url}
                 title={videos[currentVideo].title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               />
             </div>
           </div>
 
-          <div className="mt-6 flex items-center justify-between">
+          <div className="mt-6 flex items-center justify-between gap-4">
             <button
               onClick={prevVideo}
               className="rounded-xl border border-white/20 px-4 py-2"
@@ -204,7 +221,7 @@ export default function PortfolioWebsite() {
               Previous
             </button>
 
-            <p className="text-stone-400">{videos[currentVideo].title}</p>
+            <p className="text-center text-stone-400">{videos[currentVideo].title}</p>
 
             <button
               onClick={nextVideo}
@@ -216,7 +233,6 @@ export default function PortfolioWebsite() {
         </div>
       </section>
 
-      {/* ABOUT */}
       <section id="about" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
@@ -232,9 +248,9 @@ export default function PortfolioWebsite() {
           <div className="space-y-6 text-lg leading-8 text-stone-300">
             <p>
               I am a BBC producer and journalist with more than nine years of
-              experience delivering broadcast, digital and on‑location
+              experience delivering broadcast, digital and on-location
               productions. My work spans investigative journalism, documentary
-              storytelling and presenter‑led reporting.
+              storytelling and presenter-led reporting.
             </p>
 
             <p>
@@ -254,7 +270,6 @@ export default function PortfolioWebsite() {
         </div>
       </section>
 
-      {/* IMPACT */}
       <section className="border-y border-white/10 bg-white/[0.03]">
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
           <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
@@ -281,7 +296,6 @@ export default function PortfolioWebsite() {
         </div>
       </section>
 
-      {/* WORK */}
       <section id="work" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
           Selected work
@@ -313,7 +327,6 @@ export default function PortfolioWebsite() {
         </div>
       </section>
 
-      {/* DOCUMENTARIES */}
       <section id="documentaries" className="mx-auto max-w-7xl px-6 py-24 md:px-10">
         <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
           Documentary work
@@ -330,12 +343,10 @@ export default function PortfolioWebsite() {
 
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {documentaries.map((doc) => (
-            <a
+            <button
               key={doc.title}
-              href={doc.url}
-              target="_blank"
-              rel="noreferrer"
-              className="group block overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-white/20"
+              onClick={() => setSelectedDocumentary(doc)}
+              className="group block overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 text-left shadow-xl transition duration-300 hover:-translate-y-1 hover:border-white/20"
             >
               <div className="relative h-80 overflow-hidden">
                 <img
@@ -356,12 +367,66 @@ export default function PortfolioWebsite() {
                   </h3>
                 </div>
               </div>
-            </a>
+            </button>
           ))}
         </div>
       </section>
 
-      {/* LOCALISATION */}
+      <section id="documentary-detail" className="border-y border-white/10 bg-white/[0.03]">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+                Documentary spotlight
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
+                {selectedDocumentary.title}
+              </h2>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-300">
+                Selected Africa Eye investigation featured as part of my work in
+                reversioning, localisation and international documentary delivery.
+              </p>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">Role</p>
+                  <p className="mt-2 text-base text-white">Reversioning / Localisation Producer</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">Strand</p>
+                  <p className="mt-2 text-base text-white">BBC Africa Eye</p>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href={selectedDocumentary.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950"
+                >
+                  Watch documentary
+                </a>
+                <a
+                  href="#documentaries"
+                  className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-medium text-white"
+                >
+                  Browse all documentaries
+                </a>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl">
+              <img
+                src={selectedDocumentary.image}
+                alt={selectedDocumentary.title}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-white/10 bg-white/[0.03]">
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
           <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
@@ -385,7 +450,6 @@ export default function PortfolioWebsite() {
         </div>
       </section>
 
-      {/* EXPERTISE */}
       <section id="expertise" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
           Expertise
@@ -407,7 +471,6 @@ export default function PortfolioWebsite() {
         </div>
       </section>
 
-      {/* CONTACT */}
       <section id="contact" className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
           <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
@@ -423,7 +486,7 @@ export default function PortfolioWebsite() {
             opportunities and international editorial collaborations.
           </p>
 
-          <div className="mt-10 flex gap-4">
+          <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="mailto:issakheirallah@gmail.com"
               className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950"
