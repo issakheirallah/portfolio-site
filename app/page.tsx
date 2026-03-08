@@ -393,25 +393,23 @@ export default function PortfolioWebsite() {
               onClick={() => setSelectedDocumentary(doc)}
               className="group block overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 text-left shadow-xl transition duration-300 hover:-translate-y-1 hover:border-white/20"
             >
-              <div className="relative h-80 overflow-hidden">
-                <img
-                  src={doc.image}
-                  alt={doc.title}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
+     <div className="relative h-80 overflow-hidden bg-stone-950">
+  <img
+    src={doc.image}
+    alt={doc.title}
+    className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+  />
+</div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/30 to-transparent" />
+<div className="p-6">
+  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+    BBC Africa Eye
+  </p>
 
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-300">
-                    BBC Africa Eye
-                  </p>
-
-                  <h3 className="mt-2 text-xl font-medium leading-snug text-white">
-                    {doc.title}
-                  </h3>
-                </div>
-              </div>
+  <h3 className="mt-2 text-xl font-medium leading-snug text-white">
+    {doc.title}
+  </h3>
+</div>
             </button>
           ))}
         </div>
