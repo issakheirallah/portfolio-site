@@ -318,13 +318,13 @@ export default function PortfolioWebsite() {
   const timeline = [
     {
       year: "2024–Present",
-      title: "Eye Investigations / Africa Eye",
+      title: "Africa Eye",
       description:
         "Leading localisation operations for flagship BBC investigations, adapting documentaries for international audiences.",
     },
     {
       year: "2018–2024",
-      title: "BBC Arabic – 4Tech",
+      title: "4Tech",
       description:
         "Part of the production of hundreds of episodes covering technology, innovation and digital culture across broadcast and social platforms.",
     },
