@@ -2,17 +2,57 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { documentaries } from "@/lib/portfolio-data";
 
 export function DocumentaryShowcase() {
   const [selectedDocumentary, setSelectedDocumentary] = useState(documentaries[0]);
   const [spotlightVisible, setSpotlightVisible] = useState(true);
+  const [sectionInView, setSectionInView] = useState(false);
+  const [previewInView, setPreviewInView] = useState(true);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const previewRef = useRef<HTMLDivElement | null>(null);
 
   const selectedIndex = useMemo(
     () => documentaries.findIndex((doc) => doc.slug === selectedDocumentary.slug),
     [selectedDocumentary.slug]
   );
+
+  useEffect(() => {
+    const sectionNode = sectionRef.current;
+    const previewNode = previewRef.current;
+
+    if (!sectionNode || !previewNode || typeof IntersectionObserver === "undefined") {
+      return;
+    }
+
+    const sectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        setSectionInView(entry.isIntersecting);
+      },
+      {
+        rootMargin: "-96px 0px -96px 0px",
+        threshold: 0,
+      }
+    );
+
+    const previewObserver = new IntersectionObserver(
+      ([entry]) => {
+        setPreviewInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.35,
+      }
+    );
+
+    sectionObserver.observe(sectionNode);
+    previewObserver.observe(previewNode);
+
+    return () => {
+      sectionObserver.disconnect();
+      previewObserver.disconnect();
+    };
+  }, []);
 
   const changeDocumentary = (slug: string) => {
     const nextDoc = documentaries.find((doc) => doc.slug === slug);
@@ -35,8 +75,10 @@ export function DocumentaryShowcase() {
     changeDocumentary(documentaries[prevIndex].slug);
   };
 
+  const showFloatingPreview = sectionInView && !previewInView;
+
   return (
-    <section className="border-y border-white/10 bg-white/[0.03]">
+    <section ref={sectionRef} className="border-y border-white/10 bg-white/[0.03]">
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
@@ -110,7 +152,10 @@ export function DocumentaryShowcase() {
                   spotlightVisible ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="relative h-[24rem] overflow-hidden bg-stone-950 lg:sticky lg:top-0 lg:z-10">
+                <div
+                  ref={previewRef}
+                  className="relative h-[24rem] overflow-hidden bg-stone-950 lg:sticky lg:top-0 lg:z-10"
+                >
                   <Image
                     src={selectedDocumentary.image}
                     alt=""
@@ -223,6 +268,81 @@ export function DocumentaryShowcase() {
               </div>
             </div>
           </aside>
+        </div>
+      </div>
+
+      <div
+        className={`pointer-events-none fixed bottom-6 right-6 z-50 hidden w-[min(24rem,calc(100vw-3rem))] transition-all duration-300 lg:block ${
+          showFloatingPreview
+            ? "translate-y-0 opacity-100"
+            : "translate-y-4 opacity-0"
+        }`}
+      >
+        <div className="pointer-events-auto overflow-hidden rounded-[1.5rem] border border-white/10 bg-stone-950/95 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+          <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
+            <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+              Documentary spotlight
+            </p>
+            <div className="flex gap-2">
+              <button
+                onClick={prevDocumentary}
+                className="rounded-full border border-white/15 px-3 py-2 text-sm text-white transition hover:bg-white/5"
+                aria-label="Previous documentary"
+              >
+                ←
+              </button>
+              <button
+                onClick={nextDocumentary}
+                className="rounded-full border border-white/15 px-3 py-2 text-sm text-white transition hover:bg-white/5"
+                aria-label="Next documentary"
+              >
+                →
+              </button>
+            </div>
+          </div>
+
+          <div className="relative h-56 overflow-hidden bg-stone-900">
+            <Image
+              src={selectedDocumentary.image}
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="24rem"
+              className="absolute inset-0 h-full w-full scale-110 object-cover blur-3xl opacity-30"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/10 to-stone-950/30" />
+            <video
+              key={`${selectedDocumentary.preview}-floating`}
+              src={selectedDocumentary.preview}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="relative z-10 h-full w-full object-contain p-3"
+            />
+          </div>
+
+          <div className="space-y-3 px-4 py-4">
+            <h3 className="text-lg font-semibold text-white">
+              {selectedDocumentary.title}
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={selectedDocumentary.url}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl bg-white px-4 py-2 text-sm font-medium text-stone-950 transition hover:-translate-y-0.5"
+              >
+                Watch
+              </a>
+              <Link
+                href={`/documentaries/${selectedDocumentary.slug}`}
+                className="rounded-2xl border border-white/20 px-4 py-2 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-white/5"
+              >
+                Project page
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
