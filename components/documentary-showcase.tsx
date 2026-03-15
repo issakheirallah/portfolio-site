@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { documentaries } from "@/lib/portfolio-data";
 
 export function DocumentaryShowcase() {
   const [selectedDocumentary, setSelectedDocumentary] = useState(documentaries[0]);
   const [spotlightVisible, setSpotlightVisible] = useState(true);
+  const spotlightRef = useRef<HTMLDivElement | null>(null);
 
   const selectedIndex = useMemo(
     () => documentaries.findIndex((doc) => doc.slug === selectedDocumentary.slug),
@@ -17,6 +18,21 @@ export function DocumentaryShowcase() {
   const changeDocumentary = (slug: string) => {
     const nextDoc = documentaries.find((doc) => doc.slug === slug);
     if (!nextDoc) return;
+
+    const spotlightBounds = spotlightRef.current?.getBoundingClientRect();
+    if (spotlightBounds) {
+      const topSafeZone = 120;
+      const bottomSafeZone = window.innerHeight - 80;
+      const spotlightOutOfView =
+        spotlightBounds.top < topSafeZone || spotlightBounds.bottom > bottomSafeZone;
+
+      if (spotlightOutOfView) {
+        spotlightRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
 
     setSpotlightVisible(false);
     window.setTimeout(() => {
@@ -102,8 +118,11 @@ export function DocumentaryShowcase() {
             </div>
           </div>
 
-          <aside className="lg:sticky lg:top-24">
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl">
+          <aside className="lg:sticky lg:top-24 lg:self-start">
+            <div
+              ref={spotlightRef}
+              className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl"
+            >
               <div
                 key={selectedDocumentary.slug}
                 className={`transition-opacity duration-300 ${
