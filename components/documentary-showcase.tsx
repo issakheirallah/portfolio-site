@@ -84,7 +84,7 @@ export function DocumentaryShowcase() {
                         alt={doc.title}
                         fill
                         sizes="(max-width: 640px) 100vw, 50vw"
-                        className="relative z-10 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                        className="relative z-10 h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
 
