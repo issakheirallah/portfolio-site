@@ -38,7 +38,7 @@ export function DocumentaryShowcase() {
   return (
     <section className="border-y border-white/10 bg-white/[0.03]">
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
               Localisation work
@@ -102,7 +102,7 @@ export function DocumentaryShowcase() {
             </div>
           </div>
 
-          <aside className="space-y-6 lg:self-start">
+          <aside className="space-y-6">
             <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl lg:sticky lg:top-24">
               <div
                 key={selectedDocumentary.slug}
