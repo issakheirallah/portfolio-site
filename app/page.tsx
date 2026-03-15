@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { DocumentaryShowcase } from "@/components/documentary-showcase";
 import { SiteShell } from "@/components/site-shell";
-import { profileImage, featuredWork } from "@/lib/portfolio-data";
+import { featuredWork } from "@/lib/portfolio-data";
 
 export default function HomePage() {
   return (
@@ -61,26 +61,52 @@ export default function HomePage() {
 
           <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
             <div className="absolute -inset-6 rounded-[2.5rem] bg-white/10 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl">
-              <div className="relative aspect-[4/5] overflow-hidden bg-stone-950">
-                <Image
-                  src={profileImage}
-                  alt="Issa Kheirallah"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 p-8 shadow-2xl">
+              <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+                <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                  Current focus
+                </p>
+                <p className="mt-4 text-2xl font-medium leading-snug text-white">
+                  Investigations, international localisation and factual storytelling.
+                </p>
+                <p className="mt-4 leading-7 text-stone-300">
+                  Producing work that travels clearly across markets, platforms and
+                  audiences.
+                </p>
               </div>
 
-              <div className="grid gap-4 border-t border-white/10 bg-stone-900/80 p-6 sm:grid-cols-2">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">Based in</p>
-                  <p className="mt-2 text-white">London</p>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    Based in
+                  </p>
+                  <p className="mt-3 text-lg text-white">London</p>
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">Focus</p>
-                  <p className="mt-2 text-white">Investigations & factual storytelling</p>
+
+                <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    Focus
+                  </p>
+                  <p className="mt-3 text-lg text-white">
+                    Investigations & factual storytelling
+                  </p>
+                </div>
+
+                <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 sm:col-span-2">
+                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    What to explore
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-3 text-sm text-stone-200">
+                    <span className="rounded-full border border-white/10 px-4 py-2">
+                      Africa Eye documentaries
+                    </span>
+                    <span className="rounded-full border border-white/10 px-4 py-2">
+                      Presenter-led reporting
+                    </span>
+                    <span className="rounded-full border border-white/10 px-4 py-2">
+                      Editorial production
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
