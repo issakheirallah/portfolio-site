@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import { documentaries } from "@/lib/portfolio-data";
 
 export function DocumentaryShowcase() {
   const [selectedDocumentary, setSelectedDocumentary] = useState(documentaries[0]);
   const [spotlightVisible, setSpotlightVisible] = useState(true);
-  const spotlightRef = useRef<HTMLDivElement | null>(null);
 
   const selectedIndex = useMemo(
     () => documentaries.findIndex((doc) => doc.slug === selectedDocumentary.slug),
@@ -18,21 +17,6 @@ export function DocumentaryShowcase() {
   const changeDocumentary = (slug: string) => {
     const nextDoc = documentaries.find((doc) => doc.slug === slug);
     if (!nextDoc) return;
-
-    const spotlightBounds = spotlightRef.current?.getBoundingClientRect();
-    if (spotlightBounds) {
-      const topSafeZone = 120;
-      const bottomSafeZone = window.innerHeight - 80;
-      const spotlightOutOfView =
-        spotlightBounds.top < topSafeZone || spotlightBounds.bottom > bottomSafeZone;
-
-      if (spotlightOutOfView) {
-        spotlightRef.current?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    }
 
     setSpotlightVisible(false);
     window.setTimeout(() => {
@@ -119,17 +103,14 @@ export function DocumentaryShowcase() {
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start">
-            <div
-              ref={spotlightRef}
-              className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl"
-            >
+            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto">
               <div
                 key={selectedDocumentary.slug}
                 className={`transition-opacity duration-300 ${
                   spotlightVisible ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div className="relative h-[28rem] overflow-hidden bg-stone-950">
+                <div className="relative h-[24rem] overflow-hidden bg-stone-950 lg:sticky lg:top-0 lg:z-10">
                   <Image
                     src={selectedDocumentary.image}
                     alt=""
@@ -152,7 +133,7 @@ export function DocumentaryShowcase() {
                   />
                 </div>
 
-                <div className="p-8">
+                <div className="bg-stone-900/95 p-8 backdrop-blur-sm">
                   <div className="flex items-center justify-between gap-4">
                     <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
                       Documentary spotlight
