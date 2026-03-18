@@ -16,7 +16,13 @@ const workSections: WorkSection[] = [
   {
     title: "On-screen reporting",
     intro: "A selection of presenter-led reports available to watch directly from their YouTube embeds.",
-    items: [...showreelVideos],
+    items: [
+      ...showreelVideos,
+      {
+        title: "Artificial blood vessels made from human tissue",
+        url: "https://www.youtube.com/embed/LuWaGMmpaBY",
+      },
+    ],
   },
   {
     title: "Short segments",
@@ -29,6 +35,18 @@ const workSections: WorkSection[] = [
       {
         title: "Euro 2024 technologies",
         url: "https://www.youtube.com/embed/ZPVHmm8xzF4",
+      },
+      {
+        title: "Why NASA wants to go back to the moon",
+        url: "https://www.youtube.com/embed/ERqYzHdDV9k",
+      },
+      {
+        title: "Using brain waves to produce music",
+        url: "https://www.youtube.com/embed/Fbf0skU_7oM",
+      },
+      {
+        title: "Technology at the BBC: 100 years on",
+        url: "https://www.youtube.com/embed/cpQti3iIp7U",
       },
     ],
   },
@@ -63,6 +81,10 @@ const workSections: WorkSection[] = [
       {
         title: "A corona mask made with an...aubergine?",
         url: "https://www.youtube.com/embed/CdTRomWnSxk",
+      },
+      {
+        title: "How one woman is reviving lost Palestinian foods",
+        url: "https://www.youtube.com/embed/G9hcLwvmJEk",
       },
     ],
   },
