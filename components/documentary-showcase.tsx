@@ -95,41 +95,9 @@ export function DocumentaryShowcase() {
           </div>
 
           <aside className="space-y-6">
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl lg:sticky lg:top-24">
-              <div
-                key={selectedDocumentary.slug}
-                className={`transition-opacity duration-300 ${
-                  spotlightVisible ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                <div className="relative h-[22rem] overflow-hidden bg-stone-950">
-                  <Image
-                    src={selectedDocumentary.image}
-                    alt=""
-                    aria-hidden="true"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="absolute inset-0 h-full w-full scale-110 object-cover blur-3xl opacity-30"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/10 to-stone-950/30" />
-                  <div className="absolute inset-0 ring-1 ring-white/10" />
-
-                  <video
-                    key={selectedDocumentary.preview}
-                    src={selectedDocumentary.preview}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="relative z-10 h-full w-full object-contain p-4 transition-opacity duration-300"
-                  />
-                </div>
-              </div>
-            </div>
-
             <div
               key={`${selectedDocumentary.slug}-details`}
-              className={`rounded-[2rem] border border-white/10 bg-stone-900/70 p-8 shadow-2xl transition-opacity duration-300 ${
+              className={`rounded-[2rem] border border-white/10 bg-stone-900/70 p-8 shadow-2xl transition-opacity duration-300 lg:sticky lg:top-24 ${
                 spotlightVisible ? "opacity-100" : "opacity-0"
               }`}
             >
