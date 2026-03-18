@@ -21,7 +21,16 @@ const workSections: WorkSection[] = [
   {
     title: "Short segments",
     intro: "A dedicated space for shorter report formats and quick-turn editorial pieces.",
-    items: [],
+    items: [
+      {
+        title: "Deepfake and AI in UK elections",
+        url: "https://www.youtube.com/embed/37cZIDbD4EQ",
+      },
+      {
+        title: "Euro 2024 technologies",
+        url: "https://www.youtube.com/embed/ZPVHmm8xzF4",
+      },
+    ],
   },
   {
     title: "Digitised reports",
