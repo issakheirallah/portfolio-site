@@ -1,4 +1,4 @@
-import { DocumentaryShowcase } from "@/components/documentary-showcase";
+import { DocumentaryArchive } from "@/components/documentary-archive";
 import { SiteShell } from "@/components/site-shell";
 
 export default function DocumentariesPage() {
@@ -8,7 +8,7 @@ export default function DocumentariesPage() {
       title="Selected Africa Eye investigations"
       intro="A dedicated project archive for localisation work delivered across BBC Africa Eye investigations, with individual pages for each documentary."
     >
-      <DocumentaryShowcase />
+      <DocumentaryArchive />
     </SiteShell>
   );
 }
