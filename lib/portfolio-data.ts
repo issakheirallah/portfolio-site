@@ -62,7 +62,7 @@ export const featuredWork = [
 export const documentaries: Documentary[] = [
   {
     slug: "dark-waters",
-    title: "Dark Waters: Africa's Deadliest Migration Route",
+    title: "Dark Waters",
     image: "/images/documentaries/01-afeye-dark-waters.jpg",
     preview: "/videos/documentaries/dark-waters-preview.mp4",
     url: "https://youtu.be/ajX6NaVks3w",
@@ -116,7 +116,7 @@ export const documentaries: Documentary[] = [
   },
   {
     slug: "stranded",
-    title: "Stranded: Exposing The UK's Immigration Scammers",
+    title: "Stranded",
     image: "/images/documentaries/04-afeye-stranded.jpg",
     preview: "/videos/documentaries/stranded-preview.mp4",
     url: "https://youtu.be/191CuNRGoos",
@@ -152,7 +152,7 @@ export const documentaries: Documentary[] = [
   },
   {
     slug: "madams",
-    title: "Madams: Exposing Kenya's Child Sex Trade",
+    title: "Madams",
     image: "/images/documentaries/06-afeye-madams.jpg",
     preview: "/videos/documentaries/madams-preview.mp4",
     url: "https://youtu.be/JHINoFq8GvE",
@@ -188,7 +188,7 @@ export const documentaries: Documentary[] = [
   },
   {
     slug: "money-rituals",
-    title: "Money Rituals: Africa's Deadliest Taboo",
+    title: "Money Rituals",
     image: "/images/documentaries/08-afeye-money-rituals.jpg",
     preview: "/videos/documentaries/money-rituals-preview.mp4",
     url: "https://youtu.be/EjDe1D8NlOY",
