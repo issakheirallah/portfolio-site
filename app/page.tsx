@@ -179,7 +179,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <DocumentaryShowcase />
+      <DocumentaryShowcase showExtendedDetails={false} />
 
       <section className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-20 md:px-10 lg:flex-row lg:items-center lg:justify-between">

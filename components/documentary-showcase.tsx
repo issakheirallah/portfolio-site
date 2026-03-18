@@ -5,7 +5,11 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import { documentaries } from "@/lib/portfolio-data";
 
-export function DocumentaryShowcase() {
+export function DocumentaryShowcase({
+  showExtendedDetails = true,
+}: {
+  showExtendedDetails?: boolean;
+}) {
   const [selectedDocumentary, setSelectedDocumentary] = useState(documentaries[0]);
   const [spotlightVisible, setSpotlightVisible] = useState(true);
 
@@ -145,30 +149,34 @@ export function DocumentaryShowcase() {
                 </div>
               </div>
 
-              <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-                  My contribution
-                </p>
-                <p className="mt-3 leading-7 text-stone-300">
-                  {selectedDocumentary.contribution}
-                </p>
-              </div>
+              {showExtendedDetails && (
+                <>
+                  <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+                    <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                      My contribution
+                    </p>
+                    <p className="mt-3 leading-7 text-stone-300">
+                      {selectedDocumentary.contribution}
+                    </p>
+                  </div>
 
-              <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-                  Process
-                </p>
-                <div className="mt-4 space-y-3">
-                  {selectedDocumentary.process.map((step) => (
-                    <div
-                      key={step}
-                      className="rounded-xl border border-white/10 bg-stone-950/40 px-4 py-3 text-sm leading-6 text-stone-300"
-                    >
-                      {step}
+                  <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
+                    <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                      Process
+                    </p>
+                    <div className="mt-4 space-y-3">
+                      {selectedDocumentary.process.map((step) => (
+                        <div
+                          key={step}
+                          className="rounded-xl border border-white/10 bg-stone-950/40 px-4 py-3 text-sm leading-6 text-stone-300"
+                        >
+                          {step}
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </div>
+                </>
+              )}
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
