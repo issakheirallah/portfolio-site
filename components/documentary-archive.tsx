@@ -63,22 +63,6 @@ export function DocumentaryArchive() {
                   </p>
                 </div>
 
-                <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-                    Process
-                  </p>
-                  <div className="mt-4 space-y-3">
-                    {doc.process.map((step) => (
-                      <div
-                        key={step}
-                        className="rounded-xl border border-white/10 bg-stone-950/40 px-4 py-3 text-sm leading-6 text-stone-300"
-                      >
-                        {step}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
                     href={doc.url}
