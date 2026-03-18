@@ -1,51 +1,120 @@
-import Image from "next/image";
-import { ShowreelCarousel } from "@/components/showreel-carousel";
 import { SiteShell } from "@/components/site-shell";
-import { featuredWork } from "@/lib/portfolio-data";
+import { showreelVideos } from "@/lib/portfolio-data";
+
+type VideoItem = {
+  title: string;
+  url: string;
+};
+
+type WorkSection = {
+  title: string;
+  intro: string;
+  items: VideoItem[];
+};
+
+const workSections: WorkSection[] = [
+  {
+    title: "On-screen reporting",
+    intro: "A selection of presenter-led reports available to watch directly from their YouTube embeds.",
+    items: [...showreelVideos],
+  },
+  {
+    title: "Short segments",
+    intro: "A dedicated space for shorter report formats and quick-turn editorial pieces.",
+    items: [],
+  },
+  {
+    title: "Digitised reports",
+    intro: "A section for digitised or reformatted reports adapted for online-first viewing.",
+    items: [],
+  },
+  {
+    title: "Voice-over work",
+    intro: "A section for reports and packages built around narration and voice-led storytelling.",
+    items: [],
+  },
+  {
+    title: "Promos and trailers",
+    intro: "A section for teasers, promotional edits and trailer-style pieces.",
+    items: [],
+  },
+];
+
+function getYoutubeHref(embedUrl: string) {
+  return embedUrl.replace("/embed/", "/watch?v=");
+}
 
 export default function WorkPage() {
   return (
     <SiteShell
       eyebrow="Work"
       title="Investigations, reporting and factual production"
-      intro="A cross-section of presenter-led reporting, BBC investigations and factual formats produced for broadcast and digital audiences."
+      intro="A cross-section of presenter-led reporting, short-form journalism and editorial video formats organised by output type."
     >
-      <ShowreelCarousel />
+      {workSections.map((section) => (
+        <section
+          key={section.title}
+          className="border-y border-white/10 bg-white/[0.03] first:border-t-0"
+        >
+          <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+              Work section
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
+              {section.title}
+            </h2>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-300">
+              {section.intro}
+            </p>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Featured work</p>
-        <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
-          Editorial projects and formats
-        </h2>
+            {section.items.length > 0 ? (
+              <div className="mt-12 grid gap-8 xl:grid-cols-3">
+                {section.items.map((item) => (
+                  <article
+                    key={item.title}
+                    className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl"
+                  >
+                    <div className="aspect-video overflow-hidden border-b border-white/10">
+                      <iframe
+                        className="h-full w-full"
+                        src={item.url}
+                        title={item.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                      />
+                    </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-3">
-          {featuredWork.map((item) => (
-            <article
-              key={item.title}
-              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/20 hover:shadow-2xl"
-            >
-              <div className="relative h-80 overflow-hidden bg-stone-950">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="relative z-10 h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
-                />
+                    <div className="p-6">
+                      <h3 className="text-2xl font-medium text-white">{item.title}</h3>
+                      <div className="mt-6 flex flex-wrap gap-4">
+                        <a
+                          href={getYoutubeHref(item.url)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-stone-950 transition hover:-translate-y-1 hover:shadow-2xl"
+                        >
+                          Watch on YouTube
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                ))}
               </div>
-
-              <div className="p-6">
-                <p className="text-xs uppercase tracking-[0.28em] text-stone-400">
-                  {item.category}
+            ) : (
+              <div className="mt-12 rounded-[2rem] border border-dashed border-white/15 bg-stone-900/40 p-8">
+                <p className="text-sm uppercase tracking-[0.25em] text-stone-400">
+                  Ready for content
                 </p>
-                <h3 className="mt-3 text-2xl font-medium text-white">{item.title}</h3>
-                <p className="mt-4 leading-7 text-stone-300">{item.description}</p>
-                <div className="mt-6 text-sm font-medium text-stone-200">Featured work</div>
+                <p className="mt-4 max-w-2xl text-lg leading-8 text-stone-300">
+                  This section is set up and ready for YouTube links. Once you share the
+                  reports you want here, I can drop them straight into the layout.
+                </p>
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
+            )}
+          </div>
+        </section>
+      ))}
     </SiteShell>
   );
 }
