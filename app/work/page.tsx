@@ -35,7 +35,36 @@ const workSections: WorkSection[] = [
   {
     title: "Digitised reports",
     intro: "A section for digitised or reformatted reports adapted for online-first viewing.",
-    items: [],
+    items: [
+      {
+        title: "Nude drawings: My society's taboo",
+        url: "https://www.youtube.com/embed/IGOAyWEVvN8",
+      },
+      {
+        title: "Acapella and my religion",
+        url: "https://www.youtube.com/embed/mneVKbvg-88",
+      },
+      {
+        title: "I treated my mental health with the art of photography",
+        url: "https://www.youtube.com/embed/vGYMgmFF-Ks",
+      },
+      {
+        title: "How I used photography to treat my Borderline Personality Disorder",
+        url: "https://www.youtube.com/embed/QgWKasEclF4",
+      },
+      {
+        title: "Photography, my mother and Alzheimers",
+        url: "https://www.youtube.com/embed/APX-_dwZZWg",
+      },
+      {
+        title: "The Ottoman effect on the Arabic language",
+        url: "https://www.youtube.com/embed/zqX40BRKRbY",
+      },
+      {
+        title: "A corona mask made with an...aubergine?",
+        url: "https://www.youtube.com/embed/CdTRomWnSxk",
+      },
+    ],
   },
   {
     title: "Voice-over work",
