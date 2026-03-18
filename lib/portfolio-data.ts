@@ -73,7 +73,7 @@ export const documentaries: Documentary[] = [
     contribution:
       "Led localisation delivery, coordinating editorial adaptation, dubbing and multilingual production workflows for international audiences.",
     process: [
-      "Managed editorial localisation workflow from source delivery to final versioning",
+      "Managed localisation workflow from offline to online delivery",
       "Oversaw translation, dubbing and partner coordination",
       "Prepared the film for international audience adaptation and delivery",
     ],
@@ -157,7 +157,7 @@ export const documentaries: Documentary[] = [
     preview: "/videos/documentaries/madams-preview.mp4",
     url: "https://youtu.be/JHINoFq8GvE",
     summary:
-      "Africa Eye uncovers child sex trafficking in Kenya's transit town, Mai Mahiu, and follows one woman, Baby Girl, who rescues girls from abuse and exploitation.",
+      "Africa Eye uncovers child sex traffic  king in Kenya's transit town, Mai Mahiu.",
     role: "Localisation Producer",
     strand: "BBC Africa Eye",
     contribution:
@@ -193,7 +193,7 @@ export const documentaries: Documentary[] = [
     preview: "/videos/documentaries/money-rituals-preview.mp4",
     url: "https://youtu.be/EjDe1D8NlOY",
     summary:
-      "Africa Eye investigates Sierra Leone's hidden ritual market, where criminals posing as healers claim they can supply human body parts, while traditional healers and police deny the trade exists.",
+      "Africa Eye investigates Sierra Leone's hidden ritual market, where criminals posing as healers claim they can supply human body parts.",
     role: "Localisation Producer",
     strand: "BBC Africa Eye",
     contribution:
