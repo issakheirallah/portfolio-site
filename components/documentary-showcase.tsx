@@ -84,7 +84,7 @@ export function DocumentaryShowcase() {
                       <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
                         BBC Africa Eye
                       </p>
-                      <h3 className="mt-2 text-xl font-medium leading-snug text-white">
+                      <h3 className="mt-2 min-h-[5.75rem] text-xl font-medium leading-snug text-white">
                         {doc.title}
                       </h3>
                     </div>
