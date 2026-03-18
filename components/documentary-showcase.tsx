@@ -68,15 +68,7 @@ export function DocumentaryShowcase() {
                     }`}
                   >
                     <div className="relative h-80 overflow-hidden bg-stone-950">
-                      <Image
-                        src={doc.image}
-                        alt=""
-                        aria-hidden="true"
-                        fill
-                        sizes="(max-width: 640px) 100vw, 50vw"
-                        className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl opacity-35"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/20 to-stone-950/40" />
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(120,72,32,0.18),transparent_58%),linear-gradient(180deg,rgba(28,25,23,0.96),rgba(17,17,17,1))]" />
                       <div className="absolute inset-0 ring-1 ring-white/10" />
 
                       <Image
