@@ -17,7 +17,7 @@ const workSections: WorkSection[] = [
     title: "On-screen reporting",
     intro: "A selection of presenter-led reports available to watch directly from their YouTube embeds.",
     items: [
-      ...showreelVideos,
+      ...showreelVideos.slice(1),
       {
         title: "Artificial blood vessels made from human tissue",
         url: "https://www.youtube.com/embed/LuWaGMmpaBY",
@@ -25,9 +25,13 @@ const workSections: WorkSection[] = [
     ],
   },
   {
-    title: "Short segments",
+    title: "Segments",
     intro: "A dedicated space for shorter report formats and quick-turn editorial pieces.",
     items: [
+      {
+        title: showreelVideos[0].title,
+        url: showreelVideos[0].url,
+      },
       {
         title: "Deepfake and AI in UK elections",
         url: "https://www.youtube.com/embed/37cZIDbD4EQ",

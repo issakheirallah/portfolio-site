@@ -1,4 +1,3 @@
-import { ReportingMap } from "@/components/reporting-map";
 import { SiteShell } from "@/components/site-shell";
 import { expertise, timeline } from "@/lib/portfolio-data";
 
@@ -50,8 +49,6 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
-
-      <ReportingMap />
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Expertise</p>
