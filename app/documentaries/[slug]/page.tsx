@@ -41,9 +41,7 @@ export default async function DocumentaryDetailPage({
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-stone-950/30" />
               <video
                 src={documentary.preview}
-                autoPlay
-                muted
-                loop
+                controls
                 playsInline
                 className="relative z-10 h-full w-full object-contain p-4"
               />
