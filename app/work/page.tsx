@@ -93,8 +93,8 @@ const workSections: WorkSection[] = [
     ],
   },
   {
-    title: "Voice-over work",
-    intro: "A section for reports and packages built around narration and voice-led storytelling.",
+    title: "Field Producing",
+    intro: "A section for location-based production work, reporting support and field-led editorial delivery.",
     items: [],
   },
   {
