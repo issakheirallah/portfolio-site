@@ -45,16 +45,16 @@ export const featuredWork = [
   },
   {
     title: "4Tech",
-    category: "Presenter-led reporting",
+    category: "Technology",
     description:
-      "Part of the production of 280+ episodes covering global technology, innovation and digital culture across broadcast and social platforms.",
+      "Produced and presented reports and part of the production of 280+ episodes covering global technology, innovation and digital culture across broadcast and social platforms.",
     image: "/images/projects/bbc-arabic-4tech.jpg",
   },
   {
     title: "Art for Life",
     category: "Arts and Culture",
     description:
-      "Produced and directed reports across Europe covering digital art, NFTs and cultural events, helping teams from development through final edit.",
+      "Produced and directed reports across Europe covering digital art, NFTs and cultural events, guiding teams from development through final edit.",
     image: "/images/projects/art-for-life.jpg",
   },
 ] as const;
@@ -62,7 +62,7 @@ export const featuredWork = [
 export const documentaries: Documentary[] = [
   {
     slug: "dark-waters",
-    title: "Dark Waters",
+    title: "Dark Waters: Africa's Deadliest Migration Route",
     image: "/images/documentaries/01-afeye-dark-waters.jpg",
     preview: "/videos/documentaries/dark-waters-preview.mp4",
     url: "https://youtu.be/ajX6NaVks3w",
@@ -116,7 +116,7 @@ export const documentaries: Documentary[] = [
   },
   {
     slug: "stranded",
-    title: "Stranded",
+    title: "Stranded: Exposing The UK's Immigration Scammers",
     image: "/images/documentaries/04-afeye-stranded.jpg",
     preview: "/videos/documentaries/stranded-preview.mp4",
     url: "https://youtu.be/191CuNRGoos",
@@ -152,7 +152,7 @@ export const documentaries: Documentary[] = [
   },
   {
     slug: "madams",
-    title: "Madams",
+    title: "Madams: Exposing Kenya's Child Sex Trade",
     image: "/images/documentaries/06-afeye-madams.jpg",
     preview: "/videos/documentaries/madams-preview.mp4",
     url: "https://youtu.be/JHINoFq8GvE",
@@ -188,7 +188,7 @@ export const documentaries: Documentary[] = [
   },
   {
     slug: "money-rituals",
-    title: "Money Rituals",
+    title: "Money Rituals: Africa's Deadliest Taboo",
     image: "/images/documentaries/08-afeye-money-rituals.jpg",
     preview: "/videos/documentaries/money-rituals-preview.mp4",
     url: "https://youtu.be/EjDe1D8NlOY",
@@ -245,24 +245,35 @@ export const documentaries: Documentary[] = [
 export const timeline = [
   {
     year: "2024-Present",
+    role: "Localisation Producer",
     title: "Africa Eye",
     description:
       "Leading localisation operations for flagship BBC investigations, adapting documentaries for international audiences.",
   },
   {
     year: "2018-2024",
+    role: "Producer",
     title: "4Tech",
     description:
       "Part of the production of hundreds of episodes covering technology, innovation and digital culture across broadcast and social platforms.",
   },
   {
+    year: "2024",
+    role: "Newsroom Journalist",
+    title: "BBC News",
+    description:
+      "Produced scripts and content for news bulletins using newsroom systems, while monitoring breaking news and coordinating contributors for major stories such as the Israel-Gaza conflict.",
+  },
+  {
     year: "2021-2022",
+    role: "Digital Producer",
     title: "Art for Life",
     description:
       "Produced and directed arts and culture reports across the UK and Europe, from development through final edit.",
   },
   {
     year: "2015-2024",
+    role: "",
     title: "BBC News Arabic & Newsroom Roles",
     description:
       "Worked across digital video, newsroom journalism and factual production, building a cross-platform editorial foundation.",
@@ -327,10 +338,10 @@ export const storyLocations: StoryLocation[] = [
 ];
 
 export const expertise = [
-  "Investigations and editorial decision-making",
+  "Investigations",
   "Producer-led storytelling",
   "International documentary localisation",
   "Scriptwriting and story development",
-  "Editorial leadership and team management",
+  "Digital and social media storytelling",
   "Audience growth and digital strategy",
 ] as const;

@@ -71,7 +71,7 @@ const workSections: WorkSection[] = [
         url: "https://www.youtube.com/embed/QgWKasEclF4",
       },
       {
-        title: "Photography, my mother and Alzheimers",
+        title: "Photography, my mother and Alzheimer's",
         url: "https://www.youtube.com/embed/APX-_dwZZWg",
       },
       {
@@ -79,7 +79,7 @@ const workSections: WorkSection[] = [
         url: "https://www.youtube.com/embed/zqX40BRKRbY",
       },
       {
-        title: "A corona mask made with an...aubergine?",
+        title: "A corona mask made with...aubergine?",
         url: "https://www.youtube.com/embed/CdTRomWnSxk",
       },
       {

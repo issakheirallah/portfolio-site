@@ -16,7 +16,7 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-lg leading-8 text-stone-300">
             <p>
-              I currently lead localisation operations for Eye Investigation&apos;s
+              I currently lead localisation operations for Eye Investigations&apos;
               Africa Eye, adapting flagship documentaries for new international
               audiences while managing editorial workflows, translation, dubbing and
               production delivery.
@@ -36,9 +36,14 @@ export default function AboutPage() {
         <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">Career timeline</h2>
         <div className="mt-12 space-y-6 border-l border-white/10 pl-6 md:pl-10">
           {timeline.map((item) => (
-            <div key={item.title} className="relative">
+            <div key={`${item.year}-${item.title}`} className="relative">
               <div className="absolute -left-[2.05rem] top-2 h-3 w-3 rounded-full bg-white md:-left-[2.6rem]" />
               <p className="text-sm uppercase tracking-[0.25em] text-stone-400">{item.year}</p>
+              {item.role && (
+                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-stone-400">
+                  {item.role}
+                </p>
+              )}
               <h3 className="mt-2 text-2xl font-medium text-white">{item.title}</h3>
               <p className="mt-3 max-w-3xl leading-7 text-stone-300">{item.description}</p>
             </div>

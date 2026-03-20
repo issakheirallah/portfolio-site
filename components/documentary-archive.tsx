@@ -56,7 +56,7 @@ export function DocumentaryArchive() {
 
                 <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
                   <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-                    My contribution
+                    Contribution
                   </p>
                   <p className="mt-3 leading-7 text-stone-300">
                     {doc.contribution}

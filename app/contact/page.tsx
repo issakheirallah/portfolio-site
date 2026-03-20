@@ -8,7 +8,7 @@ export default function ContactPage() {
       intro="Open to documentary projects, presenting opportunities, video editing roles and international editorial collaborations."
     >
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-2">
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-stone-400">Email</p>
             <a
@@ -26,16 +26,6 @@ export default function ContactPage() {
               className="mt-4 block text-2xl text-white hover:text-stone-300"
             >
               Connect on LinkedIn
-            </a>
-          </div>
-
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-stone-400">CV</p>
-            <a
-              href="/Issa-Kheirallah-CV.pdf"
-              className="mt-4 block text-2xl text-white hover:text-stone-300"
-            >
-              Download CV
             </a>
           </div>
         </div>

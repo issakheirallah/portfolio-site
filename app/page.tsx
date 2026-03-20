@@ -25,7 +25,7 @@ export default function HomePage() {
         <div className="relative mx-auto grid min-h-[85vh] max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="max-w-4xl">
             <p className="mb-5 text-sm uppercase tracking-[0.38em] text-stone-300">
-              Producer • Video Journalist • On-screen Reporter
+              Producer • Journalist • Video Editor
             </p>
 
             <div className="relative inline-block">
@@ -39,8 +39,8 @@ export default function HomePage() {
 
             <p className="mt-6 max-w-3xl text-xl leading-9 text-stone-200">
               Producer specialising in video journalism, digital storytelling,
-              investigations, documentary localisation, and presenter-led reporting
-              for global audiences.
+              documentary localisation, and presenter-led reporting for global
+              audiences.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -125,17 +125,13 @@ export default function HomePage() {
 
           <div className="space-y-6 text-lg leading-8 text-stone-300">
             <p>
-              I am a BBC producer and journalist with more than nine years of
+              I am a BBC producer and journalist with more than nine years&apos;
               experience delivering broadcast, digital and on-location productions.
             </p>
             <p>
-              My recent work centres on Africa Eye documentary localisation while my
-              wider background spans presenter-led reporting, digital storytelling and
-              factual production.
-            </p>
-            <p>
-              The site now separates that work into dedicated pages so projects,
-              biography and contact details are easier to browse.
+              Currently, I am leading Africa Eye documentary localisation while my
+              wider background spans presenter-led reporting, digital storytelling
+              and factual production.
             </p>
           </div>
         </div>
@@ -146,7 +142,7 @@ export default function HomePage() {
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Featured work</p>
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
-              Selected formats and editorial projects
+              Brands I&apos;ve worked on
             </h2>
           </div>
           <Link href="/work" className="text-sm uppercase tracking-[0.28em] text-stone-300 hover:text-white">

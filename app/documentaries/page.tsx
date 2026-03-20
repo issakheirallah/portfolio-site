@@ -6,7 +6,7 @@ export default function DocumentariesPage() {
     <SiteShell
       eyebrow="Documentaries"
       title="Selected Africa Eye investigations"
-      intro="A dedicated project archive for localisation work delivered across BBC Africa Eye investigations, with individual pages for each documentary."
+      intro="A selection from the 30+ Africa Eye investigations that I have localised."
     >
       <DocumentaryArchive />
     </SiteShell>

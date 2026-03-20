@@ -3,8 +3,8 @@ import { ReactNode } from "react";
 
 const navigation = [
   { href: "/", label: "Home" },
-  { href: "/work", label: "Work" },
-  { href: "/documentaries", label: "Documentaries" },
+  { href: "/work", label: "Portfolio" },
+  { href: "/documentaries", label: "Localisation" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -71,7 +71,7 @@ export function SiteShell({
 
       <footer className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-stone-400 md:flex-row md:items-center md:justify-between md:px-10">
-          <p>Producer, video journalist and localisation specialist based in London.</p>
+          <p>Producer, journalist and video editor currently based in London.</p>
           <div className="flex flex-wrap gap-4">
             <Link href="/documentaries" className="hover:text-white">
               Documentary work
