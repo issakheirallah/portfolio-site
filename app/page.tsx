@@ -57,11 +57,8 @@ export default function HomePage() {
                 Browse documentaries
               </Link>
             </div>
-          </div>
 
-          <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
-            <div className="absolute -inset-6 rounded-[2.5rem] bg-white/10 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 p-8 shadow-2xl">
+            <div className="mt-10 max-w-3xl rounded-[2rem] border border-white/10 bg-stone-900/65 p-6 shadow-2xl backdrop-blur-sm">
               <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
                 <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
                   Current focus
@@ -111,6 +108,8 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
+          <div className="hidden lg:block" />
         </div>
       </section>
 
