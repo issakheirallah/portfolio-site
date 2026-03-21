@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { BbcBadge } from "@/components/bbc-badge";
 import { documentaries } from "@/lib/portfolio-data";
 
 export function DocumentaryArchive() {
@@ -13,6 +14,7 @@ export function DocumentaryArchive() {
               className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-2xl"
             >
               <div className="relative h-80 overflow-hidden bg-stone-950">
+                <BbcBadge />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(120,72,32,0.18),transparent_58%),linear-gradient(180deg,rgba(28,25,23,0.96),rgba(17,17,17,1))]" />
                 <div className="absolute inset-0 ring-1 ring-white/10" />
 
