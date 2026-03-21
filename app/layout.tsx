@@ -8,6 +8,19 @@ export const metadata: Metadata = {
   },
   description:
     "Portfolio website for Issa Kheirallah, featuring investigations, factual production, documentary localisation and presenter-led reporting.",
+  openGraph: {
+    title: "Issa Kheirallah",
+    description:
+      "Portfolio website for Issa Kheirallah, featuring investigations, factual production, documentary localisation and presenter-led reporting.",
+    type: "website",
+    siteName: "Issa Kheirallah",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Issa Kheirallah",
+    description:
+      "Portfolio website for Issa Kheirallah, featuring investigations, factual production, documentary localisation and presenter-led reporting.",
+  },
 };
 
 export default function RootLayout({

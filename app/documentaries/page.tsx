@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { DocumentaryArchive } from "@/components/documentary-archive";
 import { SiteShell } from "@/components/site-shell";
+
+export const metadata: Metadata = {
+  title: "Localisation",
+  description:
+    "Featured Africa Eye investigations and other localised titles delivered by Issa Kheirallah.",
+};
 
 const otherLocalisedTitles = [
   "Shadow War: Islamic State Group In Africa (2026)",

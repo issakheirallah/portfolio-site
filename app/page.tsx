@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { DocumentaryShowcase } from "@/components/documentary-showcase";
+import { FadeIn } from "@/components/fade-in";
 import { SiteShell } from "@/components/site-shell";
 import { featuredWork } from "@/lib/portfolio-data";
 
@@ -23,7 +24,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative mx-auto grid min-h-[85vh] max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div className="max-w-4xl">
+          <FadeIn className="max-w-4xl">
             <p className="mb-5 text-sm uppercase tracking-[0.38em] text-stone-300">
               Producer • Journalist • Video Editor
             </p>
@@ -107,14 +108,14 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
 
           <div className="hidden lg:block" />
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+        <FadeIn className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Overview</p>
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
@@ -133,11 +134,11 @@ export default function HomePage() {
               and factual production.
             </p>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <FadeIn className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Featured work</p>
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
@@ -147,7 +148,7 @@ export default function HomePage() {
           <Link href="/work" className="text-sm uppercase tracking-[0.28em] text-stone-300 hover:text-white">
             View all work
           </Link>
-        </div>
+        </FadeIn>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-3">
           {featuredWork.map((item) => (
@@ -156,13 +157,27 @@ export default function HomePage() {
               className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl"
             >
               <div className="relative h-80 overflow-hidden bg-stone-950">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="h-full w-full object-contain p-3"
-                />
+                {item.image ? (
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="h-full w-full object-contain p-3"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_35%),linear-gradient(135deg,rgba(28,25,23,1),rgba(41,37,36,0.82))]" />
+                )}
+                {!item.image && (
+                  <div className="relative flex h-full flex-col justify-end p-6">
+                    <p className="text-xs uppercase tracking-[0.3em] text-stone-400">
+                      {item.category}
+                    </p>
+                    <h3 className="mt-4 max-w-[12rem] text-4xl font-semibold tracking-tight text-white">
+                      {item.title}
+                    </h3>
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <p className="text-xs uppercase tracking-[0.28em] text-stone-400">{item.category}</p>

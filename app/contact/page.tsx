@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { SiteShell } from "@/components/site-shell";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contact Issa Kheirallah for documentary projects, editorial collaborations and production opportunities.",
+};
 
 export default function ContactPage() {
   return (

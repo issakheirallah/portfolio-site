@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import { AriaIconButton } from "@/components/aria-icon-button";
 import { documentaries } from "@/lib/portfolio-data";
 
 export function DocumentaryShowcase({
@@ -110,20 +111,12 @@ export function DocumentaryShowcase({
                   Documentary spotlight
                 </p>
                 <div className="flex gap-2">
-                  <button
-                    onClick={prevDocumentary}
-                    className="rounded-full border border-white/15 px-3 py-2 text-sm text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/5"
-                    aria-label="Previous documentary"
-                  >
+                  <AriaIconButton onPress={prevDocumentary} ariaLabel="Previous documentary">
                     ←
-                  </button>
-                  <button
-                    onClick={nextDocumentary}
-                    className="rounded-full border border-white/15 px-3 py-2 text-sm text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white/5"
-                    aria-label="Next documentary"
-                  >
+                  </AriaIconButton>
+                  <AriaIconButton onPress={nextDocumentary} ariaLabel="Next documentary">
                     →
-                  </button>
+                  </AriaIconButton>
                 </div>
               </div>
 

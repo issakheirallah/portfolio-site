@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { SiteShell } from "@/components/site-shell";
 import { showreelVideos } from "@/lib/portfolio-data";
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description:
+    "Presenter-led reporting, segments, digitised reports and other editorial video work by Issa Kheirallah.",
+};
 
 type VideoItem = {
   title: string;

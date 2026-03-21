@@ -58,6 +58,24 @@ export const featuredWork = [
       "Produced and directed reports across Europe covering digital art, NFTs and cultural events, guiding teams from development through final edit.",
     image: "/images/projects/art-for-life.jpg",
   },
+  {
+    title: "BBC News",
+    category: "Breaking News",
+    description:
+      "Wrote scripts for bulletins, online articles and video reports while monitoring breaking developments, coordinating contributors and preparing presenters for major live stories.",
+  },
+  {
+    title: "HARDtalk",
+    category: "Politics",
+    description:
+      "Compiled detailed editorial briefs for high-profile interviews and produced supporting social video and image content across Facebook, Instagram, TikTok and X.",
+  },
+  {
+    title: "Xtra",
+    category: "Social stories",
+    description:
+      "Supported fast-paced newsroom production by coordinating contributors, managing logistics and working across editorial and technical teams to deliver live and recorded content.",
+  },
 ] as const;
 
 export const documentaries: Documentary[] = [

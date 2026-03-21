@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import { SoftwareBadges } from "@/components/software-badges";
 import { SiteShell } from "@/components/site-shell";
 import { expertise, timeline } from "@/lib/portfolio-data";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Editorial background, career timeline, expertise and software proficiency for Issa Kheirallah.",
+};
 
 export default function AboutPage() {
   return (

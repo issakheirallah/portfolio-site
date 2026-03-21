@@ -1,11 +1,32 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteShell } from "@/components/site-shell";
 import { documentaries } from "@/lib/portfolio-data";
 
 export function generateStaticParams() {
   return documentaries.map((doc) => ({ slug: doc.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const documentary = documentaries.find((doc) => doc.slug === slug);
+
+  if (!documentary) {
+    return {
+      title: "Project Page",
+    };
+  }
+
+  return {
+    title: documentary.title,
+    description: documentary.summary,
+  };
 }
 
 export default async function DocumentaryDetailPage({
