@@ -62,155 +62,22 @@ export const featuredWork = [
 
 export const documentaries: Documentary[] = [
   {
-    slug: "dark-waters",
-    title: "Dark Waters: Africa's Deadliest Migration Route",
-    image: "/images/documentaries/01-afeye-dark-waters.jpg",
-    preview: "/videos/documentaries/dark-waters-preview.mp4",
-    url: "https://youtu.be/ajX6NaVks3w",
-    releaseYear: "2024",
+    slug: "state-of-fear",
+    title: "State of Fear",
+    image: "/images/documentaries/10-afeye-state-of-fear.jpg",
+    preview: "/videos/documentaries/state-of-fear-preview.mp4",
+    url: "https://youtu.be/9WkYK-SjJtE",
+    releaseYear: "2026",
     summary:
-      "BBC Africa Eye investigates what is fast becoming the world's deadliest migration route: the perilous Atlantic crossing from West Africa to Spain's Canary Islands.",
+      "A wave of enforced disappearances of government critics is spreading fear across Tanzania. Africa Eye investigates the abductions through powerful testimonies from survivors of torture and families of the disappeared.",
     role: "Localisation Producer",
     strand: "BBC Africa Eye",
     contribution:
-      "Led localisation delivery, coordinating editorial adaptation, dubbing and multilingual production workflows for international audiences.",
+      "Supported international adaptation and delivery for an investigation centred on testimony, risk and accountability.",
     process: [
-      "Managed localisation workflow from offline to online delivery",
-      "Oversaw translation, dubbing and partner coordination",
-      "Prepared the film for international audience adaptation and delivery",
-    ],
-  },
-  {
-    slug: "miracle-baby-scammers",
-    title: "Nigeria's Miracle Baby Scammers",
-    image: "/images/documentaries/02-afeye-nigeria-babies.jpg",
-    preview: "/videos/documentaries/nigeria-babies-preview.mp4",
-    url: "https://youtu.be/r62xSGw3kcI",
-    releaseYear: "2024",
-    summary:
-      "Africa Eye goes undercover to expose fertility scammers targeting Nigerian women and fuelling an underground trade in black market babies.",
-    role: "Localisation Producer",
-    strand: "BBC Africa Eye",
-    contribution:
-      "Managed localisation and editorial adaptation for international audiences, ensuring the investigation travelled clearly across markets.",
-    process: [
-      "Supported multilingual editorial versioning",
-      "Coordinated translation and dubbing delivery",
-      "Maintained editorial clarity across localised outputs",
-    ],
-  },
-  {
-    slug: "opioid-kings",
-    title: "India's Opioid Kings",
-    image: "/images/documentaries/03-afeye-india-opioids.jpg",
-    preview: "/videos/documentaries/opioid-kings-preview.mp4",
-    url: "https://youtu.be/ji6tjiRjbok",
-    releaseYear: "2025",
-    summary:
-      "For more than a decade, West Africa has been in the grip of an opioid crisis. BBC Eye tracks the supply chain back to the makers of the illegal, dangerous pills.",
-    role: "Localisation Producer",
-    strand: "BBC Africa Eye",
-    contribution:
-      "Adapted the film for wider international distribution through structured localisation and editorial delivery management.",
-    process: [
-      "Oversaw localisation timeline and delivery",
-      "Managed vendor workflows across translation and dubbing",
-      "Prepared final versions for platform distribution",
-    ],
-  },
-  {
-    slug: "stranded",
-    title: "Stranded: Exposing The UK's Immigration Scammers",
-    image: "/images/documentaries/04-afeye-stranded.jpg",
-    preview: "/videos/documentaries/stranded-preview.mp4",
-    url: "https://youtu.be/191CuNRGoos",
-    releaseYear: "2025",
-    summary:
-      "BBC Africa Eye goes undercover to track down rogue relocation agents who squeeze thousands of pounds from aspiring migrants with the false promise of a job in the UK.",
-    role: "Localisation Producer",
-    strand: "BBC Africa Eye",
-    contribution:
-      "Handled localisation planning and final adaptation workflows to support wider audience reach.",
-    process: [
-      "Planned versioning across international outputs",
-      "Managed multilingual adaptation",
-      "Supported final editorial delivery",
-    ],
-  },
-  {
-    slug: "blood-parliament",
-    title: "Blood Parliament",
-    image: "/images/documentaries/05-afeye-blood-parliament.jpg",
-    preview: "/videos/documentaries/blood-parliament-preview.mp4",
-    url: "https://youtu.be/qz0f1yyf_eA",
-    releaseYear: "2025",
-    summary:
-      "Africa Eye investigates the shootings at Kenya's June 25th finance bill protest.",
-    role: "Localisation Producer",
-    strand: "BBC Africa Eye",
-    contribution:
-      "Delivered localisation support for a fast-moving, high-impact investigation requiring precise editorial adaptation.",
-    process: [
-      "Supported rapid localisation turnaround",
-      "Coordinated language and versioning workflows",
-      "Maintained consistency across adapted outputs",
-    ],
-  },
-  {
-    slug: "madams",
-    title: "Madams: Exposing Kenya's Child Sex Trade",
-    image: "/images/documentaries/06-afeye-madams.jpg",
-    preview: "/videos/documentaries/madams-preview.mp4",
-    url: "https://youtu.be/JHINoFq8GvE",
-    releaseYear: "2025",
-    summary:
-      "Africa Eye uncovers child sex traffic  king in Kenya's transit town, Mai Mahiu.",
-    role: "Localisation Producer",
-    strand: "BBC Africa Eye",
-    contribution:
-      "Managed adaptation and multilingual delivery to preserve tone, clarity and emotional impact for new audiences.",
-    process: [
-      "Coordinated multilingual delivery pipeline",
-      "Oversaw dubbing and final quality control",
-      "Supported editorial adaptation for wider accessibility",
-    ],
-  },
-  {
-    slug: "death-in-dubai",
-    title: "Death In Dubai",
-    image: "/images/documentaries/07-afeye-death-in-dubai.jpg",
-    preview: "/videos/documentaries/death-in-dubai-preview.mp4",
-    url: "https://youtu.be/OboT09uRw6M",
-    releaseYear: "2025",
-    summary:
-      "When the mysterious death of a 23-year-old Ugandan in Dubai goes viral, she becomes the face of the disturbing Dubai Porta Potty scandal.",
-    role: "Localisation Producer",
-    strand: "BBC Africa Eye",
-    contribution:
-      "Helped localise and deliver a sensitive, high-interest investigation for audiences across multiple markets.",
-    process: [
-      "Managed localisation workflow end to end",
-      "Coordinated language adaptation and dubbing",
-      "Prepared final materials for distribution",
-    ],
-  },
-  {
-    slug: "money-rituals",
-    title: "Money Rituals: Africa's Deadliest Taboo",
-    image: "/images/documentaries/08-afeye-money-rituals.jpg",
-    preview: "/videos/documentaries/money-rituals-preview.mp4",
-    url: "https://youtu.be/EjDe1D8NlOY",
-    releaseYear: "2025",
-    summary:
-      "Africa Eye investigates Sierra Leone's hidden ritual market, where criminals posing as healers claim they can supply human body parts.",
-    role: "Localisation Producer",
-    strand: "BBC Africa Eye",
-    contribution:
-      "Oversaw the documentary's localisation and delivery, ensuring editorial integrity across adapted versions.",
-    process: [
-      "Guided translation and dubbing workflows",
-      "Ensured cultural and editorial clarity in adapted versions",
-      "Managed delivery across international outputs",
+      "Managed adaptation across target outputs",
+      "Handled dubbing and versioning workflows",
+      "Maintained editorial consistency through final delivery",
     ],
   },
   {
@@ -233,22 +100,155 @@ export const documentaries: Documentary[] = [
     ],
   },
   {
-    slug: "state-of-fear",
-    title: "State of Fear",
-    image: "/images/documentaries/10-afeye-state-of-fear.jpg",
-    preview: "/videos/documentaries/state-of-fear-preview.mp4",
-    url: "https://youtu.be/9WkYK-SjJtE",
-    releaseYear: "2026",
+    slug: "money-rituals",
+    title: "Money Rituals",
+    image: "/images/documentaries/08-afeye-money-rituals.jpg",
+    preview: "/videos/documentaries/money-rituals-preview.mp4",
+    url: "https://youtu.be/EjDe1D8NlOY",
+    releaseYear: "2025",
     summary:
-      "A wave of enforced disappearances of government critics is spreading fear across Tanzania. Africa Eye investigates the abductions through powerful testimonies from survivors of torture and families of the disappeared.",
+      "Africa Eye investigates Sierra Leone's hidden ritual market, where criminals posing as healers claim they can supply human body parts.",
     role: "Localisation Producer",
     strand: "BBC Africa Eye",
     contribution:
-      "Supported international adaptation and delivery for an investigation centred on testimony, risk and accountability.",
+      "Oversaw the documentary's localisation and delivery, ensuring editorial integrity across adapted versions.",
     process: [
-      "Managed adaptation across target outputs",
-      "Handled dubbing and versioning workflows",
-      "Maintained editorial consistency through final delivery",
+      "Guided translation and dubbing workflows",
+      "Ensured cultural and editorial clarity in adapted versions",
+      "Managed delivery across international outputs",
+    ],
+  },
+  {
+    slug: "death-in-dubai",
+    title: "Death In Dubai",
+    image: "/images/documentaries/07-afeye-death-in-dubai.jpg",
+    preview: "/videos/documentaries/death-in-dubai-preview.mp4",
+    url: "https://youtu.be/OboT09uRw6M",
+    releaseYear: "2025",
+    summary:
+      "When the mysterious death of a 23-year-old Ugandan in Dubai goes viral, she becomes the face of the disturbing Dubai Porta Potty scandal.",
+    role: "Localisation Producer",
+    strand: "BBC Africa Eye",
+    contribution:
+      "Helped localise and deliver a sensitive, high-interest investigation for audiences across multiple markets.",
+    process: [
+      "Managed localisation workflow end to end",
+      "Coordinated language adaptation and dubbing",
+      "Prepared final materials for distribution",
+    ],
+  },
+  {
+    slug: "madams",
+    title: "Madams",
+    image: "/images/documentaries/06-afeye-madams.jpg",
+    preview: "/videos/documentaries/madams-preview.mp4",
+    url: "https://youtu.be/JHINoFq8GvE",
+    releaseYear: "2025",
+    summary:
+      "Africa Eye uncovers child sex traffic  king in Kenya's transit town, Mai Mahiu.",
+    role: "Localisation Producer",
+    strand: "BBC Africa Eye",
+    contribution:
+      "Managed adaptation and multilingual delivery to preserve tone, clarity and emotional impact for new audiences.",
+    process: [
+      "Coordinated multilingual delivery pipeline",
+      "Oversaw dubbing and final quality control",
+      "Supported editorial adaptation for wider accessibility",
+    ],
+  },
+  {
+    slug: "blood-parliament",
+    title: "Blood Parliament",
+    image: "/images/documentaries/05-afeye-blood-parliament.jpg",
+    preview: "/videos/documentaries/blood-parliament-preview.mp4",
+    url: "https://youtu.be/qz0f1yyf_eA",
+    releaseYear: "2025",
+    summary:
+      "Africa Eye investigates the shootings at Kenya's June 25th finance bill protest.",
+    role: "Localisation Producer",
+    strand: "BBC Africa Eye",
+    contribution:
+      "Delivered localisation support for a fast-moving, high-impact investigation requiring precise editorial adaptation.",
+    process: [
+      "Supported rapid localisation turnaround",
+      "Coordinated language and versioning workflows",
+      "Maintained consistency across adapted outputs",
+    ],
+  },
+  {
+    slug: "stranded",
+    title: "Stranded",
+    image: "/images/documentaries/04-afeye-stranded.jpg",
+    preview: "/videos/documentaries/stranded-preview.mp4",
+    url: "https://youtu.be/191CuNRGoos",
+    releaseYear: "2025",
+    summary:
+      "BBC Africa Eye goes undercover to track down rogue relocation agents who squeeze thousands of pounds from aspiring migrants with the false promise of a job in the UK.",
+    role: "Localisation Producer",
+    strand: "BBC Africa Eye",
+    contribution:
+      "Handled localisation planning and final adaptation workflows to support wider audience reach.",
+    process: [
+      "Planned versioning across international outputs",
+      "Managed multilingual adaptation",
+      "Supported final editorial delivery",
+    ],
+  },
+  {
+    slug: "opioid-kings",
+    title: "India's Opioid Kings",
+    image: "/images/documentaries/03-afeye-india-opioids.jpg",
+    preview: "/videos/documentaries/opioid-kings-preview.mp4",
+    url: "https://youtu.be/ji6tjiRjbok",
+    releaseYear: "2025",
+    summary:
+      "For more than a decade, West Africa has been in the grip of an opioid crisis. BBC Eye tracks the supply chain back to the makers of the illegal, dangerous pills.",
+    role: "Localisation Producer",
+    strand: "BBC Africa Eye",
+    contribution:
+      "Adapted the film for wider international distribution through structured localisation and editorial delivery management.",
+    process: [
+      "Oversaw localisation timeline and delivery",
+      "Managed vendor workflows across translation and dubbing",
+      "Prepared final versions for platform distribution",
+    ],
+  },
+  {
+    slug: "miracle-baby-scammers",
+    title: "Nigeria's Miracle Baby Scammers",
+    image: "/images/documentaries/02-afeye-nigeria-babies.jpg",
+    preview: "/videos/documentaries/nigeria-babies-preview.mp4",
+    url: "https://youtu.be/r62xSGw3kcI",
+    releaseYear: "2024",
+    summary:
+      "Africa Eye goes undercover to expose fertility scammers targeting Nigerian women and fuelling an underground trade in black market babies.",
+    role: "Localisation Producer",
+    strand: "BBC Africa Eye",
+    contribution:
+      "Managed localisation and editorial adaptation for international audiences, ensuring the investigation travelled clearly across markets.",
+    process: [
+      "Supported multilingual editorial versioning",
+      "Coordinated translation and dubbing delivery",
+      "Maintained editorial clarity across localised outputs",
+    ],
+  },
+  {
+    slug: "dark-waters",
+    title: "Dark Waters",
+    image: "/images/documentaries/01-afeye-dark-waters.jpg",
+    preview: "/videos/documentaries/dark-waters-preview.mp4",
+    url: "https://youtu.be/ajX6NaVks3w",
+    releaseYear: "2024",
+    summary:
+      "BBC Africa Eye investigates what is fast becoming the world's deadliest migration route: the perilous Atlantic crossing from West Africa to Spain's Canary Islands.",
+    role: "Localisation Producer",
+    strand: "BBC Africa Eye",
+    contribution:
+      "Led localisation delivery, coordinating editorial adaptation, dubbing and multilingual production workflows for international audiences.",
+    process: [
+      "Managed localisation workflow from offline to online delivery",
+      "Oversaw translation, dubbing and partner coordination",
+      "Prepared the film for international audience adaptation and delivery",
     ],
   },
 ];
