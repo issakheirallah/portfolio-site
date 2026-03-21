@@ -16,7 +16,7 @@ export default function HomePage() {
             playsInline
             className="absolute inset-0 h-full w-full scale-105 object-cover animate-[heroZoom_18s_ease-in-out_infinite_alternate] opacity-40"
           >
-            <source src="/videos/hero/hero-background.mp4" type="video/mp4" />
+            <source src="/videos/hero/issa-hero-video.mp4" type="video/mp4" />
           </video>
 
           <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/85 to-stone-950/50" />
