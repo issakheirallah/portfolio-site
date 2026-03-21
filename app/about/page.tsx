@@ -1,3 +1,4 @@
+import { SoftwareBadges } from "@/components/software-badges";
 import { SiteShell } from "@/components/site-shell";
 import { expertise, timeline } from "@/lib/portfolio-data";
 
@@ -55,12 +56,22 @@ export default function AboutPage() {
         <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
           Editorial and production expertise
         </h2>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {expertise.map((item) => (
             <div key={item} className="rounded-2xl border border-white/10 bg-white/5 p-6">
               {item}
             </div>
           ))}
+        </div>
+
+        <div className="mt-16">
+          <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+            Editing software
+          </p>
+          <h3 className="mt-4 text-2xl font-semibold text-white md:text-4xl">
+            Editing and post-production tools
+          </h3>
+          <SoftwareBadges />
         </div>
       </section>
     </SiteShell>

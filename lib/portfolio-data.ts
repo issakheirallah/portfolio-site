@@ -350,9 +350,11 @@ export const storyLocations: StoryLocation[] = [
 
 export const expertise = [
   "Investigations",
+  "Documentary localisation and reversioning",
+  "Field producing and crew direction",
   "Producer-led storytelling",
-  "International documentary localisation",
   "Scriptwriting and story development",
-  "Digital and social media storytelling",
   "Audience growth and digital strategy",
+  "Video editing, motion graphics and image design",
+  "Project management",
 ] as const;
