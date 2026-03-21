@@ -38,6 +38,13 @@ export function DocumentaryArchive() {
                   {doc.summary}
                 </p>
 
+                <div className="mt-6">
+                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    Year of release
+                  </p>
+                  <p className="mt-2 text-base text-white">{doc.releaseYear}</p>
+                </div>
+
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                     <p className="text-xs uppercase tracking-[0.25em] text-stone-400">

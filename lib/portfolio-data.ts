@@ -11,6 +11,7 @@ export type Documentary = {
   image: string;
   preview: string;
   url: string;
+  releaseYear: string;
   summary: string;
   role: string;
   strand: string;
@@ -66,6 +67,7 @@ export const documentaries: Documentary[] = [
     image: "/images/documentaries/01-afeye-dark-waters.jpg",
     preview: "/videos/documentaries/dark-waters-preview.mp4",
     url: "https://youtu.be/ajX6NaVks3w",
+    releaseYear: "2024",
     summary:
       "BBC Africa Eye investigates what is fast becoming the world's deadliest migration route: the perilous Atlantic crossing from West Africa to Spain's Canary Islands.",
     role: "Localisation Producer",
@@ -84,6 +86,7 @@ export const documentaries: Documentary[] = [
     image: "/images/documentaries/02-afeye-nigeria-babies.jpg",
     preview: "/videos/documentaries/nigeria-babies-preview.mp4",
     url: "https://youtu.be/r62xSGw3kcI",
+    releaseYear: "2024",
     summary:
       "Africa Eye goes undercover to expose fertility scammers targeting Nigerian women and fuelling an underground trade in black market babies.",
     role: "Localisation Producer",
@@ -102,6 +105,7 @@ export const documentaries: Documentary[] = [
     image: "/images/documentaries/03-afeye-india-opioids.jpg",
     preview: "/videos/documentaries/opioid-kings-preview.mp4",
     url: "https://youtu.be/ji6tjiRjbok",
+    releaseYear: "2025",
     summary:
       "For more than a decade, West Africa has been in the grip of an opioid crisis. BBC Eye tracks the supply chain back to the makers of the illegal, dangerous pills.",
     role: "Localisation Producer",
@@ -120,6 +124,7 @@ export const documentaries: Documentary[] = [
     image: "/images/documentaries/04-afeye-stranded.jpg",
     preview: "/videos/documentaries/stranded-preview.mp4",
     url: "https://youtu.be/191CuNRGoos",
+    releaseYear: "2025",
     summary:
       "BBC Africa Eye goes undercover to track down rogue relocation agents who squeeze thousands of pounds from aspiring migrants with the false promise of a job in the UK.",
     role: "Localisation Producer",
@@ -138,6 +143,7 @@ export const documentaries: Documentary[] = [
     image: "/images/documentaries/05-afeye-blood-parliament.jpg",
     preview: "/videos/documentaries/blood-parliament-preview.mp4",
     url: "https://youtu.be/qz0f1yyf_eA",
+    releaseYear: "2025",
     summary:
       "Africa Eye investigates the shootings at Kenya's June 25th finance bill protest.",
     role: "Localisation Producer",
@@ -156,6 +162,7 @@ export const documentaries: Documentary[] = [
     image: "/images/documentaries/06-afeye-madams.jpg",
     preview: "/videos/documentaries/madams-preview.mp4",
     url: "https://youtu.be/JHINoFq8GvE",
+    releaseYear: "2025",
     summary:
       "Africa Eye uncovers child sex traffic  king in Kenya's transit town, Mai Mahiu.",
     role: "Localisation Producer",
@@ -174,6 +181,7 @@ export const documentaries: Documentary[] = [
     image: "/images/documentaries/07-afeye-death-in-dubai.jpg",
     preview: "/videos/documentaries/death-in-dubai-preview.mp4",
     url: "https://youtu.be/OboT09uRw6M",
+    releaseYear: "2025",
     summary:
       "When the mysterious death of a 23-year-old Ugandan in Dubai goes viral, she becomes the face of the disturbing Dubai Porta Potty scandal.",
     role: "Localisation Producer",
@@ -192,6 +200,7 @@ export const documentaries: Documentary[] = [
     image: "/images/documentaries/08-afeye-money-rituals.jpg",
     preview: "/videos/documentaries/money-rituals-preview.mp4",
     url: "https://youtu.be/EjDe1D8NlOY",
+    releaseYear: "2025",
     summary:
       "Africa Eye investigates Sierra Leone's hidden ritual market, where criminals posing as healers claim they can supply human body parts.",
     role: "Localisation Producer",
@@ -210,6 +219,7 @@ export const documentaries: Documentary[] = [
     image: "/images/documentaries/09-afeye-traffickers.jpg",
     preview: "/videos/documentaries/traffickers-preview.mp4",
     url: "https://youtu.be/_a4G2SZPvBQ",
+    releaseYear: "2026",
     summary:
       "Africa Eye is given exclusive access to the Sierra Leone Police as they target criminal gangs trafficking vulnerable people across West Africa and help one father try to find his missing daughter.",
     role: "Localisation Producer",
@@ -228,6 +238,7 @@ export const documentaries: Documentary[] = [
     image: "/images/documentaries/10-afeye-state-of-fear.jpg",
     preview: "/videos/documentaries/state-of-fear-preview.mp4",
     url: "https://youtu.be/9WkYK-SjJtE",
+    releaseYear: "2026",
     summary:
       "A wave of enforced disappearances of government critics is spreading fear across Tanzania. Africa Eye investigates the abductions through powerful testimonies from survivors of torture and families of the disappeared.",
     role: "Localisation Producer",
