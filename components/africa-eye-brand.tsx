@@ -1,22 +1,16 @@
+import Image from "next/image";
+
 export function AfricaEyeBrand() {
   return (
-    <div className="inline-flex max-w-full flex-wrap items-center gap-4 rounded-[1.5rem] border border-white/10 bg-stone-950/70 px-5 py-5 shadow-2xl backdrop-blur-sm">
-      <div className="flex gap-2">
-        {["B", "B", "C"].map((letter, index) => (
-          <div
-            key={`${letter}-${index}`}
-            className="flex h-14 w-14 items-center justify-center bg-white text-3xl font-bold tracking-[0.06em] text-black sm:h-16 sm:w-16"
-          >
-            {letter}
-          </div>
-        ))}
-      </div>
-
-      <div className="bg-[#c91717] px-6 py-4 sm:px-10 sm:py-5">
-        <span className="text-2xl font-semibold uppercase tracking-[0.18em] text-white sm:text-3xl">
-          Africa Eye
-        </span>
-      </div>
+    <div className="inline-flex max-w-full rounded-[1.25rem] border border-white/10 bg-stone-950/70 p-4 shadow-2xl backdrop-blur-sm">
+      <Image
+        src="/images/afeye-logo.png"
+        alt="BBC Africa Eye"
+        width={640}
+        height={160}
+        className="h-auto w-full max-w-[30rem] object-contain"
+        priority
+      />
     </div>
   );
 }
