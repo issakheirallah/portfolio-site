@@ -117,7 +117,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <FadeIn className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Featured work</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">Featured work</p>
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
               Brands I&apos;ve worked on
             </h2>
@@ -157,7 +157,7 @@ export default function HomePage() {
       <section className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-20 md:px-10 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Next step</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">Next step</p>
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
               Explore the rest of the portfolio
             </h2>
