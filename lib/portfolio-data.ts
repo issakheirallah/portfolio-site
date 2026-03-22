@@ -63,18 +63,21 @@ export const featuredWork = [
     category: "Breaking News",
     description:
       "Wrote scripts for bulletins, online articles and video reports while monitoring breaking developments, coordinating contributors and preparing presenters for major live stories.",
+    image: "/images/projects/bbc-news.jpg",
   },
   {
     title: "HARDtalk",
     category: "Politics",
     description:
       "Compiled detailed editorial briefs for high-profile interviews and produced supporting social video and image content across Facebook, Instagram, TikTok and X.",
+    image: "/images/projects/hardtalk.jpg",
   },
   {
     title: "Xtra",
     category: "Social stories",
     description:
       "Supported fast-paced newsroom production by coordinating contributors, managing logistics and working across editorial and technical teams to deliver live and recorded content.",
+    image: "/images/projects/xtra.jpg",
   },
 ] as const;
 
