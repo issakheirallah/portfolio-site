@@ -157,27 +157,13 @@ export default function HomePage() {
               className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl"
             >
               <div className="relative h-80 overflow-hidden bg-stone-950">
-                {item.image ? (
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="h-full w-full object-contain p-3"
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_35%),linear-gradient(135deg,rgba(28,25,23,1),rgba(41,37,36,0.82))]" />
-                )}
-                {!item.image && (
-                  <div className="relative flex h-full flex-col justify-end p-6">
-                    <p className="text-xs uppercase tracking-[0.3em] text-stone-400">
-                      {item.category}
-                    </p>
-                    <h3 className="mt-4 max-w-[12rem] text-4xl font-semibold tracking-tight text-white">
-                      {item.title}
-                    </h3>
-                  </div>
-                )}
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="h-full w-full object-contain p-3"
+                />
               </div>
               <div className="p-6">
                 <p className="text-xs uppercase tracking-[0.28em] text-stone-400">{item.category}</p>
