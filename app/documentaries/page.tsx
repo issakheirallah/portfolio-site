@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AfricaEyeBrand } from "@/components/africa-eye-brand";
 import { DocumentaryArchive } from "@/components/documentary-archive";
 import { SiteShell } from "@/components/site-shell";
 
@@ -35,6 +36,10 @@ export default function DocumentariesPage() {
       title="Selected Africa Eye investigations"
       intro="A selection from the 30+ Africa Eye investigations that I have localised."
     >
+      <section className="mx-auto max-w-7xl px-6 pt-12 md:px-10">
+        <AfricaEyeBrand />
+      </section>
+
       <DocumentaryArchive />
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
