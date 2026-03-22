@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { AfricaEyeBrand } from "@/components/africa-eye-brand";
 import { AriaIconButton } from "@/components/aria-icon-button";
 import { documentaries } from "@/lib/portfolio-data";
 
@@ -44,10 +43,6 @@ export function DocumentaryShowcase({
   return (
     <section className="border-y border-white/10 bg-white/[0.03]">
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
-        <div className="mb-10">
-          <AfricaEyeBrand />
-        </div>
-
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-stone-400">

@@ -10,15 +10,15 @@ export default function HomePage() {
     <SiteShell>
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 overflow-hidden">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 h-full w-full scale-105 object-cover animate-[heroZoom_18s_ease-in-out_infinite_alternate] opacity-40"
-          >
-            <source src="/videos/hero/issa-hero-video.mp4" type="video/mp4" />
-          </video>
+          <Image
+            src="/images/profile/issa-hero.png"
+            alt=""
+            aria-hidden="true"
+            fill
+            priority
+            sizes="100vw"
+            className="absolute inset-0 h-full w-full object-cover object-right opacity-50"
+          />
 
           <div className="absolute inset-0 bg-gradient-to-r from-stone-950/85 via-stone-950/65 to-stone-950/30" />
         </div>
@@ -112,29 +112,6 @@ export default function HomePage() {
 
           <div className="hidden lg:block" />
         </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <FadeIn className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Overview</p>
-            <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
-              Reporting, investigations and localisation across multiple formats
-            </h2>
-          </div>
-
-          <div className="space-y-6 text-lg leading-8 text-stone-300">
-            <p>
-              I am a BBC producer and journalist with more than nine years&apos;
-              experience delivering broadcast, digital and on-location productions.
-            </p>
-            <p>
-              Currently, I am leading Africa Eye documentary localisation while my
-              wider background spans presenter-led reporting, digital storytelling
-              and factual production.
-            </p>
-          </div>
-        </FadeIn>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
