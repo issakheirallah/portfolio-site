@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { DocumentaryShowcase } from "@/components/documentary-showcase";
 import { FadeIn } from "@/components/fade-in";
+import { HeroBackgroundCarousel } from "@/components/hero-background-carousel";
 import { SiteShell } from "@/components/site-shell";
 import { featuredWork } from "@/lib/portfolio-data";
 
@@ -9,19 +10,7 @@ export default function HomePage() {
   return (
     <SiteShell>
       <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 overflow-hidden">
-          <Image
-            src="/images/profile/issa-hero.png"
-            alt=""
-            aria-hidden="true"
-            fill
-            priority
-            sizes="100vw"
-            className="absolute inset-0 h-full w-full object-cover object-right opacity-100"
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-950/80 via-stone-950/50 to-stone-950/15" />
-        </div>
+        <HeroBackgroundCarousel />
 
         <div className="relative mx-auto grid min-h-[85vh] max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <FadeIn className="max-w-4xl">
