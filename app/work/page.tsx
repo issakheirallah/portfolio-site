@@ -10,7 +10,8 @@ export const metadata: Metadata = {
 
 type VideoItem = {
   title: string;
-  url: string;
+  embedUrl: string;
+  watchUrl?: string;
 };
 
 type WorkSection = {
@@ -27,7 +28,7 @@ const workSections: WorkSection[] = [
       ...showreelVideos.slice(1),
       {
         title: "Artificial blood vessels made from human tissue",
-        url: "https://www.youtube.com/embed/LuWaGMmpaBY",
+        embedUrl: "https://www.youtube.com/embed/LuWaGMmpaBY",
       },
     ],
   },
@@ -37,27 +38,27 @@ const workSections: WorkSection[] = [
     items: [
       {
         title: showreelVideos[0].title,
-        url: showreelVideos[0].url,
+        embedUrl: showreelVideos[0].url,
       },
       {
         title: "Deepfake and AI in UK elections",
-        url: "https://www.youtube.com/embed/37cZIDbD4EQ",
+        embedUrl: "https://www.youtube.com/embed/37cZIDbD4EQ",
       },
       {
         title: "Euro 2024 technologies",
-        url: "https://www.youtube.com/embed/ZPVHmm8xzF4",
+        embedUrl: "https://www.youtube.com/embed/ZPVHmm8xzF4",
       },
       {
         title: "Why NASA wants to go back to the moon",
-        url: "https://www.youtube.com/embed/ERqYzHdDV9k",
+        embedUrl: "https://www.youtube.com/embed/ERqYzHdDV9k",
       },
       {
         title: "Using brain waves to produce music",
-        url: "https://www.youtube.com/embed/Fbf0skU_7oM",
+        embedUrl: "https://www.youtube.com/embed/Fbf0skU_7oM",
       },
       {
         title: "Technology at the BBC: 100 years on",
-        url: "https://www.youtube.com/embed/cpQti3iIp7U",
+        embedUrl: "https://www.youtube.com/embed/cpQti3iIp7U",
       },
     ],
   },
@@ -67,42 +68,68 @@ const workSections: WorkSection[] = [
     items: [
       {
         title: "Nude drawings: My society's taboo",
-        url: "https://www.youtube.com/embed/IGOAyWEVvN8",
+        embedUrl: "https://www.youtube.com/embed/IGOAyWEVvN8",
       },
       {
         title: "Acapella and my religion",
-        url: "https://www.youtube.com/embed/mneVKbvg-88",
+        embedUrl: "https://www.youtube.com/embed/mneVKbvg-88",
       },
       {
         title: "I treated my mental health with the art of photography",
-        url: "https://www.youtube.com/embed/vGYMgmFF-Ks",
+        embedUrl: "https://www.youtube.com/embed/vGYMgmFF-Ks",
       },
       {
         title: "How I used photography to treat my Borderline Personality Disorder",
-        url: "https://www.youtube.com/embed/QgWKasEclF4",
+        embedUrl: "https://www.youtube.com/embed/QgWKasEclF4",
       },
       {
         title: "Photography, my mother and Alzheimer's",
-        url: "https://www.youtube.com/embed/APX-_dwZZWg",
+        embedUrl: "https://www.youtube.com/embed/APX-_dwZZWg",
       },
       {
         title: "The Ottoman effect on the Arabic language",
-        url: "https://www.youtube.com/embed/zqX40BRKRbY",
+        embedUrl: "https://www.youtube.com/embed/zqX40BRKRbY",
       },
       {
         title: "A corona mask made with...aubergine?",
-        url: "https://www.youtube.com/embed/CdTRomWnSxk",
+        embedUrl: "https://www.youtube.com/embed/CdTRomWnSxk",
       },
       {
         title: "How one woman is reviving lost Palestinian foods",
-        url: "https://www.youtube.com/embed/G9hcLwvmJEk",
+        embedUrl: "https://www.youtube.com/embed/G9hcLwvmJEk",
       },
     ],
   },
   {
     title: "Field Producing",
     intro: "A section for location-based production work, reporting support and field-led editorial delivery.",
-    items: [],
+    items: [
+      {
+        title: "Ibrahim Keivo: Blending ancient Mesopotamian languages into one song",
+        embedUrl: "https://www.bbc.com/arabic/av-embeds/tv-and-radio-62066450",
+        watchUrl: "https://www.bbc.com/arabic/av-embeds/tv-and-radio-62066450",
+      },
+      {
+        title: "Syrian Cassette Archive: Preserving the art of popular music in cassettes",
+        embedUrl: "https://www.youtube.com/embed/t6HEkEkaLl0",
+        watchUrl: "https://www.youtube.com/watch?v=t6HEkEkaLl0",
+      },
+      {
+        title: "SACF: The first Syrian arts and culture festival in London",
+        embedUrl: "https://www.bbc.com/arabic/av-embeds/tv-and-radio-62066452",
+        watchUrl: "https://www.bbc.com/arabic/av-embeds/tv-and-radio-62066452",
+      },
+      {
+        title: "Dima Orsho: A soprano singer’s journey in the world of music",
+        embedUrl: "https://www.bbc.com/arabic/av-embeds/blog-tv-and-radio-64641842",
+        watchUrl: "https://www.bbc.com/arabic/av-embeds/blog-tv-and-radio-64641842",
+      },
+      {
+        title: "N3rdistan: Arabic poetry in music",
+        embedUrl: "https://www.bbc.com/arabic/av-embeds/tv-and-radio-65978455",
+        watchUrl: "https://www.bbc.com/arabic/av-embeds/tv-and-radio-65978455",
+      },
+    ],
   },
   {
     title: "Promos and trailers",
@@ -111,8 +138,9 @@ const workSections: WorkSection[] = [
   },
 ];
 
-function getYoutubeHref(embedUrl: string) {
-  return embedUrl.replace("/embed/", "/watch?v=");
+function getVideoHref(item: VideoItem) {
+  if (item.watchUrl) return item.watchUrl;
+  return item.embedUrl.replace("/embed/", "/watch?v=");
 }
 
 export default function WorkPage() {
@@ -128,7 +156,7 @@ export default function WorkPage() {
           className="border-y border-white/10 bg-white/[0.03] first:border-t-0"
         >
           <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">
+            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
               Work section
             </p>
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
@@ -148,7 +176,7 @@ export default function WorkPage() {
                     <div className="aspect-video overflow-hidden border-b border-white/10">
                       <iframe
                         className="h-full w-full"
-                        src={item.url}
+                        src={item.embedUrl}
                         title={item.title}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
@@ -160,12 +188,12 @@ export default function WorkPage() {
                       <h3 className="text-2xl font-medium text-white">{item.title}</h3>
                       <div className="mt-6 flex flex-wrap gap-4">
                         <a
-                          href={getYoutubeHref(item.url)}
+                          href={getVideoHref(item)}
                           target="_blank"
                           rel="noreferrer"
                           className="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-stone-950 transition hover:-translate-y-1 hover:shadow-2xl"
                         >
-                          Watch on YouTube
+                          Watch video
                         </a>
                       </div>
                     </div>
