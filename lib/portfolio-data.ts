@@ -24,15 +24,15 @@ export const profileImage = "/images/profile/issa-kheirallah.jpg";
 export const showreelVideos = [
   {
     title: "Technologies at the 2024 Paris Olympics",
-    url: "https://www.youtube.com/embed/ZFO_vnkpLBA",
+    embedUrl: "https://www.youtube.com/embed/ZFO_vnkpLBA",
   },
   {
     title: "Implantable device to help with regulating diabetes",
-    url: "https://www.youtube.com/embed/2eOiy7dC3nE",
+    embedUrl: "https://www.youtube.com/embed/2eOiy7dC3nE",
   },
   {
     title: "Spinal cord rehabilitation device",
-    url: "https://www.youtube.com/embed/OcGbQclUDQw",
+    embedUrl: "https://www.youtube.com/embed/OcGbQclUDQw",
   },
 ] as const;
 

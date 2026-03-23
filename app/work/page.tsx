@@ -38,7 +38,7 @@ const workSections: WorkSection[] = [
     items: [
       {
         title: showreelVideos[0].title,
-        embedUrl: showreelVideos[0].url,
+        embedUrl: showreelVideos[0].embedUrl,
       },
       {
         title: "Deepfake and AI in UK elections",

@@ -26,7 +26,7 @@ export function ShowreelCarousel() {
           <div className="aspect-video">
             <iframe
               className="h-full w-full"
-              src={showreelVideos[currentVideo].url}
+              src={showreelVideos[currentVideo].embedUrl}
               title={showreelVideos[currentVideo].title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
