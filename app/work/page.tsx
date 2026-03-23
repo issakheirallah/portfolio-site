@@ -105,6 +105,11 @@ const workSections: WorkSection[] = [
     intro: "A section for location-based production work, reporting support and field-led editorial delivery.",
     items: [
       {
+        title: "Bioengineered mosquitoes to fight Dengue fever",
+        embedUrl: "https://www.bbc.com/ws/av-embeds/articles/cg4qpkxpz4go/p0jx55tc/ar",
+        watchUrl: "https://www.bbc.com/ws/av-embeds/articles/cg4qpkxpz4go/p0jx55tc/ar",
+      },
+      {
         title: "Ibrahim Keivo: Blending ancient Mesopotamian languages into one song",
         embedUrl: "https://www.bbc.com/arabic/av-embeds/tv-and-radio-62066450",
         watchUrl: "https://www.bbc.com/arabic/av-embeds/tv-and-radio-62066450",
