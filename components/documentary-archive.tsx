@@ -26,7 +26,7 @@ export function DocumentaryArchive() {
               </div>
 
               <div className="p-8">
-                <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+                <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">
                   Documentary spotlight
                 </p>
 
@@ -39,7 +39,7 @@ export function DocumentaryArchive() {
                 </p>
 
                 <div className="mt-6">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                  <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                     Year of release
                   </p>
                   <p className="mt-2 text-base text-white">{doc.releaseYear}</p>
@@ -47,14 +47,14 @@ export function DocumentaryArchive() {
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                    <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                       Role
                     </p>
                     <p className="mt-2 text-base text-white">{doc.role}</p>
                   </div>
 
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                    <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                       Strand
                     </p>
                     <p className="mt-2 text-base text-white">{doc.strand}</p>
@@ -62,7 +62,7 @@ export function DocumentaryArchive() {
                 </div>
 
                 <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                  <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                     Contribution
                   </p>
                   <p className="mt-3 leading-7 text-stone-300">

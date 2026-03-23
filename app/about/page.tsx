@@ -39,7 +39,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Timeline</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">Timeline</p>
         <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">Career timeline</h2>
         <div className="mt-12 space-y-6 border-l border-white/10 pl-6 md:pl-10">
           {timeline.map((item) => (
@@ -59,7 +59,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Expertise</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">Expertise</p>
         <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
           Editorial and production expertise
         </h2>
@@ -72,7 +72,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mt-16">
-          <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">
             Editing software
           </p>
           <h3 className="mt-4 text-2xl font-semibold text-white md:text-4xl">

@@ -49,7 +49,7 @@ export function SiteShell({
         <section className="border-b border-white/10">
           <div className="mx-auto max-w-7xl px-6 py-16 md:px-10 md:py-20">
             {eyebrow && (
-              <p className="text-sm uppercase tracking-[0.35em] text-stone-400">
+              <p className="text-sm uppercase tracking-[0.35em] text-[#B80000]">
                 {eyebrow}
               </p>
             )}

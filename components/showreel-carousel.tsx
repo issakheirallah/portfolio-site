@@ -17,7 +17,7 @@ export function ShowreelCarousel() {
   return (
     <section className="border-y border-white/10 bg-white/[0.03]">
       <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Showreel</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">Showreel</p>
         <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">
           On-screen reporting
         </h2>

@@ -128,7 +128,7 @@ export default function WorkPage() {
           className="border-y border-white/10 bg-white/[0.03] first:border-t-0"
         >
           <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">
               Work section
             </p>
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">

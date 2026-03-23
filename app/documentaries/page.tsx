@@ -38,7 +38,7 @@ export default function DocumentariesPage() {
       <DocumentaryArchive />
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+        <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">
           Other localised titles
         </p>
         <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">

@@ -61,7 +61,7 @@ export default function HomePage() {
 
             <div className="mt-10 max-w-3xl rounded-[2rem] border border-white/10 bg-stone-900/65 p-6 shadow-2xl backdrop-blur-sm">
               <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                   Current focus
                 </p>
                 <p className="mt-4 text-2xl font-medium leading-snug text-white">
@@ -75,14 +75,14 @@ export default function HomePage() {
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                  <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                     Based in
                   </p>
                   <p className="mt-3 text-lg text-white">London</p>
                 </div>
 
                 <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                  <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                     Focus
                   </p>
                   <p className="mt-3 text-lg text-white">
@@ -91,7 +91,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 sm:col-span-2">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                  <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                     What to explore
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3 text-sm text-stone-200">
@@ -143,7 +143,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <p className="text-xs uppercase tracking-[0.28em] text-stone-400">{item.category}</p>
+                <p className="text-xs uppercase tracking-[0.28em] text-[#B80000]">{item.category}</p>
                 <h3 className="mt-3 text-2xl font-medium text-white">{item.title}</h3>
                 <p className="mt-4 leading-7 text-stone-300">{item.description}</p>
               </div>

@@ -140,7 +140,7 @@ export function ReportingMap() {
       <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">
               Global reporting footprint
             </p>
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-5xl">

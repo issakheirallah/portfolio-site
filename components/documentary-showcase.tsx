@@ -45,7 +45,7 @@ export function DocumentaryShowcase({
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-10">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">
               Localisation work
             </p>
 
@@ -86,7 +86,7 @@ export function DocumentaryShowcase({
                     </div>
 
                     <div className="p-6">
-                      <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                      <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                         BBC Africa Eye
                       </p>
                       <h3 className="mt-2 min-h-[5.75rem] text-xl font-medium leading-snug text-white">
@@ -107,7 +107,7 @@ export function DocumentaryShowcase({
               }`}
             >
               <div className="flex items-center justify-between gap-4">
-                <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
+                <p className="text-sm uppercase tracking-[0.3em] text-[#B80000]">
                   Documentary spotlight
                 </p>
                 <div className="flex gap-2">
@@ -129,13 +129,13 @@ export function DocumentaryShowcase({
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                  <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                     Role
                   </p>
                   <p className="mt-2 text-base text-white">{selectedDocumentary.role}</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                  <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                     Strand
                   </p>
                   <p className="mt-2 text-base text-white">{selectedDocumentary.strand}</p>
@@ -145,7 +145,7 @@ export function DocumentaryShowcase({
               {showExtendedDetails && (
                 <>
                   <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                    <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                       My contribution
                     </p>
                     <p className="mt-3 leading-7 text-stone-300">
@@ -154,7 +154,7 @@ export function DocumentaryShowcase({
                   </div>
 
                   <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-white/5 p-6">
-                    <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+                    <p className="text-xs uppercase tracking-[0.25em] text-[#B80000]">
                       Process
                     </p>
                     <div className="mt-4 space-y-3">
