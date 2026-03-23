@@ -137,6 +137,30 @@ const workSections: WorkSection[] = [
     ],
   },
   {
+    title: "High-profile political interviews",
+    intro: "A selection of political interviews featuring senior diplomatic and policy voices.",
+    items: [
+      {
+        title: "Daniel Levy: Former Israeli peace negotiator",
+        embedUrl: "https://www.youtube.com/embed/inSNyyLyQp0",
+        watchUrl: "https://www.youtube.com/watch?v=inSNyyLyQp0&t=5s",
+      },
+      {
+        title: "Muhanad Al Aklouk: Palestinian envoy to the League of Arab States",
+        embedUrl: "https://www.youtube.com/embed/iD8af5t8L-c",
+        watchUrl:
+          "https://www.youtube.com/watch?v=iD8af5t8L-c&list=PLF614048CA3E017F0&index=127",
+      },
+      {
+        title:
+          "Hassan Asfour: Former Palestinian minister and member on the Oslo Accord committee",
+        embedUrl: "https://www.youtube.com/embed/Sv7ndCUpDVE",
+        watchUrl:
+          "https://www.youtube.com/watch?v=Sv7ndCUpDVE&list=PLF614048CA3E017F0&index=130&t=28s",
+      },
+    ],
+  },
+  {
     title: "Promos and trailers",
     intro: "A section for teasers, promotional edits and trailer-style pieces.",
     items: [],
