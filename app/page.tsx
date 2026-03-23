@@ -11,7 +11,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/images/profile/issa-hero.png"
+            src="/images/profile/issa-hero.jpg"
             alt=""
             aria-hidden="true"
             fill
