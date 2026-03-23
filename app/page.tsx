@@ -17,7 +17,7 @@ export default function HomePage() {
             fill
             priority
             sizes="100vw"
-            className="absolute inset-0 h-full w-full object-cover object-right opacity-75"
+            className="absolute inset-0 h-full w-full object-cover object-right opacity-100"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-stone-950/80 via-stone-950/50 to-stone-950/15" />
