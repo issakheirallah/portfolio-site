@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 
 const heroImages = [
   "/images/profile/issa-hero.png",
-  "/images/profile/issa-hero-2.jpg",
-  "/images/profile/issa-hero-3.jpg",
+  "/images/profile/issa-hero-2.png",
+  "/images/profile/issa-hero-3.png",
 ] as const;
 
 export function HeroBackgroundCarousel() {
