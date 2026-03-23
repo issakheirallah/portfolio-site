@@ -23,7 +23,7 @@ export function HeroBackgroundCarousel() {
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <motion.div
           key={heroImages[currentIndex]}
           initial={{ opacity: 0 }}
