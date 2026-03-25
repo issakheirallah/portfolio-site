@@ -44,7 +44,7 @@ export default function HomePage() {
               audiences.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap gap-4 pl-6">
               <Link
                 href="/work"
                 className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-950"
