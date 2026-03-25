@@ -25,14 +25,17 @@ export const showreelVideos = [
   {
     title: "Technologies at the 2024 Paris Olympics",
     embedUrl: "https://www.youtube.com/embed/ZFO_vnkpLBA",
+    role: "Producer / Presenter",
   },
   {
     title: "Implantable device to help with regulating diabetes",
     embedUrl: "https://www.youtube.com/embed/2eOiy7dC3nE",
+    role: "Producer / Presenter",
   },
   {
     title: "Spinal cord rehabilitation device",
     embedUrl: "https://www.youtube.com/embed/OcGbQclUDQw",
+    role: "Producer / Presenter",
   },
 ] as const;
 
