@@ -221,11 +221,6 @@ const workSections: WorkSection[] = [
       },
     ],
   },
-  {
-    title: "Promos and trailers",
-    intro: "A section for teasers, promotional edits and trailer-style pieces.",
-    items: [],
-  },
 ];
 
 function getVideoHref(item: VideoItem) {
