@@ -29,7 +29,7 @@ export default function ContactPage() {
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
             <p className="text-xs uppercase tracking-[0.25em] text-stone-400">LinkedIn</p>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/issa-kheirallah/"
               className="mt-4 block text-2xl text-white hover:text-stone-300"
             >
               Connect on LinkedIn
