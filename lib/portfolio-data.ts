@@ -45,7 +45,7 @@ export const featuredWork = [
     title: "Eye Investigations",
     category: "Investigations",
     description:
-      "Localising flagship BBC investigations for international audiences, managing editorial workflows, translation, dubbing and delivery across multiple markets.",
+      "Documentary series offering high-impact investigations and in-depth reporting from award-winning World Service teams across the globe.",
     image: "/images/projects/bbc-eye-investigations.jpg",
   },
   {
@@ -53,7 +53,7 @@ export const featuredWork = [
     title: "4Tech",
     category: "Technology",
     description:
-      "Produced and presented reports and part of the production of 280+ episodes covering global technology, innovation and digital culture across broadcast and social platforms.",
+      "A weekly show that covers everything technology from the medical sector on earth to the endless bounds of space.",
     image: "/images/projects/bbc-arabic-4tech.jpg",
   },
   {
@@ -61,7 +61,7 @@ export const featuredWork = [
     title: "Art for Life",
     category: "Arts and Culture",
     description:
-      "Produced and directed reports across Europe covering digital art, NFTs and cultural events, guiding teams from development through final edit.",
+      "Art for Life is a weekly culture programme showcasing a variety of Arab culture genres, from music to cinema to poetry.",
     image: "/images/projects/art-for-life.jpg",
   },
   {
@@ -69,7 +69,7 @@ export const featuredWork = [
     title: "BBC News",
     category: "Breaking News",
     description:
-      "Wrote scripts for bulletins, online articles and video reports while monitoring breaking developments, coordinating contributors and preparing presenters for major live stories.",
+      "BBC News provides trusted World and UK news as well as local and regional perspectives.",
     image: "/images/projects/bbc-news.jpg",
   },
   {
@@ -77,7 +77,7 @@ export const featuredWork = [
     title: "HARDtalk",
     category: "Politics",
     description:
-      "Compiled detailed editorial briefs for high-profile interviews and produced supporting social video and image content across Facebook, Instagram, TikTok and X.",
+      "In-depth interviews with hard-hitting questions and sensitive topics being covered as famous personalities from all walks of life talk about the highs and lows in their lives.",
     image: "/images/projects/hardtalk.jpg",
   },
   {
@@ -85,7 +85,7 @@ export const featuredWork = [
     title: "Xtra",
     category: "Social stories",
     description:
-      "Supported fast-paced newsroom production by coordinating contributors, managing logistics and working across editorial and technical teams to deliver live and recorded content.",
+      "A weekly magazine show looking at a range of social, political and cultural topics across the Middle East.",
     image: "/images/projects/xtra.jpg",
   },
 ] as const;

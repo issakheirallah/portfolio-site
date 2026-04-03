@@ -250,7 +250,7 @@ export const brandWorkPages: BrandWorkPage[] = [
     eyebrow: "Brand portfolio",
     title: "4Tech",
     intro:
-      "A filtered portfolio of presenter-led reporting, technology segments and field-produced work created for BBC Arabic's 4Tech.",
+      "A weekly show that covers everything technology from the medical sector on earth to the endless bounds of space.",
     sections: getSectionsByProgramme("4Tech"),
   },
   {
@@ -258,7 +258,7 @@ export const brandWorkPages: BrandWorkPage[] = [
     eyebrow: "Brand portfolio",
     title: "Art for Life",
     intro:
-      "A selection of digital arts and culture work produced across field shoots, feature segments and online-first edits for Art for Life.",
+      "Art for Life is a weekly culture programme showcasing a variety of Arab culture genres, from music to cinema to poetry.",
     sections: getSectionsByProgramme("Art for Life"),
   },
   {
@@ -266,7 +266,7 @@ export const brandWorkPages: BrandWorkPage[] = [
     eyebrow: "Brand portfolio",
     title: "HARDtalk",
     intro:
-      "A focused archive of high-profile political interviews and supporting editorial work produced for HARDtalk.",
+      "In-depth interviews with hard-hitting questions and sensitive topics being covered as famous personalities from all walks of life talk about the highs and lows in their lives.",
     sections: getSectionsByProgramme("HARDtalk"),
   },
   {
@@ -274,7 +274,7 @@ export const brandWorkPages: BrandWorkPage[] = [
     eyebrow: "Brand portfolio",
     title: "Eye Investigations",
     intro:
-      "This work lives in the dedicated Localisation section, where the documentary archive and individual project pages are organised separately from the main Portfolio page.",
+      "Documentary series offering high-impact investigations and in-depth reporting from award-winning World Service teams across the globe.",
     sections: [],
     emptyMessage:
       "The Eye Investigations work is presented in the Localisation section rather than the main Portfolio format.",
@@ -286,7 +286,7 @@ export const brandWorkPages: BrandWorkPage[] = [
     eyebrow: "Brand portfolio",
     title: "BBC News",
     intro:
-      "Selected BBC News work will be added here in the same portfolio format as the rest of the site.",
+      "BBC News provides trusted World and UK news as well as local and regional perspectives.",
     sections: [],
     emptyMessage:
       "This page is ready for BBC News examples once you want to add them.",
@@ -296,7 +296,7 @@ export const brandWorkPages: BrandWorkPage[] = [
     eyebrow: "Brand portfolio",
     title: "Xtra",
     intro:
-      "Selected Xtra work will be added here in the same portfolio format as the rest of the site.",
+      "A weekly magazine show looking at a range of social, political and cultural topics across the Middle East.",
     sections: [],
     emptyMessage:
       "This page is ready for Xtra examples once you want to add them.",
