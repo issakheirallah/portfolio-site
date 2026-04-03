@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 import { SiteShell } from "@/components/site-shell";
 import { WorkSections } from "@/components/work-sections";
 import { brandWorkPages, getBrandWorkPage } from "@/lib/work-data";
@@ -16,6 +17,14 @@ export async function generateMetadata({
   params: Params;
 }): Promise<Metadata> {
   const { slug } = await params;
+
+  if (slug === "eye-investigations") {
+    return {
+      title: "Localisation",
+      description: "Selected Africa Eye investigations localised for international audiences.",
+    };
+  }
+
   const brandPage = getBrandWorkPage(slug);
 
   if (!brandPage) {
@@ -30,6 +39,11 @@ export async function generateMetadata({
 
 export default async function BrandWorkPage({ params }: { params: Params }) {
   const { slug } = await params;
+
+  if (slug === "eye-investigations") {
+    redirect("/documentaries");
+  }
+
   const brandPage = getBrandWorkPage(slug);
 
   if (!brandPage) {

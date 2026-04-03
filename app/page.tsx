@@ -114,7 +114,7 @@ export default function HomePage() {
           {featuredWork.map((item) => (
             <Link
               key={item.title}
-              href={`/work/${item.slug}`}
+              href={item.slug === "eye-investigations" ? "/documentaries" : `/work/${item.slug}`}
               className="group overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl transition hover:-translate-y-1 hover:border-white/20 hover:shadow-2xl"
             >
               <div className="relative h-80 overflow-hidden bg-stone-950">
