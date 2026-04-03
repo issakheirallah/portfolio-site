@@ -41,6 +41,7 @@ export const showreelVideos = [
 
 export const featuredWork = [
   {
+    slug: "eye-investigations",
     title: "Eye Investigations",
     category: "Investigations",
     description:
@@ -48,6 +49,7 @@ export const featuredWork = [
     image: "/images/projects/bbc-eye-investigations.jpg",
   },
   {
+    slug: "4tech",
     title: "4Tech",
     category: "Technology",
     description:
@@ -55,6 +57,7 @@ export const featuredWork = [
     image: "/images/projects/bbc-arabic-4tech.jpg",
   },
   {
+    slug: "art-for-life",
     title: "Art for Life",
     category: "Arts and Culture",
     description:
@@ -62,6 +65,7 @@ export const featuredWork = [
     image: "/images/projects/art-for-life.jpg",
   },
   {
+    slug: "bbc-news",
     title: "BBC News",
     category: "Breaking News",
     description:
@@ -69,6 +73,7 @@ export const featuredWork = [
     image: "/images/projects/bbc-news.jpg",
   },
   {
+    slug: "hardtalk",
     title: "HARDtalk",
     category: "Politics",
     description:
@@ -76,6 +81,7 @@ export const featuredWork = [
     image: "/images/projects/hardtalk.jpg",
   },
   {
+    slug: "xtra",
     title: "Xtra",
     category: "Social stories",
     description:

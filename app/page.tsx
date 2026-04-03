@@ -112,9 +112,10 @@ export default function HomePage() {
 
         <div className="mt-12 grid gap-8 lg:grid-cols-3">
           {featuredWork.map((item) => (
-            <article
+            <Link
               key={item.title}
-              className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl"
+              href={`/work/${item.slug}`}
+              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70 shadow-xl transition hover:-translate-y-1 hover:border-white/20 hover:shadow-2xl"
             >
               <div className="relative h-80 overflow-hidden bg-stone-950">
                 <Image
@@ -122,15 +123,18 @@ export default function HomePage() {
                   alt={item.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="h-full w-full object-contain p-3"
+                  className="h-full w-full object-contain p-3 transition duration-500 group-hover:scale-[1.02]"
                 />
               </div>
               <div className="p-6">
                 <p className="text-xs uppercase tracking-[0.28em] text-stone-400">{item.category}</p>
                 <h3 className="mt-3 text-2xl font-medium text-white">{item.title}</h3>
                 <p className="mt-4 leading-7 text-stone-300">{item.description}</p>
+                <p className="mt-6 text-sm uppercase tracking-[0.25em] text-stone-400 transition group-hover:text-white">
+                  View portfolio
+                </p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
