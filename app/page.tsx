@@ -89,23 +89,6 @@ export default function HomePage() {
                     Investigations & factual storytelling
                   </p>
                 </div>
-
-                <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 sm:col-span-2">
-                  <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-                    What to explore
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-3 text-sm text-stone-200">
-                    <span className="rounded-full border border-white/10 px-4 py-2">
-                      Africa Eye documentaries
-                    </span>
-                    <span className="rounded-full border border-white/10 px-4 py-2">
-                      Presenter-led reporting
-                    </span>
-                    <span className="rounded-full border border-white/10 px-4 py-2">
-                      Editorial production
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </FadeIn>
