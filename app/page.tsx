@@ -130,6 +130,7 @@ export default function HomePage() {
                 <p className="text-xs uppercase tracking-[0.28em] text-stone-400">{item.category}</p>
                 <h3 className="mt-3 text-2xl font-medium text-white">{item.title}</h3>
                 <p className="mt-4 leading-7 text-stone-200">{item.profile}</p>
+                <p className="mt-6 text-xs uppercase tracking-[0.25em] text-stone-400">Role</p>
                 <p className="mt-4 leading-7 text-stone-300">{item.description}</p>
                 <p className="mt-6 text-sm uppercase tracking-[0.25em] text-stone-400 transition group-hover:text-white">
                   View portfolio
