@@ -72,12 +72,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mt-16">
-          <p className="text-sm uppercase tracking-[0.3em] text-stone-400">
-            Software proficiency
-          </p>
-          <h3 className="mt-4 text-2xl font-semibold text-white md:text-4xl">
-            Editing, operations and production tools
-          </h3>
+          <p className="text-sm uppercase tracking-[0.3em] text-stone-400">Software proficiency</p>
           <SoftwareBadges />
         </div>
       </section>
