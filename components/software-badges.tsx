@@ -21,22 +21,65 @@ const software = [
   },
 ] as const;
 
+const softwareGroups = [
+  {
+    label: "Newsroom & Editorial Systems",
+    tools: ["OpenMedia", "Jupiter/Q-Edit"],
+  },
+  {
+    label: "Localisation Tools",
+    tools: ["Agora", "OOONA", "ZOO Digital", "SDVI Rally"],
+  },
+  {
+    label: "Cloud & Transfer",
+    tools: ["Aspera", "Signiant"],
+  },
+  {
+    label: "Analytics & OSINT",
+    tools: ["Chartbeat", "CrowdTangle", "InVID", "WeVerify", "YouTube Analytics"],
+  },
+  {
+    label: "Editing & Creative",
+    tools: ["After Effects", "Photoshop", "Illustrator", "Audition"],
+  },
+  {
+    label: "Operations",
+    tools: ["MS Office", "Smartsheet"],
+  },
+] as const;
+
 export function SoftwareBadges() {
   return (
-    <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-      {software.map((item) => (
-        <div
-          key={item.name}
-          className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6"
-        >
+    <div className="mt-12 space-y-12">
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {software.map((item) => (
           <div
-            className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br text-lg font-semibold tracking-[0.08em] ${item.className}`}
+            key={item.name}
+            className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6"
           >
-            {item.mark}
+            <div
+              className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br text-lg font-semibold tracking-[0.08em] ${item.className}`}
+            >
+              {item.mark}
+            </div>
+            <p className="mt-5 text-lg font-medium text-white">{item.name}</p>
           </div>
-          <p className="mt-5 text-lg font-medium text-white">{item.name}</p>
-        </div>
-      ))}
+        ))}
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+        {softwareGroups.map((group) => (
+          <div
+            key={group.label}
+            className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6"
+          >
+            <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
+              {group.label}
+            </p>
+            <p className="mt-4 leading-7 text-stone-200">{group.tools.join(", ")}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
