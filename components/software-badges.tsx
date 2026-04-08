@@ -24,26 +24,32 @@ const software = [
 const softwareGroups = [
   {
     label: "Newsroom & Editorial Systems",
+    mark: "NE",
     tools: ["OpenMedia", "Jupiter/Q-Edit"],
   },
   {
     label: "Localisation Tools",
+    mark: "LT",
     tools: ["Agora", "OOONA", "ZOO Digital", "SDVI Rally"],
   },
   {
     label: "Cloud & Transfer",
+    mark: "CT",
     tools: ["Aspera", "Signiant"],
   },
   {
     label: "Analytics & OSINT",
+    mark: "AO",
     tools: ["Chartbeat", "CrowdTangle", "InVID", "WeVerify", "YouTube Analytics"],
   },
   {
     label: "Editing & Creative",
+    mark: "EC",
     tools: ["After Effects", "Photoshop", "Illustrator", "Audition"],
   },
   {
     label: "Operations",
+    mark: "OP",
     tools: ["MS Office", "Smartsheet"],
   },
 ] as const;
@@ -73,9 +79,10 @@ export function SoftwareBadges() {
             key={group.label}
             className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6"
           >
-            <p className="text-xs uppercase tracking-[0.25em] text-stone-400">
-              {group.label}
-            </p>
+            <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-stone-900 text-lg font-semibold tracking-[0.08em] text-white">
+              {group.mark}
+            </div>
+            <p className="mt-5 text-lg font-medium text-white">{group.label}</p>
             <p className="mt-4 leading-7 text-stone-200">{group.tools.join(", ")}</p>
           </div>
         ))}
